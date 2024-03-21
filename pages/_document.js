@@ -5,10 +5,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <link
-                href="https://fonts.bunny.net/css?family=noto-sans:400,500,700,800"
-                rel="stylesheet"
-            />
+          <link
+            href='https://fonts.bunny.net/css?family=noto-sans:400,500,700,800'
+            rel='stylesheet'
+          />
         </Head>
         <body>
           <Main />
