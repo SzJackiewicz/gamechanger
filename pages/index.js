@@ -6,7 +6,6 @@ import EditorPicked from '@/components/sections/EditorPicked'
 import PopularCategories from '@/components/sections/PopularCategories'
 import RecentPosts from '@/components/sections/RecentPosts'
 import Sidebar from '@/components/layout/Sidebar'
-import HotTopic from '@/components/slider/HotTopic'
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
               <div className='col-xl-1' />
               <div className='col-xl-10 col-lg-12'>
                 <Hero1 />
-                <HotTopic />
                 <EditorPicked />
                 <PopularCategories />
                 <div className='row mt-70'>

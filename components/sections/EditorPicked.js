@@ -143,12 +143,6 @@ const EditorPicked = () => {
           <i className='fi-rr-arrow-small-right' />
         </Link>
       </div>
-      <div className='text-center mb-80 mt-50 wow animate__animated animate__pulse'>
-        <img
-          src='assets/imgs/page/homepage4/banner-3.png'
-          alt='Genz'
-        />
-      </div>
     </>
   )
 }
