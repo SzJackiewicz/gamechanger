@@ -1,10 +1,5 @@
-
 const SectionName = () => {
-    return (
-        <>
+  return <></>
+}
 
-         </>
-     );
-};
-
-export default SectionName;
+export default SectionName
