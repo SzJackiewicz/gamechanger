@@ -57,52 +57,18 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                 <ul className='main-menu'>
                   <li className='has-children'>
                     <Link
-                      className='active'
+                      className='color-gray-500'
                       href='/'
                     >
-                      Home
+                      Aktualności
                     </Link>
-                    <ul className='sub-menu two-col'>
-                      <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/'
-                        >
-                          Homepage - 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/index-2'
-                        >
-                          Homepage - 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/index-3'
-                        >
-                          Homepage - 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/index-4'
-                        >
-                          Homepage - 4
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li className='has-children'>
                     <Link
                       className='color-gray-500'
                       href='/page-about'
                     >
-                      About Me
+                      Potrzebuję pomocy
                     </Link>
                     <ul className='sub-menu'>
                       <li>
@@ -128,7 +94,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                       className='color-gray-500'
                       href='#'
                     >
-                      Category
+                      Wesprzyj nas
                     </Link>
                     <ul className='sub-menu two-col'>
                       <li>
@@ -178,7 +144,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                       className='color-gray-500'
                       href='#'
                     >
-                      Single Post
+                      Wspierający
                     </Link>
                     <ul className='sub-menu two-col'>
                       <li>
@@ -212,7 +178,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                       className='color-gray-500'
                       href='#'
                     >
-                      Pages
+                      O nas
                     </Link>
                     <ul className='sub-menu two-col'>
                       <li>
@@ -236,7 +202,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                           className='color-gray-500'
                           href='/page-contact'
                         >
-                          Contact
+                          Kontact
                         </Link>
                       </li>
                       <li>
@@ -278,7 +244,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                       className='color-gray-500'
                       href='/page-contact'
                     >
-                      Contact
+                      Kontakt
                     </Link>
                   </li>
                 </ul>
@@ -294,62 +260,6 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                 <span className='burger-icon-mid' />
                 <span className='burger-icon-bottom' />
               </div>
-            </div>
-            <div className='header-right text-end'>
-              <Link
-                className='btn btn-search'
-                href='#'
-                onClick={toggleTrueFalse}
-              />
-              <div className={isToggled ? 'form-search p-20 d-block' : ' form-search p-20 d-none'}>
-                <form action='#'>
-                  <input
-                    className='form-control'
-                    type='text'
-                    placeholder='Search'
-                  />
-                  <input className='btn-search-2' />
-                </form>
-                <div className='popular-keywords text-start mt-20'>
-                  <p className='mb-10 color-white'>Popular tags:</p>
-                  <Link
-                    className='color-gray-600 mr-10 font-xs'
-                    href='#'
-                  >
-                    # Travel,
-                  </Link>
-                  <Link
-                    className='color-gray-600 mr-10 font-xs'
-                    href='#'
-                  >
-                    # Tech,
-                  </Link>
-                  <Link
-                    className='color-gray-600 mr-10 font-xs'
-                    href='#'
-                  >
-                    # Movie
-                  </Link>
-                  <Link
-                    className='color-gray-600 mr-10 font-xs'
-                    href='#'
-                  >
-                    # Lifestyle
-                  </Link>
-                  <Link
-                    className='color-gray-600 mr-10 font-xs'
-                    href='#'
-                  >
-                    # Sport
-                  </Link>
-                </div>
-              </div>
-              <Link
-                className='btn btn-linear d-none d-sm-inline-block hover-up hover-shadow'
-                href='/page-login'
-              >
-                Subscribe
-              </Link>
             </div>
           </div>
         </div>
