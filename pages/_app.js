@@ -1,25 +1,26 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import '../public/assets/css/style.css'
-import {getNavigationData} from "@/lib/api/getNavigationData";
-import App from "next/app";
+import { getNavigationData } from '@/lib/api/getNavigationData'
+import App from 'next/app'
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    const navigationData = await getNavigationData();
+    const navigationData = await getNavigationData()
 
-    let pageProps = {};
+    let pageProps = {}
     pageProps.navigation = navigationData
-    console.log({pageProps})
+
     if (Component.getServerSideProps) {
-      pageProps = await Component.getServerSideProps(ctx);
+      pageProps = await Component.getServerSideProps(ctx)
     }
-    return { pageProps };
+    return { pageProps }
   }
 
   // initialize the WOW.js library when the component mounts
   componentDidMount() {
     // Import the WOW.js library
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const WOW = require('wowjs')
 
     // Create an instance of the WOW.js library with live set to false
@@ -32,15 +33,14 @@ class MyApp extends App {
     wowInstance.init()
   }
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
 
     return (
-        <>
-          <Component {...pageProps} />
-        </>
+      <>
+        <Component {...pageProps} />
+      </>
     )
   }
-
 }
 
 export default MyApp

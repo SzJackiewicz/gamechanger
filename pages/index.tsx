@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
-import EditorPicked from '@/components/sections/EditorPicked'
-import PopularCategories from '@/components/sections/PopularCategories'
-import RecentPosts from '@/components/sections/RecentPosts'
+import Layout from '../components/layout/Layout'
+import EditorPicked from '../components/sections/EditorPicked'
+import PopularCategories from '../components/sections/PopularCategories'
+import RecentPosts from '../components/sections/RecentPosts'
+import React from 'react'
+import { Navigation } from '../types/types'
 
-export default function Home({ navigation }) {
+export default function Home({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>

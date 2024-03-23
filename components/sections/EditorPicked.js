@@ -3,12 +3,10 @@ import data from '@/utils/blogData2'
 
 const EditorPicked = () => {
   return (
-    <>
-      <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Editor's picked</h2>
-      <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Featured and highly rated articles</p>
+    <div className='row'>
       <div className='row mt-70'>
-        {data.slice(0, 5).map((item, i) =>
-          i < 2 ? (
+        {data.slice(0, 4).map((item, i) =>
+          i < 1 ? (
             <div
               className='col-lg-6 wow animate__animated animate__fadeIn'
               key={i}
@@ -33,8 +31,7 @@ const EditorPicked = () => {
                         className='color-gray-700 text-sm'
                         href={`/blog/${item.id}`}
                       >
-                        {' '}
-                        #Travel
+                        #PomagaMY
                       </Link>
                     </div>
                     <div className='col-5 text-end'>
@@ -44,28 +41,6 @@ const EditorPicked = () => {
                   <Link href={`/blog/${item.id}`}>
                     <h4 className='color-white mt-20'>{item.title}</h4>
                   </Link>
-                  <div className='row align-items-center mt-25'>
-                    <div className='col-7'>
-                      <div className='box-author'>
-                        <img
-                          src='assets/imgs/page/homepage1/author.png'
-                          alt='Genz'
-                        />
-                        <div className='author-info'>
-                          <h6 className='color-gray-700'>{item.authorname}</h6>
-                          <span className='color-gray-700 text-sm'>{item.date}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col-5 text-end'>
-                      <Link
-                        className='readmore color-gray-500 text-sm'
-                        href={`/blog/${item.id}`}
-                      >
-                        <span>Read more</span>
-                      </Link>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -106,44 +81,13 @@ const EditorPicked = () => {
                   <Link href='/single-sidebar'>
                     <h5 className='color-white mt-20'>{item.title}</h5>
                   </Link>
-                  <div className='row align-items-center mt-25'>
-                    <div className='col-7'>
-                      <div className='box-author'>
-                        <img
-                          src='assets/imgs/page/homepage1/author3.png'
-                          alt='Genz'
-                        />
-                        <div className='author-info'>
-                          <h6 className='color-gray-700'>{item.authorname}</h6>
-                          <span className='color-gray-700 text-sm'>{item.date}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col-5 text-end'>
-                      <Link
-                        className='readmore color-gray-500 text-sm'
-                        href={`/blog/${item.id}`}
-                      >
-                        <span>Read more</span>
-                      </Link>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           )
         )}
       </div>
-      <div className='text-center mb-50'>
-        <Link
-          href='#'
-          className='btn btn-linear btn-load-more wow animate__animated animate__zoomIn'
-        >
-          Show More Posts
-          <i className='fi-rr-arrow-small-right' />
-        </Link>
-      </div>
-    </>
+    </div>
   )
 }
 
