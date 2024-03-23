@@ -4,8 +4,7 @@ import EditorPicked from '@/components/sections/EditorPicked'
 import PopularCategories from '@/components/sections/PopularCategories'
 import RecentPosts from '@/components/sections/RecentPosts'
 
-export default function Home({navigation}) {
-
+export default function Home({ navigation }) {
   return (
     <>
       <Head>
