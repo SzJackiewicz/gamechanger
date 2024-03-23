@@ -3,15 +3,15 @@ import Layout from '@/components/layout/Layout'
 import EditorPicked from '@/components/sections/EditorPicked'
 import PopularCategories from '@/components/sections/PopularCategories'
 import RecentPosts from '@/components/sections/RecentPosts'
-import Sidebar from '@/components/layout/Sidebar'
 
-export default function Home() {
+export default function Home({navigation}) {
+
   return (
     <>
       <Head>
         <title>Genz - Creative Personal Blog Portfolio NextJS Template</title>
       </Head>
-      <Layout>
+      <Layout navigation={navigation}>
         <div className='cover-home1'>
           <div className='container'>
             <div className='row'>

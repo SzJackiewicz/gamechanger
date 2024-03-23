@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const MobileMenu = ({ openClass }) => {
+const MobileMenu = ({ openClass, navigation }) => {
   // State to track the active status and key
   const [isActive, setIsActive] = useState({
     status: false,

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { React, useState, useEffect } from 'react'
 
-const Header = ({ handleOpen, handleRemove, openClass }) => {
+const Header = ({ handleOpen, handleRemove, openClass, navigation }) => {
   // State to keep track of the scroll position
   const [scroll, setScroll] = useState(0)
 
@@ -55,37 +55,32 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
             <div className='header-nav'>
               <nav className='nav-main-menu d-none d-xl-block'>
                 <ul className='main-menu'>
+                  {navigation.map((item) => (
                   <li className='has-children'>
-                    <Link
-                      className='color-gray-500'
-                      href='/'
-                    >
-                      Aktualności
-                    </Link>
+                    <Link className='color-gray-500 active' href={item.slug}>{item.name}</Link>
+                    {item.subMenu.length > 0 && (
+                    <ul className='sub-menu'>
+                      {item.subMenu.map((submenu) => (
+                      <li>
+                        <Link className='color-gray-500' href={submenu.slug}>{submenu.name}</Link>
+                      </li>
+                      ))}
+                    </ul>
+                    )}
+                  </li>
+
+                  ))}
+                  <li className='has-children'>
+                    <Link className='color-gray-500' href='/'>Aktualności</Link>
                   </li>
                   <li className='has-children'>
-                    <Link
-                      className='color-gray-500'
-                      href='/page-about'
-                    >
-                      Potrzebuję pomocy
-                    </Link>
+                    <Link className='color-gray-500' href='/page-about'>Potrzebuję pomocy</Link>
                     <ul className='sub-menu'>
                       <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/page-portfolio'
-                        >
-                          My Portfolio
-                        </Link>
+                        <Link className='color-gray-500' href='/page-portfolio'>My Portfolio</Link>
                       </li>
                       <li>
-                        <Link
-                          className='color-gray-500'
-                          href='/portfolio-details'
-                        >
-                          Portfolio Details
-                        </Link>
+                        <Link className='color-gray-500' href='/portfolio-details'>Portfolio Details</Link>
                       </li>
                     </ul>
                   </li>
