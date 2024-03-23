@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '../components/layout/Layout'
+import Layout from '../../components/layout/Layout'
 import React from 'react'
-import { Navigation } from '../types/types'
+import { Navigation } from '../../types/types'
 
 export default function PageContact({ navigation }: { navigation: Navigation }) {
   return (

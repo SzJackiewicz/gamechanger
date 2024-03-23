@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import Pagination from '../components/elements/Pagination'
+import Layout from '../../components/layout/Layout'
+import Pagination from '../../components/elements/Pagination'
 import React from 'react'
-import data from '../utils/blogData'
-import { Navigation } from '../types/types'
+import data from '../../utils/blogData'
+import { Navigation } from '../../types/types'
 
 export default function PageAuthor({ navigation }: { navigation: Navigation }) {
   return (

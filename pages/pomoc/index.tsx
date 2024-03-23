@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-import Breadcrumb from '../components/elements/Breadcrumb'
-import SingleContent from '../components/sections/SingleContent'
-import { Navigation } from '../types/types'
+import Layout from '../../components/layout/Layout'
+import Breadcrumb from '../../components/elements/Breadcrumb'
+import SingleContent from '../../components/sections/SingleContent'
+import { Navigation } from '../../types/types'
 
 export default function Single1({ navigation }: { navigation: Navigation }) {
   return (

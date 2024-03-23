@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import Accordion from '../components/elements/Accordion'
-import Layout from '../components/layout/Layout'
-import Testimonial from '../components/slider/Testimonial'
-import PricingTable from '../components/sections/PricingTable'
-import MyServices from '../components/sections/MyServices'
-import PartnersLogs from '../components/sections/PartnersLogs'
-import { Navigation } from '../types/types'
+import Accordion from '../../components/elements/Accordion'
+import Layout from '../../components/layout/Layout'
+import Testimonial from '../../components/slider/Testimonial'
+import PricingTable from '../../components/sections/PricingTable'
+import MyServices from '../../components/sections/MyServices'
+import PartnersLogs from '../../components/sections/PartnersLogs'
+import { Navigation } from '../../types/types'
 
 export default function PageAbout({ navigation }: { navigation: Navigation }) {
   return (
