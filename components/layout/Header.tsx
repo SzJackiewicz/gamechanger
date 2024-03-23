@@ -60,7 +60,7 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
                               <li key={idx}>
                                 <Link
                                   className='color-gray-500'
-                                  href={submenu.slug}
+                                  href={`${item.slug}/${submenu.slug}`}
                                 >
                                   {submenu.name}
                                 </Link>

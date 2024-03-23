@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { Navigation } from '../../types/types'
@@ -8,23 +9,18 @@ type MobileMenuProps = {
 }
 
 const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
-  // State to track the active status and key
   const [isActive, setIsActive] = useState({
     status: false,
     key: -1,
   })
 
-  // Function to handle toggling the active status based on the given key
   const handleToggle = (key: number) => {
-    // Check if the current key matches the active key in the state
     if (isActive.key === key) {
-      // If the current key matches, set the active status to false
       setIsActive({
         status: false,
         key: -1,
       })
     } else {
-      // If the current key does not match, set the active status to true and update the key
       setIsActive({
         status: true,
         key,
@@ -75,7 +71,7 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
                             <ul className={isActive.key === index ? 'sub-menu d-block' : 'sub-menu d-none'}>
                               {item?.subMenu?.map((subItem, index) => (
                                 <li key={index}>
-                                  <Link href={subItem.slug}>{subItem.name}</Link>
+                                  <Link href={`${item.slug}/${subItem.slug}`}>{subItem.name}</Link>
                                 </li>
                               ))}
                             </ul>

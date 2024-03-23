@@ -5,16 +5,26 @@ import { getNavigationData } from '@/lib/api/getNavigationData'
 import App from 'next/app'
 
 class MyApp extends App {
+  constructor(props) {
+    super(props)
+    this.state = {
+      pageProps: props.pageProps,
+    }
+  }
   static async getInitialProps({ Component, ctx }) {
     const navigationData = await getNavigationData()
 
     let pageProps = {}
     pageProps.navigation = navigationData
 
-    if (Component.getServerSideProps) {
-      pageProps = await Component.getServerSideProps(ctx)
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
     }
     return { pageProps }
+  }
+
+  setPageProps = (newPageProps) => {
+    this.setState({ pageProps: newPageProps })
   }
 
   // initialize the WOW.js library when the component mounts
@@ -33,13 +43,10 @@ class MyApp extends App {
     wowInstance.init()
   }
   render() {
-    const { Component, pageProps } = this.props
+    const { Component } = this.props
+    const { pageProps } = this.state
 
-    return (
-      <>
-        <Component {...pageProps} />
-      </>
-    )
+    return <Component {...pageProps} />
   }
 }
 
