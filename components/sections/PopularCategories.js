@@ -5,8 +5,6 @@ const PopularCategories = () => {
   return (
     <>
       <div className='mt-30'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Popular Tags</h2>
-        <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Most searched keywords</p>
         <div className='row mt-70 mb-50'>
           {categories.slice(0, 12).map((item, i) => (
             <div

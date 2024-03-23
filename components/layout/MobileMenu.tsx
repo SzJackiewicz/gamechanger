@@ -58,7 +58,7 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
               <div className='mobile-menu-wrap mobile-header-border'>
                 <nav className='mt-15'>
                   <ul className='mobile-menu font-heading'>
-                    {navigation.length > 0 &&
+                    {navigation?.length > 0 &&
                       navigation.map((item, index) => (
                         <li
                           key={index}

@@ -1,19 +1,20 @@
+import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
-import PopularCategories from '@/components/sections/PopularCategories'
-import Sidebar2 from '@/components/layout/Sidebar2'
-import Pagination from '@/components/elements/Pagination'
-import PageHeader1 from '@/components/elements/PageHeader1'
-import data from '@/utils/blogData2'
+import Layout from '../components/layout/Layout'
+import PopularCategories from '../components/sections/PopularCategories'
+import Pagination from '../components/elements/Pagination'
+import PageHeader1 from '../components/elements/PageHeader1'
+import data from '../utils/blogData2'
+import { Navigation } from '../types/types'
 
-export default function Archive2() {
+export default function Archive2({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
         <title>Genz - Blog archive 2</title>
       </Head>
-      <Layout>
+      <Layout navigation={navigation}>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>
@@ -121,9 +122,6 @@ export default function Archive2() {
                         )}
                       </div>
                       <Pagination />
-                    </div>
-                    <div className='col-lg-4'>
-                      <Sidebar2 />
                     </div>
                   </div>
                 </div>

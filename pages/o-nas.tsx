@@ -1,20 +1,20 @@
-import Link from 'next/link'
+import React from 'react'
 import Head from 'next/head'
-import Accordion from '@/components/elements/Accordion'
-import PortfolioFilter from '@/components/elements/PortfolioFilter'
-import Layout from '@/components/layout/Layout'
-import Testimonial from '@/components/slider/Testimonial'
-import PricingTable from '@/components/sections/PricingTable'
-import MyServices from '@/components/sections/MyServices'
-import PartnersLogs from '@/components/sections/PartnersLogs'
+import Accordion from '../components/elements/Accordion'
+import Layout from '../components/layout/Layout'
+import Testimonial from '../components/slider/Testimonial'
+import PricingTable from '../components/sections/PricingTable'
+import MyServices from '../components/sections/MyServices'
+import PartnersLogs from '../components/sections/PartnersLogs'
+import { Navigation } from '../types/types'
 
-export default function PageAbout() {
+export default function PageAbout({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
         <title>Genz - About me</title>
       </Head>
-      <Layout>
+      <Layout navigation={navigation}>
         <div className='cover-home1'>
           <div className='container'>
             <div className='row'>
@@ -29,7 +29,6 @@ export default function PageAbout() {
                     the world of design and architecture.
                   </p>
                 </div>
-                <PortfolioFilter col={4} />
                 <PricingTable />
                 <div className='text-center mt-30'>
                   <h2

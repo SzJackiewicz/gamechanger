@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Layout from '../components/layout/Layout'
+import React from 'react'
+import { Navigation } from '../types/types'
 
-export default function PageContact() {
+export default function PageContact({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
         <title>Genz - Contact</title>
       </Head>
-      <Layout>
+      <Layout navigation={navigation}>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>

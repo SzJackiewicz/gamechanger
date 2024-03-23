@@ -5,87 +5,44 @@ const EditorPicked = () => {
   return (
     <div className='row'>
       <div className='row mt-70'>
-        {data.slice(0, 4).map((item, i) =>
-          i < 1 ? (
+        {data.slice(0, 2).map((item, i) => (
+          <div
+            className='col-lg-6'
+            key={i}
+          >
             <div
-              className='col-lg-6 wow animate__animated animate__fadeIn'
-              key={i}
+              className='card-style-1 hover-up mb-30 wow animate__animated animate__fadeIn'
+              data-wow-delay='.0s'
             >
-              <div className='card-blog-1 hover-up'>
-                <div className='card-image mb-20 mh-315 bdr-16'>
-                  <Link
-                    className='post-type'
-                    href={`/blog/${item.id}`}
+              <div className='card-image'>
+                <Link
+                  className='link-post'
+                  href='/single-sidebar'
+                >
+                  <img
+                    src={`/assets/imgs/page/homepage3/${item.img}`}
+                    alt='Genz'
                   />
-                  <Link href={`/blog/${item.id}`}>
-                    <img
-                      src={`/assets/imgs/page/healthy/${item.img}`}
-                      alt='Genz'
-                    />
-                  </Link>
-                </div>
-                <div className='card-info'>
-                  <div className='row'>
-                    <div className='col-7'>
-                      <Link
-                        className='color-gray-700 text-sm'
-                        href={`/blog/${item.id}`}
-                      >
-                        #PomagaMY
-                      </Link>
-                    </div>
-                    <div className='col-5 text-end'>
-                      <span className='color-gray-700 text-sm timeread'>{item.duration} mins read</span>
+                  <div className='card-info card-bg-2'>
+                    <div className='info-bottom mb-15'>
+                      <h4 className='color-white mb-15'>{item.title}</h4>
+                      <div className='box-author'>
+                        <img
+                          src='assets/imgs/page/homepage3/author.jpg'
+                          alt='Genz'
+                        />
+                        <div className='author-info'>
+                          <h6 className='mr-15 color-gray-700'>{item.authorName}</h6>
+                          <span className='color-gray-700 text-sm'>{item.date}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <Link href={`/blog/${item.id}`}>
-                    <h4 className='color-white mt-20'>{item.title}</h4>
-                  </Link>
-                </div>
+                </Link>
               </div>
             </div>
-          ) : (
-            <div
-              className='col-lg-4 wow animate__animated animate__fadeIn'
-              data-wow-delay='.1s'
-              key={i}
-            >
-              <div className='card-blog-1 hover-up'>
-                <div className='card-image mb-20 mh-200 bdr-16 '>
-                  <Link
-                    className='post-type'
-                    href={`/blog/${item.id}`}
-                  />
-                  <Link href={`/blog/${item.id}`}>
-                    <img
-                      src={`/assets/imgs/page/healthy/${item.img}`}
-                      alt='Genz'
-                    />
-                  </Link>
-                </div>
-                <div className='card-info'>
-                  <div className='row'>
-                    <div className='col-7'>
-                      <Link
-                        className='color-gray-700 text-sm'
-                        href={`/blog/${item.id}`}
-                      >
-                        {' '}
-                        #Design
-                      </Link>
-                    </div>
-                    <div className='col-5 text-end'>
-                      <span className='color-gray-700 text-sm timeread'>{item.duration} mins read</span>
-                    </div>
-                  </div>
-                  <Link href='/single-sidebar'>
-                    <h5 className='color-white mt-20'>{item.title}</h5>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )
-        )}
+          </div>
+        ))}
       </div>
     </div>
   )
