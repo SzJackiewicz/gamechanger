@@ -13,19 +13,6 @@ const data = [
     tags: ['Travel', 'Lifestyle'],
   },
   {
-    id: 2,
-    title: '10 Easy Ways to Be Environmentally Conscious At Home',
-    excerpt:
-      'Take small but impactful steps towards environmental stewardship and sustainability within the comfort of your own home, contributing to a greener planet',
-    img: 'img2.png',
-    category: 'Development',
-    author: 'author.jpg',
-    authorname: 'Rose',
-    date: '12 May 2023',
-    duration: '7',
-    tags: ['Travel', 'Lifestyle'],
-  },
-  {
     id: 3,
     title: 'How to Give Your Space a Parisian-Inspired Makeover',
     excerpt:

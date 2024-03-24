@@ -2165,7 +2165,7 @@ input {
 }
 .header .main-header .header-nav {
   display: inline-block;
-  width: 65%;
+  width: 75%;
   text-align: center;
 }
 .header .main-header .header-search {
@@ -2748,7 +2748,7 @@ input {
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
   min-height: 100vh;
   bottom: 0;
   right: 0;
