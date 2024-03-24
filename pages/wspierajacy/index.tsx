@@ -1,11 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import PortfolioFilter from '../../components/elements/PortfolioFilter'
+import { PortfolioFilter } from '../../components/elements/PortfolioFilter'
 import Layout from '../../components/layout/Layout'
 import Testimonial from '../../components/slider/Testimonial'
 import Pagination from '../../components/elements/Pagination'
 import MyServices from '../../components/sections/MyServices'
-import PartnersLogs from '../../components/sections/PartnersLogs'
 import { Navigation } from '../../types/types'
 
 const Portfolio = ({ navigation }: { navigation: Navigation }) => {
@@ -35,7 +34,6 @@ const Portfolio = ({ navigation }: { navigation: Navigation }) => {
                 <Pagination />
                 <MyServices />
                 <Testimonial />
-                <PartnersLogs />
               </div>
             </div>
           </div>

@@ -34,7 +34,7 @@ const portfolio = [
   },
 ]
 
-const PortfolioFilter = ({ col, show }) => {
+export const PortfolioFilter = ({ col, show }) => {
   // State variable to store the currently selected filter category
   const [filter, setFilter] = useState('all')
 
@@ -173,5 +173,3 @@ const PortfolioFilter = ({ col, show }) => {
     </>
   )
 }
-
-export default PortfolioFilter
