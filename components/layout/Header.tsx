@@ -1,12 +1,21 @@
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
-import { Navigation } from '../../types/types'
+import React, {useEffect, useState} from 'react'
+import {Navigation} from '@/types/types'
+import { useRouter } from 'next/router';
 
 type HeaderProps = {
   handleOpen: () => void
   handleRemove: () => void
   openClass: string
   navigation: Navigation[]
+}
+
+const isActiveRoute = (currentRoute: string, targetRoute:string) => {
+  if (targetRoute === '/') {
+    return currentRoute === '/' ? 'active' : 'color-gray-500';
+  } else {
+    return currentRoute.startsWith(targetRoute) ? 'active' : 'color-gray-500';
+  }
 }
 
 const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps) => {
@@ -25,7 +34,8 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
       document.removeEventListener('scroll', handleScroll)
     }
   })
-
+  const router = useRouter();
+console.log({router})
   return (
     <>
       <header className={scroll ? 'header sticky-bar bg-gray-900 stick' : 'header sticky-bar bg-gray-900'}>
@@ -49,7 +59,7 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
                         key={index}
                       >
                         <Link
-                          className={index === 0 ? 'active' : 'color-gray-500'}
+                          className={isActiveRoute(router.asPath, `/${item.slug}`)}
                           href={`/${item.slug}`}
                         >
                           {item.name}
