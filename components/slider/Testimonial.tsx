@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Link from 'next/link'
 
 SwiperCore.use([Autoplay, Navigation])
-const Testimonial = () => {
+export const Testimonial = () => {
   const data = [
     {
       img: '1.webp',
@@ -23,14 +25,12 @@ const Testimonial = () => {
   ]
   return (
     <>
-      <div className='text-center mt-70 mb-50'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Testimonials</h2>
-        <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>
-          Nettracking is a B2B marketing software for telecommunications industry.
-        </p>
+      <div className='text-center mt-70'>
+        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wesprzyj nas</h2>
+        <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Lorem ipsum dolor sit amet, consectet</p>
       </div>
       <div className='box-testimonials mb-150animate__fadeIn mb-100'>
-        <div className='box-swiper'></div>
+        <div className='box-swiper' />
         <div className='swiper-container swiper-group-3'>
           <Swiper
             slidesPerView={3}
@@ -77,21 +77,25 @@ const Testimonial = () => {
                 className='swiper-slide'
                 key={i}
               >
-                <div className='card-testimonials bg-gray-850 border-gray-800 hover-up'>
-                  <div className='box-author mb-20'>
-                    <img
-                      src='/assets/imgs/page/about/author.png'
-                      alt='Genz'
-                    />
-                    <div className='author-info'>
-                      <h6 className='color-gray-700'>Karen Adderiy</h6>
-                      <span className='color-gray-700 text-sm'>Alithemes Co</span>
-                    </div>
-                  </div>
-                  <div className='card-info'>
-                    <p className='color-gray-500'>
-                      Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.
-                    </p>
+                <div
+                  className='card-style-1 hover-up mb-30'
+                  data-wow-delay='.0s'
+                >
+                  <div className='card-image'>
+                    <Link
+                      className='link-post'
+                      href='#'
+                    >
+                      <img
+                        src={`assets/imgs/page/about/img4.png`}
+                        alt='Genz'
+                      />
+                      <div className='card-info card-bg-2'>
+                        <div className='info-bottom mb-15'>
+                          <h3 className='color-white mb-10'>Przykładowy tytuł</h3>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -106,5 +110,3 @@ const Testimonial = () => {
     </>
   )
 }
-
-export default Testimonial

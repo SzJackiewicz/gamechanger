@@ -1,5 +1,7 @@
 import Link from 'next/link'
-const PricingTable = () => {
+import React from 'react'
+
+export const PricingTable = () => {
   return (
     <>
       <div className='text-center mt-30 mb-50'>
@@ -121,4 +123,3 @@ const PricingTable = () => {
     </>
   )
 }
-export default PricingTable

@@ -8,7 +8,7 @@ const data = [
     category: 'Working Tips',
     author: 'author.jpg',
     authorname: 'Joseph',
-    date: '25 April 2023',
+    date: '20-03-2024',
     duration: '5',
     tags: ['Travel', 'Lifestyle'],
   },
@@ -18,7 +18,7 @@ const data = [
     excerpt:
       'Infuse the timeless elegance of Parisian aesthetics into your living space with expert design guidance, creating an inviting atmosphere that exudes sophistication',
     img: 'img3.png',
-    category: 'Lifestyle',
+    category: '20-03-2024',
     author: 'author.jpg',
     authorname: 'Steven',
     date: '15 May 2023',
@@ -31,7 +31,7 @@ const data = [
     excerpt:
       'Equip yourself with essential business insights and proven strategies that can propel your career towards unparalleled success and growth',
     img: 'img4.png',
-    category: 'Business',
+    category: '20-03-2024',
     author: 'author.jpg',
     authorname: 'Harry',
     date: '27 June 2023',
@@ -44,7 +44,7 @@ const data = [
     excerpt:
       'Dive into the realm of planning and strategic thinking, as you lay the groundwork for a dynamic and effective roadmap to achieve your aspirations',
     img: 'img5.png',
-    category: 'Building',
+    category: '10-01-2024',
     author: 'author.jpg',
     authorname: 'Roney',
     date: '28 June 2023',

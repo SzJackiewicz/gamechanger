@@ -36,7 +36,11 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
                 className='d-flex'
                 href='/'
               >
-                Logo
+                <img
+                  className='logo-night'
+                  alt='Gamechangers'
+                  src='/assets/imgs/template/logo.png'
+                />
               </Link>
             </div>
             <div className='header-nav'>
