@@ -35,7 +35,7 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
     }
   })
   const router = useRouter();
-console.log({router})
+
   return (
     <>
       <header className={scroll ? 'header sticky-bar bg-gray-900 stick' : 'header sticky-bar bg-gray-900'}>
