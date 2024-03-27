@@ -6,12 +6,22 @@ import Breadcrumb from '../../components/elements/Breadcrumb'
 import data from '../../utils/blogData'
 import { Navigation } from '../../types/types'
 
+type BlogPost = {
+  id: number
+  title: string
+  excerpt: string
+  img: string
+  authorTitle: string
+  author: string
+  date: string
+}
+
 const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
   // Import the useRouter hook from 'next/router' module
   const Router = useRouter()
 
   // Define a state variable 'blogPost' and a function 'setBlogPost' to update the state
-  const [blogPost, setBlogPost] = useState(null)
+  const [blogPost, setBlogPost] = useState<BlogPost | null>(null)
 
   // Destructure the 'id' from the 'query' object provided by the useRouter hook
   const { id } = Router.query
@@ -21,7 +31,7 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
     // Use the 'data' array (assuming it is available) and find the blog post with matching 'id'
     // The find method returns the first element in the array that satisfies the provided testing function
     // It looks for an object in the 'data' array where the 'id' property matches the current 'id' from the Router query
-    const foundBlogPost = data.find((data) => data.id == id)
+    const foundBlogPost = data.find((data) => data.id === Number(id)) || null
 
     // Update the 'blogPost' state with the found blog post or set it to null if no match is found
     setBlogPost(foundBlogPost)
