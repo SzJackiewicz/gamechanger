@@ -5,38 +5,43 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Link from 'next/link'
 
 SwiperCore.use([Autoplay, Navigation])
-export const Supporters = () => {
+export const Supporters = ({ title }: { title: string }) => {
   const data = [
     {
       img: '1.webp',
+      name: 'Jacek Szymkiewicz',
     },
     {
       img: '2.webp',
+      name: 'Jacek Szymkiewicz',
     },
     {
       img: '3.webp',
+      name: 'Jacek Szymkiewicz',
     },
     {
       img: '4.webp',
+      name: 'Jacek Szymkiewicz',
     },
     {
       img: '5.webp',
+      name: 'Jacek Szymkiewicz',
     },
   ]
   return (
     <>
-      <div className='text-center mb-50'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wspierają nas</h2>
+      <div className='text-center mb-40'>
+        <h3 className='color-linear d-inline-block wow animate__animated animate__fadeInUp'>{title}</h3>
       </div>
       <div className='box-testimonials mb-150animate__fadeIn mb-100'>
         <div className='box-swiper' />
         <div className='swiper-container swiper-group-3'>
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            slidesPerView={4}
+            spaceBetween={0}
             loop={true}
             autoplay={{
-              delay: 2500,
+              delay: 3500,
               disableOnInteraction: false,
             }}
             navigation={{
@@ -46,27 +51,27 @@ export const Supporters = () => {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               575: {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               767: {
                 slidesPerView: 1,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               991: {
                 slidesPerView: 2,
-                spaceBetween: 30,
+                spaceBetween: 10,
               },
               1199: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+                slidesPerView: 4,
+                spaceBetween: 10,
               },
               1350: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+                slidesPerView: 4,
+                spaceBetween: 10,
               },
             }}
             className='swiper-wrapper pt-5'
@@ -77,10 +82,10 @@ export const Supporters = () => {
                 key={i}
               >
                 <div
-                  className='card-style-1 hover-up mb-30'
+                  className='card-style-medium mb-30 hoverUpTitle'
                   data-wow-delay='.0s'
                 >
-                  <div className='card-image'>
+                  <div className='card-image hover-up'>
                     <Link
                       className='link-post'
                       href='#'
@@ -90,6 +95,9 @@ export const Supporters = () => {
                         alt='Genz'
                       />
                     </Link>
+                  </div>
+                  <div className='card-item-name'>
+                    <label>{item.name}</label>
                   </div>
                 </div>
               </SwiperSlide>

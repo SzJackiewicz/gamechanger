@@ -1562,6 +1562,51 @@ input {
   position: relative;
   width: 100%;
 }
+
+.card-style-medium {
+  position: relative;
+  width: 70%;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 8px;
+
+  @media (max-width: 1200px) {
+    margin-left: 20%;
+  }
+  @media (max-width: 992px) {
+    margin-left: 15%;
+  }
+}
+
+.card-item-name {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: #34cc9950;
+  transition: bottom 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  height: 100%;
+  transition: bottom 0.2s ease-out;
+  label {
+    color: #c9dbf6;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+}
+
+.hoverUpTitle {
+  position: relative;
+  overflow: hidden; /* Zapobiega wyświetlaniu się tekstu poza kartą */
+}
+
+.hoverUpTitle:hover .card-item-name {
+  bottom: 0; /* Położenie końcowe - tekst wysunięty */
+}
+
 .card-style-1:hover h6 {
   color: #34cc99 !important;
 }
@@ -1684,8 +1729,8 @@ input {
   color: #34cc99 !important;
 }
 .card-list-posts .card-image {
-  width: 270px;
-  min-width: 270px;
+  width: 210px;
+  min-width: 210px;
   margin-right: 20px;
 }
 .card-list-posts .card-image img {
@@ -5464,6 +5509,14 @@ iframe.google-map {
 .form-login .btn {
   width: 100%;
   height: 48px;
+}
+
+.box-list-posts {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
 .box-form-login {
