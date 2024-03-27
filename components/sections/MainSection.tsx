@@ -66,7 +66,7 @@ export const MainSection = () => {
                   {item.category}
                 </Link>
                 <Link href={`/blog/${item.id}`}>
-                  <h4 className='mt-15 mb-20 color-white'>{item.title}</h4>
+                  <h4 className='mt-15 mb-20 color-white text-xl'>{item.title}</h4>
                 </Link>
                 <p className='color-gray-500'>{item.excerpt}</p>
               </div>

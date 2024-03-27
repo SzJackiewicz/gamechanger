@@ -29,7 +29,7 @@ export const Testimonial = () => {
         <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wesprzyj nas</h2>
         <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Lorem ipsum dolor sit amet, consectet</p>
       </div>
-      <div className='box-testimonials mb-150animate__fadeIn mb-100'>
+      <div className='box-testimonials mb-20 animate__fadeIn mb-100'>
         <div className='box-swiper' />
         <div className='swiper-container swiper-group-3'>
           <Swiper
