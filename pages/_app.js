@@ -1,8 +1,8 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import '../public/assets/css/style.css'
-import { getNavigationData } from '@/lib/api/getNavigationData'
 import App from 'next/app'
+import {getNavigationData} from "../lib/api/getNavigationData";
 
 class MyApp extends App {
   constructor(props) {
@@ -13,7 +13,7 @@ class MyApp extends App {
   }
   static async getInitialProps({ Component, ctx }) {
     const navigationData = await getNavigationData()
-
+console.log({navigationData})
     let pageProps = {}
     pageProps.navigation = navigationData
 
