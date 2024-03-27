@@ -13,7 +13,7 @@ class MyApp extends App {
   }
   static async getInitialProps({ Component, ctx }) {
     const navigationData = await getNavigationData()
-console.log({navigationData})
+
     let pageProps = {}
     pageProps.navigation = navigationData
 
