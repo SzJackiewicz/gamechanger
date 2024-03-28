@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
 import data from '../../utils/blogData'
-import { Navigation } from '../../types/types'
+import { Navigation } from '@/types/types'
 
 type BlogPost = {
   id: number
