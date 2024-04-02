@@ -10,16 +10,12 @@ const Footer = () => {
           <div className='footer-1 border-gray-800'>
             <div className='row flex-row'>
               <div className='col-lg-2'>
-                <Link
-                  className='wow animate__animated animate__fadeInUp'
-                  href='/'
-                >
-                  Logo
+                <div className='wow animate__animated animate__fadeInUp'>
                   <img
                     src='/assets/imgs/template/logo.png'
                     alt='Genz'
                   />
-                </Link>
+                </div>
                 <p className='mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp'>
                   When an unknown prnoto sans took a galley and scrambled it to make.
                 </p>
