@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import React from 'react'
 
@@ -13,6 +14,7 @@ const Footer = () => {
                   className='wow animate__animated animate__fadeInUp'
                   href='/'
                 >
+                  Logo
                   <img
                     src='/assets/imgs/template/logo.png'
                     alt='Genz'

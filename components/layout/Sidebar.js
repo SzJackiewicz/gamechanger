@@ -3,7 +3,7 @@ import data from '@/utils/blogData2'
 import comments from '@/utils/commentsData'
 import gallery from '@/utils/galleryData'
 
-const Sidebar = ({ openClass }) => {
+const Sidebar = () => {
   return (
     <>
       <div className='sidebar'>
