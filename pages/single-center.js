@@ -66,7 +66,7 @@ export default function Single1() {
                             <Link
                               className='icon-media icon-printest'
                               href='#'
-                            ></Link>
+                            />
                           </div>
                         </div>
                       </div>

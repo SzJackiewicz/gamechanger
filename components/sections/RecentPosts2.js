@@ -17,7 +17,7 @@ const RecentPosts2 = () => {
                 data-wow-delay={`${i / 10}s`}
               >
                 <div className='card-image mb-20'>
-                  <Link href={`/blog/${item.id}`}></Link>
+                  <Link href={`/blog/${item.id}`} />
                 </div>
                 <div className='card-info'>
                   <div className='row'>

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
 import categories from '@/utils/categoriesData'
 
 SwiperCore.use([Autoplay, Navigation])

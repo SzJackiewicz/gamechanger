@@ -5,7 +5,7 @@ const EditorPicked2 = () => {
   return (
     <>
       <div className='row mt-70'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Editor's picked</h2>
+        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Editors picked</h2>
         <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Featured and highly rated articles</p>
         <div className='row mt-70'>
           {data.slice(0, 4).map((item, i) => (

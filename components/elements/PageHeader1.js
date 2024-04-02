@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Breadcrumb from '@/components/elements/Breadcrumb'
 
 const PageHeader1 = ({ title, des }) => {

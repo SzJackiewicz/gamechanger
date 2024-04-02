@@ -21,7 +21,7 @@ const MyServices = () => {
               Web Graphy
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
           <div
@@ -35,7 +35,7 @@ const MyServices = () => {
               Consultancy
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
           <div
@@ -49,7 +49,7 @@ const MyServices = () => {
               &amp; Design
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
           <div
@@ -63,7 +63,7 @@ const MyServices = () => {
               Photography
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
           <div
@@ -77,7 +77,7 @@ const MyServices = () => {
               Optimization
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
           <div
@@ -91,7 +91,7 @@ const MyServices = () => {
               Management
             </h5>
             <p className='text-base color-gray-700'>
-              NetTracking" is a very powerful Web 2.0 site search engine allows you to find email allerts
+              NetTracking is a very powerful Web 2.0 site search engine allows you to find email allerts
             </p>
           </div>
         </div>

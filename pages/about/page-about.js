@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Head from 'next/head'
 import Accordion from '@/components/elements/Accordion'
 import PortfolioFilter from '@/components/elements/PortfolioFilter'

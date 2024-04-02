@@ -5,7 +5,7 @@ const RecentPosts = () => {
   return (
     <>
       <h2 className='color-linear d-inline-block mb-10'>Recent posts</h2>
-      <p className='text-lg color-gray-500'>Don't miss the latest trends</p>
+      <p className='text-lg color-gray-500'>Dont miss the latest trends</p>
       <div className='box-list-posts mt-70'>
         {data.slice(1, 6).map((item, i) => (
           <div

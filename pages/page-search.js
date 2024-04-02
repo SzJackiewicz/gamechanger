@@ -20,7 +20,7 @@ export default function PageSearch() {
                     <div className='d-inline-block position-relative'>
                       <h1 className='color-linear mb-10'>Search results</h1>
                     </div>
-                    <p className='color-gray-500 text-base mb-20'>We found 22 articles for "Hello" key word</p>
+                    <p className='color-gray-500 text-base mb-20'>We found 22 articles for Hello key word</p>
                   </div>
                   <div className='col-lg-12 text-center'>
                     <div className='box-breadcrumbs'>

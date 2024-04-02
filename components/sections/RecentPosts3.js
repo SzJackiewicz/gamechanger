@@ -7,7 +7,7 @@ const RecentPosts3 = () => {
       <div className='row mt-70'>
         <div className='col-lg-12'>
           <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Recent posts</h2>
-          <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Don't miss the latest trends</p>
+          <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Dont miss the latest trends</p>
           <div className='box-list-posts mt-70'>
             <div className='row'>
               {data.slice(0, 6).map((item, i) => (
