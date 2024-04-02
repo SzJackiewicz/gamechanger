@@ -38,28 +38,28 @@ const Brand = () => {
         }}
         breakpoints={{
           320: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 10,
           },
           575: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 10,
           },
           767: {
-            slidesPerView: 1,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 20,
           },
           991: {
-            slidesPerView: 2,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 20,
           },
           1199: {
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
           1350: {
             slidesPerView: 5,
-            spaceBetween: 30,
+            spaceBetween: 20,
           },
         }}
         className='swiper-wrapper pt-5'

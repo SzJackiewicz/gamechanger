@@ -2,7 +2,6 @@
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Link from 'next/link'
 
 SwiperCore.use([Autoplay, Navigation])
 export const Supporters = ({ title }: { title: string }) => {
@@ -86,15 +85,12 @@ export const Supporters = ({ title }: { title: string }) => {
                   data-wow-delay='.0s'
                 >
                   <div className='card-image hover-up'>
-                    <Link
-                      className='link-post'
-                      href='#'
-                    >
+                    <p className='link-post'>
                       <img
                         src={`assets/imgs/page/about/img2.png`}
                         alt='Genz'
                       />
-                    </Link>
+                    </p>
                   </div>
                   <div className='card-item-name'>
                     <label>{item.name}</label>
