@@ -5,11 +5,11 @@ import data from '@/utils/blogData2'
 export const MainSection = () => {
   return (
     <div className='row'>
-      <div className='col-xl-7 col-lg-12'>
+      <div className='col-xxl-6 col-xl-7 align-content-center col-md-12'>
         {data.slice(0, 1).map((item, i) => (
           <div key={i}>
             <div
-              className='card-style-1 hover-up mb-30 wow animate__animated animate__fadeIn'
+              className='card-style-1 hover-up wow animate__animated animate__fadeIn'
               data-wow-delay='.0s'
             >
               <div className='card-image'>
@@ -42,7 +42,7 @@ export const MainSection = () => {
           </div>
         ))}
       </div>
-      <div className='col-xl-5 col-lg-12'>
+      <div className='col-xxl-6 col-xl-5 col-md-12'>
         <div className='box-list-posts'>
           {data.slice(1, 4).map((item, i) => (
             <div
