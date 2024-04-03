@@ -1,46 +1,46 @@
-// //import { performRequest, PerformRequestParams } from '@/lib/datocms'
+import { performRequest, PerformRequestParams } from '@/lib/datocms'
 
-// const PAGE_CONTENT_QUERY = `
-//   query Home {
-//     allCategoryNavs {
-//         label
-//         name
-//         slug
-//         subMenu {
-//           label
-//           name
-//           slug
-//         }
-//     }
-//   }`
+const PAGE_CONTENT_QUERY = `
+  query Home {
+    allCategoryNavs {
+        label
+        name
+        slug
+        subMenu {
+          label
+          name
+          slug
+        }
+    }
+  }`
 
-// interface CategoryNav {
-//   label: string
-//   name: string
-//   slug: string
-// }
+interface CategoryNav {
+  label: string
+  name: string
+  slug: string
+}
 
-// interface Data {
-//   allCategoryNavs: CategoryNav[]
-// }
+interface Data {
+  allCategoryNavs: CategoryNav[]
+}
 
-// function getPageRequest(isEnabled: boolean): PerformRequestParams {
-//   return {
-//     query: PAGE_CONTENT_QUERY,
-//     includeDrafts: isEnabled,
-//     variables: {},
-//     revalidate: 0,
-//   }
-// }
+function getPageRequest(isEnabled: boolean): PerformRequestParams {
+  return {
+    query: PAGE_CONTENT_QUERY,
+    includeDrafts: isEnabled,
+    variables: {},
+    revalidate: 0,
+  }
+}
 
-// export async function getNavigationData() {
-//   try {
-//     const pageRequest = getPageRequest(false)
-//     const data = await performRequest<Data>(pageRequest)
+export async function getNavigationData() {
+  try {
+    const pageRequest = getPageRequest(false)
+    const data = await performRequest<Data>(pageRequest)
 
-//     return data.allCategoryNavs
-//   } catch (error) {
-//     console.error('Error fetching navigation data:', error)
-//     return []
-//   }
-// }
+    return data.allCategoryNavs
+  } catch (error) {
+    console.error('Error fetching navigation data:', error)
+    return []
+  }
+}

@@ -1,83 +1,83 @@
-// import { cache } from 'react'
+import { cache } from 'react'
 
-// type ApiResponse = {
-//   data: object
-// }
+type ApiResponse = {
+  data: object
+}
 
-// type ApiFetchParams = {
-//   body: string
-//   includeDrafts?: boolean
-//   excludeInvalid?: boolean
-//   visualEditingBaseUrl?: string | null
-//   revalidate?: number
-// }
+type ApiFetchParams = {
+  body: string
+  includeDrafts?: boolean
+  excludeInvalid?: boolean
+  visualEditingBaseUrl?: string | null
+  revalidate?: number
+}
 
-// export type PerformRequestParams = {
-//   query: string
-//   variables?: { [key: string]: unknown }
-//   includeDrafts?: boolean
-//   excludeInvalid?: boolean
-//   visualEditingBaseUrl?: string | null
-//   revalidate?: number
-// }
+export type PerformRequestParams = {
+  query: string
+  variables?: { [key: string]: unknown }
+  includeDrafts?: boolean
+  excludeInvalid?: boolean
+  visualEditingBaseUrl?: string | null
+  revalidate?: number
+}
 
-// //TODO przerobić na react-query, stan lub cos innego
+//TODO przerobić na react-query, stan lub cos innego
 
-// const apiFetch = cache(
-//   async ({
-//     body,
-//     includeDrafts = false,
-//     excludeInvalid = false,
-//     visualEditingBaseUrl = null,
-//     revalidate,
-//   }: ApiFetchParams): Promise<ApiResponse> => {
-//     const headers: { [key: string]: string } = {
-//       Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
-//       ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
-//       ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
-//       ...(visualEditingBaseUrl
-//         ? {
-//             'X-Visual-Editing': 'vercel-v1',
-//             'X-Base-Editing-Url': visualEditingBaseUrl,
-//           }
-//         : {}),
-//       ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
-//     }
+const apiFetch = cache(
+  async ({
+    body,
+    includeDrafts = false,
+    excludeInvalid = false,
+    visualEditingBaseUrl = null,
+    revalidate,
+  }: ApiFetchParams): Promise<ApiResponse> => {
+    const headers: { [key: string]: string } = {
+      Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
+      ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
+      ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
+      ...(visualEditingBaseUrl
+        ? {
+            'X-Visual-Editing': 'vercel-v1',
+            'X-Base-Editing-Url': visualEditingBaseUrl,
+          }
+        : {}),
+      ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
+    }
 
-//     const init = {
-//       method: 'POST',
-//       headers,
-//       body,
-//       ...(revalidate && { next: { revalidate } }),
-//     }
+    const init = {
+      method: 'POST',
+      headers,
+      body,
+      ...(revalidate && { next: { revalidate } }),
+    }
 
-//     const response = await fetch('https://graphql.datocms.com/', init)
+    const response = await fetch('https://graphql.datocms.com/', init)
 
-//     const responseBody = await response.json()
+    const responseBody = await response.json()
 
-//     if (!response.ok) {
-//       throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
-//     }
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
+    }
 
-//     return responseBody
-//   }
-// )
+    return responseBody
+  }
+)
 
-// export async function performRequest<T>({
-//   query,
-//   variables = {},
-//   includeDrafts = false,
-//   excludeInvalid = false,
-//   visualEditingBaseUrl,
-//   revalidate,
-// }: PerformRequestParams): Promise<T> {
-//   const { data } = await apiFetch({
-//     body: JSON.stringify({ query, variables, revalidate }),
-//     includeDrafts,
-//     excludeInvalid,
-//     visualEditingBaseUrl,
-//     revalidate,
-//   })
+export async function performRequest<T>({
+  query,
+  variables = {},
+  includeDrafts = false,
+  excludeInvalid = false,
+  visualEditingBaseUrl,
+  revalidate,
+}: PerformRequestParams): Promise<T> {
+  const { data } = await apiFetch({
+    body: JSON.stringify({ query, variables, revalidate }),
+    includeDrafts,
+    excludeInvalid,
+    visualEditingBaseUrl,
+    revalidate,
+  })
 
-//   return data as T
-// }
+  return data as T
+}
