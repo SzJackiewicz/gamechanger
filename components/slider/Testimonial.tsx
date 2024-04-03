@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+'use client'
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'

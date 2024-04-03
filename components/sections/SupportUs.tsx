@@ -1,3 +1,5 @@
+'use client'
+
 import { Testimonial } from '../slider/Testimonial'
 
 export const SupportUs = () => {

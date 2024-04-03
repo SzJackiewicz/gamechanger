@@ -1,11 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import BackToTop from '@/components/elements/BackToTop'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import MobileMenu from '@/components/layout/MobileMenu'
 
 const Layout = ({ children, navigation }) => {
-
   // State to control the 'openClass' CSS class
   const [openClass, setOpenClass] = useState('')
 
@@ -45,7 +44,10 @@ const Layout = ({ children, navigation }) => {
         openClass={openClass}
         navigation={navigation}
       />
-      <MobileMenu openClass={openClass} navigation={navigation}/>
+      <MobileMenu
+        openClass={openClass}
+        navigation={navigation}
+      />
       <main className='main'>{children}</main>
       <Footer />
       <BackToTop />
