@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import Pagination from '@/components/elements/Pagination'
-import Hero6 from '@/components/sections/Hero6'
 import data from '@/utils/blogData'
 
 export default function PageAuthor() {
@@ -12,7 +11,6 @@ export default function PageAuthor() {
         <title>Genz - Author Bio</title>
       </Head>
       <Layout>
-        <Hero6 />
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>

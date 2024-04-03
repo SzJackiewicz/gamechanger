@@ -1,89 +1,83 @@
-import { cache } from 'react'
+// import { cache } from 'react'
 
-type ApiResponse = {
-    data: object
-}
+// type ApiResponse = {
+//   data: object
+// }
 
-type ApiFetchParams = {
-    body: string
-    includeDrafts?: boolean
-    excludeInvalid?: boolean
-    visualEditingBaseUrl?: string | null
-    revalidate?: number
-}
+// type ApiFetchParams = {
+//   body: string
+//   includeDrafts?: boolean
+//   excludeInvalid?: boolean
+//   visualEditingBaseUrl?: string | null
+//   revalidate?: number
+// }
 
-export type PerformRequestParams = {
-    query: string
-    variables?: { [key: string]: unknown }
-    includeDrafts?: boolean
-    excludeInvalid?: boolean
-    visualEditingBaseUrl?: string | null
-    revalidate?: number
-}
+// export type PerformRequestParams = {
+//   query: string
+//   variables?: { [key: string]: unknown }
+//   includeDrafts?: boolean
+//   excludeInvalid?: boolean
+//   visualEditingBaseUrl?: string | null
+//   revalidate?: number
+// }
 
-export async function performRequest<T>({
-                                            query,
-                                            variables = {},
-                                            includeDrafts = false,
-                                            excludeInvalid = false,
-                                            visualEditingBaseUrl,
-                                            revalidate,
-                                        }: PerformRequestParams): Promise<T> {
+// //TODO przerobić na react-query, stan lub cos innego
 
-    const { data } = await apiFetch({
-        body: JSON.stringify({ query, variables, revalidate }),
-        includeDrafts,
-        excludeInvalid,
-        visualEditingBaseUrl,
-        revalidate,
-    });
+// const apiFetch = cache(
+//   async ({
+//     body,
+//     includeDrafts = false,
+//     excludeInvalid = false,
+//     visualEditingBaseUrl = null,
+//     revalidate,
+//   }: ApiFetchParams): Promise<ApiResponse> => {
+//     const headers: { [key: string]: string } = {
+//       Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
+//       ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
+//       ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
+//       ...(visualEditingBaseUrl
+//         ? {
+//             'X-Visual-Editing': 'vercel-v1',
+//             'X-Base-Editing-Url': visualEditingBaseUrl,
+//           }
+//         : {}),
+//       ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
+//     }
 
-    return data as T;
-}
+//     const init = {
+//       method: 'POST',
+//       headers,
+//       body,
+//       ...(revalidate && { next: { revalidate } }),
+//     }
 
-//TODO przerobić na react-query, stan lub cos innego
+//     const response = await fetch('https://graphql.datocms.com/', init)
 
-const apiFetch = cache(async ({
-                                  body,
-                                  includeDrafts = false,
-                                  excludeInvalid = false,
-                                  visualEditingBaseUrl = null,
-                                  revalidate,
-                              }: ApiFetchParams): Promise<ApiResponse> => {
+//     const responseBody = await response.json()
 
-    const headers: { [key: string]: string } = {
-        Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
-        ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
-        ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
-        ...(visualEditingBaseUrl
-            ? {
-                'X-Visual-Editing': 'vercel-v1',
-                'X-Base-Editing-Url': visualEditingBaseUrl,
-            }
-            : {}),
-        ...(process.env.NEXT_DATOCMS_ENVIRONMENT
-            ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT }
-            : {}),
-    }
+//     if (!response.ok) {
+//       throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
+//     }
 
-    const init = {
-        method: 'POST',
-        headers,
-        body,
-        ...(revalidate && {next: { revalidate }}),
-    }
+//     return responseBody
+//   }
+// )
 
-    const response = await fetch('https://graphql.datocms.com/', init)
+// export async function performRequest<T>({
+//   query,
+//   variables = {},
+//   includeDrafts = false,
+//   excludeInvalid = false,
+//   visualEditingBaseUrl,
+//   revalidate,
+// }: PerformRequestParams): Promise<T> {
+//   const { data } = await apiFetch({
+//     body: JSON.stringify({ query, variables, revalidate }),
+//     includeDrafts,
+//     excludeInvalid,
+//     visualEditingBaseUrl,
+//     revalidate,
+//   })
 
-    const responseBody = await response.json()
-
-    if (!response.ok) {
-        throw new Error(
-            `${response.status} ${response.statusText}: ${JSON.stringify(
-                responseBody,
-            )}`,
-        )
-    }
-
-    return responseBody
-})
+//   return data as T
+// }
