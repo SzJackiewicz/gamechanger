@@ -1,5 +1,3 @@
-import { cache } from 'react'
-
 type ApiResponse = {
   data: object
 }
@@ -23,45 +21,43 @@ export type PerformRequestParams = {
 
 //TODO przerobić na react-query, stan lub cos innego
 
-const apiFetch = cache(
-  async ({
-    body,
-    includeDrafts = false,
-    excludeInvalid = false,
-    visualEditingBaseUrl = null,
-    revalidate,
-  }: ApiFetchParams): Promise<ApiResponse> => {
-    const headers: { [key: string]: string } = {
-      Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
-      ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
-      ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
-      ...(visualEditingBaseUrl
-        ? {
-            'X-Visual-Editing': 'vercel-v1',
-            'X-Base-Editing-Url': visualEditingBaseUrl,
-          }
-        : {}),
-      ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
-    }
-
-    const init = {
-      method: 'POST',
-      headers,
-      body,
-      ...(revalidate && { next: { revalidate } }),
-    }
-
-    const response = await fetch('https://graphql.datocms.com/', init)
-
-    const responseBody = await response.json()
-
-    if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
-    }
-
-    return responseBody
+const apiFetch = async ({
+  body,
+  includeDrafts = false,
+  excludeInvalid = false,
+  visualEditingBaseUrl = null,
+  revalidate,
+}: ApiFetchParams): Promise<ApiResponse> => {
+  const headers: { [key: string]: string } = {
+    Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
+    ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
+    ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
+    ...(visualEditingBaseUrl
+      ? {
+          'X-Visual-Editing': 'vercel-v1',
+          'X-Base-Editing-Url': visualEditingBaseUrl,
+        }
+      : {}),
+    ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
   }
-)
+
+  const init = {
+    method: 'POST',
+    headers,
+    body,
+    ...(revalidate && { next: { revalidate } }),
+  }
+
+  const response = await fetch('https://graphql.datocms.com/', init)
+
+  const responseBody = await response.json()
+
+  if (!response.ok) {
+    throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
+  }
+
+  return responseBody
+}
 
 export async function performRequest<T>({
   query,
