@@ -1,7 +1,8 @@
+'use client'
 import Link from 'next/link'
-import React, {useEffect, useState} from 'react'
-import {Navigation} from '@/types/types'
-import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react'
+import { Navigation } from '@/types/types'
+import { useRouter } from 'next/router'
 
 type HeaderProps = {
   handleOpen: () => void
@@ -10,11 +11,11 @@ type HeaderProps = {
   navigation: Navigation[]
 }
 
-const isActiveRoute = (currentRoute: string, targetRoute:string) => {
+const isActiveRoute = (currentRoute: string, targetRoute: string) => {
   if (targetRoute === '/') {
-    return currentRoute === '/' ? 'active' : 'color-gray-500';
+    return currentRoute === '/' ? 'active' : 'color-gray-500'
   } else {
-    return currentRoute.startsWith(targetRoute) ? 'active' : 'color-gray-500';
+    return currentRoute.startsWith(targetRoute) ? 'active' : 'color-gray-500'
   }
 }
 
@@ -34,7 +35,7 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
       document.removeEventListener('scroll', handleScroll)
     }
   })
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
