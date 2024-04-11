@@ -32,7 +32,7 @@ export const Supporters = ({ title }: { title: string }) => {
       <div className='text-center mb-40'>
         <h3 className='color-linear d-inline-block wow animate__animated animate__fadeInUp'>{title}</h3>
       </div>
-      <div className='box-testimonials mb-150animate__fadeIn mb-100'>
+      <div className='box-testimonials mb-150animate__fadeIn mb-50'>
         <div className='box-swiper' />
         <div className='swiper-container swiper-group-3'>
           <Swiper
@@ -99,10 +99,6 @@ export const Supporters = ({ title }: { title: string }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className='swiper-buttons'>
-            <div className='swiper-button-prev swiper-button-prev-style-3' />
-            <div className='swiper-button-next swiper-button-next-style-3' />
-          </div>
         </div>
       </div>
     </>

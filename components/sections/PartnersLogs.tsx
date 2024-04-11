@@ -1,6 +1,5 @@
-'use client'
+'use server'
 
-import Link from 'next/link'
 import Brand from '@/components/slider/Brand'
 
 export const PartnersLogs = () => {
@@ -13,14 +12,7 @@ export const PartnersLogs = () => {
         <div
           className='col-lg-3 text-lg-end mt-15 hover-up wow animate__animated animate__fadeIn'
           data-wow-delay='0.2s'
-        >
-          <Link
-            className='link-brand-1'
-            href='#'
-          >
-            Zobacz więcej
-          </Link>
-        </div>
+        />
       </div>
       <div className='list-logos mt-50 mb-30'>
         <div className='container'>
