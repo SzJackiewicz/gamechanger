@@ -33,23 +33,6 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
       <div className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900 ${openClass}`}>
         <div className='mobile-header-wrapper-inner'>
           <div className='mobile-header-content-area'>
-            <div className='mobile-logo border-gray-800'>
-              <Link
-                className='d-flex'
-                href='/'
-              >
-                <img
-                  className='logo-night'
-                  alt='GenZ'
-                  src='/assets/imgs/template/logo.svg'
-                />
-                <img
-                  className='d-none logo-day'
-                  alt='GenZ'
-                  src='/assets/imgs/template/logo-day.svg'
-                />
-              </Link>
-            </div>
             <div className='perfect-scroll'>
               <div className='mobile-menu-wrap mobile-header-border'>
                 <nav className='mt-15'>
