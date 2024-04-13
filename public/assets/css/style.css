@@ -4395,6 +4395,12 @@ input {
   padding: 0 5%;
 }
 
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /***************************
     Page section margin 
 ****************************/
@@ -4496,6 +4502,11 @@ input {
 
 .mt-25 {
   margin-top: 25px !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .mt-30 {
@@ -5748,7 +5759,6 @@ iframe.google-map {
   background-position: top 50px center;
   border-radius: 16px;
   text-align: center;
-  margin: 50px 0px;
 }
 
 .content-detail {
