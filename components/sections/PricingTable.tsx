@@ -1,3 +1,5 @@
+'use server'
+
 import Link from 'next/link'
 import React from 'react'
 
@@ -5,11 +7,7 @@ export const PricingTable = () => {
   return (
     <>
       <div className='text-center mt-30 mb-50'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>
-          The best work solution,
-          <br />
-          for the best price.
-        </h2>
+        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wesprzyj nas</h2>
       </div>
       <div className='row mt-50 mb-30'>
         <div

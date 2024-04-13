@@ -12,7 +12,7 @@ function Breadcrumb({ title }) {
         </Link>
       </li>
       <li>
-        <Link href='/blog-archive'>Blog</Link>
+        <Link href='/blog-archive'>Aktualności</Link>
       </li>
       <li>
         <span>{title}</span>

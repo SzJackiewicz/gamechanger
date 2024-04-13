@@ -69,7 +69,7 @@ const data = [
     title: 'Your Light Is About To Stop Being Relevant',
     excerpt:
       "Navigate the transformative journey of personal growth, as you adapt to life's changes and emerge stronger, ready to embrace new possibilities",
-    img: 'img7.png',
+    img: 'img6.png',
     category: 'Technology',
     author: 'author.jpg',
     authorname: 'Elither',
@@ -82,7 +82,7 @@ const data = [
     title: 'Your Light Is About To Stop Being Relevant',
     excerpt:
       'Embark on a profound quest for inner serenity through mindfulness practices, fostering a sense of peace and balance in your daily life',
-    img: 'img8.png',
+    img: 'img3.png',
     category: 'Sport',
     author: 'author.jpg',
     authorname: 'Etains',
@@ -95,12 +95,25 @@ const data = [
     title: 'Master The Art Of Nature With These 7 Tips',
     excerpt:
       'Embrace the boundless realm of creativity, tapping into your artistic spirit to express yourself freely and unlock untapped potential',
-    img: 'img9.png',
+    img: 'img5.png',
     category: 'Events',
     author: 'author.jpg',
     authorname: 'Lufffi',
     date: '68 August 2023',
     duration: '18',
+    tags: ['Travel', 'Lifestyle'],
+  },
+  {
+    id: 10,
+    title: 'Your Light Is About To Stop Being Relevant',
+    excerpt:
+      "Navigate the transformative journey of personal growth, as you adapt to life's changes and emerge stronger, ready to embrace new possibilities",
+    img: 'img4.png',
+    category: 'Technology',
+    author: 'author.jpg',
+    authorname: 'Elither',
+    date: '25 April 2023',
+    duration: '14',
     tags: ['Travel', 'Lifestyle'],
   },
 ]
