@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from '../../types/types'
+import { Navigation } from '../../../types/types'
 import { SupportUsLayout } from '@/components/pagesLayout/SupportUsLayout/SupportUsLayout'
 
 const articleText =
@@ -10,9 +10,10 @@ export default function SupportUs({ navigation }: { navigation: Navigation }) {
     <SupportUsLayout
       navigation={navigation}
       articleText={articleText}
-      title='Wesprzyj nas'
+      withForm
+      partners
+      title='Dla firm'
       subtitle='Wesprzyj nas w naszej działalności'
-      pricingComponent
     />
   )
 }

@@ -25,7 +25,10 @@ export default function PageAbout({ navigation }: { navigation: Navigation }) {
                           className='col-lg-6'
                           key={i}
                         >
-                          <div className='card-blog-1 hover-up wow animate__animated animate__fadeIn'>
+                          <div
+                            className='card-blog-1 hover-up wow animate__animated animate__fadeIn'
+                            data-wow-delay='.2s'
+                          >
                             <div className='card-image mb-20'>
                               <Link href={`/aktualnosci/${item.id}`}>
                                 <img
@@ -35,7 +38,7 @@ export default function PageAbout({ navigation }: { navigation: Navigation }) {
                               </Link>
                             </div>
                             <div className='card-info'>
-                              <Link href={`/blog/${item.id}`}>
+                              <Link href={`/aktualnosci/${item.id}`}>
                                 <h4 className='color-white mt-20'>{item.title} </h4>
                                 <h6 className='color-white mt-20'>Podtytuł Podtytuł Podtytuł Podtytuł Podtytuł</h6>
                               </Link>
@@ -50,7 +53,7 @@ export default function PageAbout({ navigation }: { navigation: Navigation }) {
                                 <div className='col-5 text-end'>
                                   <Link
                                     className='readmore color-gray-500 text-sm'
-                                    href={`/blog/${item.id}`}
+                                    href={`/aktualnosci/${item.id}`}
                                   >
                                     <span>Czytaj</span>
                                   </Link>

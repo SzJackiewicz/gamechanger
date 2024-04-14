@@ -4,7 +4,7 @@ import { PortfolioFilter } from '../../components/elements/PortfolioFilter'
 import Layout from '../../components/layout/Layout'
 import { Testimonial } from '../../components/slider/Testimonial'
 import Pagination from '../../components/elements/Pagination'
-import MyServices from '../../components/sections/MyServices'
+import { BoardMembers } from '../../components/sections/BoardMembers'
 import { Navigation } from '../../types/types'
 
 const Portfolio = ({ navigation }: { navigation: Navigation }) => {
@@ -32,7 +32,7 @@ const Portfolio = ({ navigation }: { navigation: Navigation }) => {
                   show={6}
                 />
                 <Pagination />
-                <MyServices />
+                <BoardMembers />
                 <Testimonial />
               </div>
             </div>

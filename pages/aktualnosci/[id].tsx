@@ -31,7 +31,10 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
                   />
                 </div>
 
-                <div className='box-author col-lg-9 m-auto'>
+                <div
+                  className='box-author col-lg-9 m-auto'
+                  data-wow-delay='.2s'
+                >
                   <img
                     src='/assets/imgs/page/about/author2.png'
                     alt='Genz'
@@ -42,11 +45,14 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
                     <span className='color-gray-700 text-sm'>3 minuty czytania</span>
                   </div>
                 </div>
-                <div className='col-lg-9 m-auto'>
+                <div
+                  className='col-lg-9 m-auto'
+                  data-wow-delay='.2s'
+                >
                   <div className='row mb-40'>
                     <div className='col-md-6 mb-10' />
                   </div>
-                  <SingleContent />
+                  <SingleContent data-wow-delay='.2s' />
                 </div>
               </div>
             </div>

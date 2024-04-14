@@ -30,7 +30,7 @@ const Brand = () => {
         >
           <a href='#'>
             <img
-              src={`assets/imgs/page/homepage3/${item.img}`}
+              src={`/assets/imgs/page/homepage3/${item.img}`}
               alt='partner logo'
             />
           </a>

@@ -4,7 +4,7 @@ import { PortfolioFilter } from '../../components/elements/PortfolioFilter'
 import Layout from '../../components/layout/Layout'
 import { Testimonial } from '../../components/slider/Testimonial'
 import { PricingTable } from '../../components/sections/PricingTable'
-import MyServices from '../../components/sections/MyServices'
+import { BoardMembers } from '../../components/sections/BoardMembers'
 import { PartnersLogs } from '../../components/sections/PartnersLogs'
 import { Navigation } from '@/types/types'
 
@@ -20,7 +20,7 @@ export default function PageAbout({ navigation }: { navigation: Navigation }) {
             <div className='row'>
               <div className='col-xl-1' />
               <div className='col-xl-10 col-lg-12'>
-                <MyServices />
+                <BoardMembers />
                 <div className='text-center mt-70 mb-50'>
                   <h2 className='color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp'>My Latest Projects</h2>
                   <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>
