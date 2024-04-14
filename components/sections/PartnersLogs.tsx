@@ -17,7 +17,10 @@ export const PartnersLogs = () => {
       <div className='list-logos mt-50 mb-30'>
         <div className='container'>
           <div className='row'>
-            <div className='swiper-container swiper-group-1'>
+            <div
+              className='swiper-container swiper-group-1'
+              data-wow-delay='.2s'
+            >
               <Brand />
             </div>
           </div>
