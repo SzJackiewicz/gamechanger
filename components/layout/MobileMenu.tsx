@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { Navigation } from '../../types/types'
+import { HeartFilled } from '@/public/assets/icons/HeartFilled'
 
 type MobileMenuProps = {
   openClass: string
@@ -44,21 +45,22 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
                           className={isActive.key === index ? 'has-children active' : 'has-children'}
                           onClick={() => handleToggle(index)}
                         >
-                          {item.subMenu.length > 0 && (
-                            <span className='menu-expand'>
-                              <i className='fi-rr-caret-down' />
-                            </span>
-                          )}
                           <Link href={item.slug}>{item.label}</Link>
                           {item.subMenu.length > 0 && (
-                            <ul className={isActive.key === index ? 'sub-menu d-block' : 'sub-menu d-none'}>
-                              {item?.subMenu?.map((subItem, index) => (
-                                <li key={index}>
-                                  <Link href={`${item.slug}/${subItem.slug}`}>{subItem.name}</Link>
-                                </li>
-                              ))}
-                            </ul>
+                            <>
+                              <span className='menu-expand'>
+                                <i className='fi-rr-caret-down' />
+                              </span>
+                              <ul className={isActive.key === index ? 'sub-menu d-block' : 'sub-menu d-none'}>
+                                {item?.subMenu?.map((subItem, subIndex) => (
+                                  <li key={subIndex}>
+                                    <Link href={`${item.slug}/${subItem.slug}`}>{subItem.name}</Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
                           )}
+                          {index === 0 && <HeartFilled />}
                         </li>
                       ))}
                   </ul>

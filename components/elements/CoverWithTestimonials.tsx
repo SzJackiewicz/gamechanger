@@ -3,10 +3,10 @@ import React from 'react'
 type Props = {
   title?: string
   subtitle?: string
-  img?:string
+  img?: string
 }
 
-export const CoverWithTestimonials = ({ title, subtitle, img }: Props) => {
+export const CoverWithTestimonials = ({ title, subtitle }: Props) => {
   // img przekazać do styli
   return (
     <div className='cover-relative m-auto'>

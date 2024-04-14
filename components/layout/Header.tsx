@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Navigation } from '@/types/types'
 import { useRouter } from 'next/router'
+import { HeartFilled } from '@/public/assets/icons/HeartFilled'
 
 type HeaderProps = {
   handleOpen: () => void
@@ -68,6 +69,7 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
                           href={`/${item.slug}`}
                         >
                           {item.name}
+                          {index === 0 && <HeartFilled />}
                         </Link>
                         {item.subMenu.length > 0 && (
                           <ul className='sub-menu'>

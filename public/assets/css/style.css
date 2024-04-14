@@ -2342,7 +2342,7 @@ input {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  display: block;
+  display: flex;
   padding: 13px 17px;
   text-decoration: none;
   position: relative;
@@ -5230,6 +5230,29 @@ input {
   vertical-align: middle;
 }
 
+.heart-icon {
+  display: inline-block;
+  animation: beat 1.9s infinite;
+  margin: 0 0 1px 4px;
+  padding-top: 1px;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+
 .main-color-text {
   color: #34cc99 !important;
 }
@@ -5690,11 +5713,14 @@ iframe.google-map {
   z-index: 2;
 }
 
+.margin-auto {
+  margin: 0 auto;
+}
+
 .box-features {
   padding: 30px 70px;
   border-radius: 20px;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #34cc9989;
   position: relative;
   z-index: 2;
 }
@@ -7041,6 +7067,9 @@ iframe.google-map {
 }
 .theme-day .header .main-menu li ul {
   background: #e8edf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #e9eef5;
   box-shadow: none;
 }

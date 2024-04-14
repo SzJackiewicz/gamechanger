@@ -8,7 +8,7 @@ import { PartnersLogs } from '../../components/sections/PartnersLogs'
 import { Navigation } from '../../types/types'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
 
-export default function PageAbout({ navigation }: { navigation: Navigation }) {
+export default function AboutPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
@@ -18,23 +18,14 @@ export default function PageAbout({ navigation }: { navigation: Navigation }) {
         <div className='cover-home1'>
           <div className='container'>
             <CoverWithTestimonials
-              title='Misja'
-              subtitle='Podtytuł'
+              title='Treść mówiąca o naszej misji'
+              subtitle='Subtytuł kontynuujący treść dotyczącą misji fundacji'
             />
             <div className='row'>
-              <div className='col-xl-1' />
-              <div className='col-xl-10 col-lg-12'>
+              <div className='col-xl-10 col-lg-10 margin-auto'>
                 <BoardMembers title='Zarząd' />
                 <BoardMembers title='Rada fundacji' />
                 <BoardMembers title='Pomagają razem z nami' />
-                <div className='text-center mt-70 mb-50'>
-                  <h2 className='color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp'>My Latest Projects</h2>
-                  <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>
-                    The convention is the main event of the year for professionals in
-                    <br className='d-none d-lg-block' />
-                    the world of design and architecture.
-                  </p>
-                </div>
                 <div className='text-center mt-30'>
                   <h2
                     className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'

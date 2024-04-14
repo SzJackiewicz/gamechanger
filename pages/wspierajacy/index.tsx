@@ -7,7 +7,7 @@ import Pagination from '../../components/elements/Pagination'
 import { BoardMembers } from '../../components/sections/BoardMembers'
 import { Navigation } from '../../types/types'
 
-const Portfolio = ({ navigation }: { navigation: Navigation }) => {
+export const SupportersPage = ({ navigation }: { navigation: Navigation }) => {
   return (
     <>
       <Head>
@@ -42,4 +42,3 @@ const Portfolio = ({ navigation }: { navigation: Navigation }) => {
     </>
   )
 }
-export default Portfolio

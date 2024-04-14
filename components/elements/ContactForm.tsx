@@ -16,7 +16,7 @@ export const ContactForm = () => {
     formState: { errors },
   } = useForm<IFormInput>()
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  const onSubmit: SubmitHandler<IFormInput> = () => {
     alert('Formularz został wysłany!')
   }
 

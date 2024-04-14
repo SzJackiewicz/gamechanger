@@ -92,7 +92,7 @@ export const Testimonial = () => {
                       />
                       <div className='card-info card-bg-2'>
                         <div className='info-bottom mb-15'>
-                          <h3 className='color-white mb-10'>Przykładowy tytuł</h3>
+                          <h3 className='color-white mb-10'>Forma wsparcia</h3>
                         </div>
                       </div>
                     </Link>

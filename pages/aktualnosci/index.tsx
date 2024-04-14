@@ -5,7 +5,7 @@ import { Navigation } from '../../types/types'
 import data from '@/utils/blogData2'
 import Link from 'next/link'
 
-export default function PageAbout({ navigation }: { navigation: Navigation }) {
+export default function NewsPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
