@@ -7,7 +7,7 @@ import Pagination from '../../components/elements/Pagination'
 import { BoardMembers } from '../../components/sections/BoardMembers'
 import { Navigation } from '../../types/types'
 
-export const SupportersPage = ({ navigation }: { navigation: Navigation }) => {
+export default function SupportersPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
