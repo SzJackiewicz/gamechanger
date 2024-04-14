@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
-import Pagination from '@/components/elements/Pagination'
 
 export default function PageSearch() {
   return (
@@ -384,7 +383,6 @@ export default function PageSearch() {
                           </div>
                         </div>
                       </div>
-                      <Pagination />
                     </div>
                   </div>
                 </div>

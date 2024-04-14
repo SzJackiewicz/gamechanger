@@ -1,10 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import Layout from '../../components/layout/Layout'
-import SingleContent from '../../components/sections/SingleContent'
-import { Navigation } from '../../types/types'
+import Layout from '../../../components/layout/Layout'
+import SingleContent from '../../../components/sections/SingleContent'
+import { Navigation } from '../../../types/types'
 
-export default function HelpPage({ navigation }: { navigation: Navigation }) {
+export default function SupportersSubPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ export default function HelpPage({ navigation }: { navigation: Navigation }) {
                     <div className='image-detail mb-30'>
                       <img
                         className='bdrd16'
-                        src='assets/imgs/page/single/img6.jpg'
+                        src='/assets/imgs/page/single/img6.jpg'
                         alt='Genz'
                       />
                     </div>

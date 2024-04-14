@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
-import Pagination from '@/components/elements/Pagination'
 import data from '@/utils/blogData'
 
 export default function PageAuthor() {
@@ -151,7 +150,6 @@ export default function PageAuthor() {
                         </div>
                       ))}
                     </div>
-                    <Pagination />
                   </div>
                 </div>
               </div>

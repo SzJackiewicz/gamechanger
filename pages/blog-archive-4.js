@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
-import Pagination from '@/components/elements/Pagination'
 import PageHeader1 from '@/components/elements/PageHeader1'
-import SidebarBottom from '@/components/sections/SidebarBottom'
 import data from '@/utils/blogData'
 
 export default function Archive4() {
@@ -95,10 +93,8 @@ export default function Archive4() {
                       </div>
                     ))}
                   </div>
-                  <Pagination />
                 </div>
                 <div className='mb-70' />
-                <SidebarBottom />
               </div>
             </div>
           </div>

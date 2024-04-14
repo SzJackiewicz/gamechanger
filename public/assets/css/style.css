@@ -332,9 +332,8 @@ input[type='number']:focus,
 }
 
 .card-hover-border {
-  border: 1px solid #222f43;
+  border: 1px solid #34cc99;
 }
-/* 34CC99 */
 
 .card-hover-border:hover {
   background:
@@ -1665,11 +1664,8 @@ input {
   position: relative;
   width: 100%;
   border-radius: 16px;
-  border-width: 1px;
-  border-style: solid;
   margin-bottom: 30px;
-  border: 1px solid #222f43;
-  background-color: #1a1a1a;
+  border: 1px solid #34cc9989;
 }
 .card-blog-1 .card-image {
   position: relative;
@@ -1768,7 +1764,7 @@ input {
   background-position: bottom right;
 }
 .card-pricing:hover {
-  border-color: #66768f !important;
+  border-color: #34cc99 !important;
   background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
 }
 .card-pricing .lbl-danger {
@@ -2374,8 +2370,7 @@ input {
   border-radius: 0 0 4px 4px;
   padding: 8px 0px 8px 0;
   background: #1a1a1a;
-  /* Gray/800 [night] */
-  border: 1px solid #222f43;
+  border: 1px solid #34cc99;
   box-shadow: 0px 23.1405px 69.4215px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
 }
@@ -2465,7 +2460,7 @@ input {
 }
 .switch-button .form-check-input:checked {
   background-color: #222f43;
-  border-color: #222f43;
+  border-color: #34cc99;
 }
 .switch-button .form-switch .form-check-input:checked {
   background-position: right 2px center;
@@ -5391,7 +5386,27 @@ input {
 }
 
 .font-md-clamp {
-  font-size: clamp(19px, 0.61vi + 17.58px, 21.33px);
+  font-size: clamp(19px, 0.61vi + 12.58px, 21.33px);
+  line-height: 1.6;
+}
+/* 
+--font-size-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+--font-size-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+--font-size-lg: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+--font-size-xl: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+--font-size-2xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+--font-size-3xl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+--font-size-4xl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+--font-size-5xl: clamp(3.81rem, 5.18vi + 2.52rem, 6.66rem);
+--font-size-6xl: clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem); */
+
+.font-xl-clamp {
+  font-size: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  line-height: 1.6;
+}
+
+.font-l-clamp {
+  font-size: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
   line-height: 1.6;
 }
 

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import Breadcrumb from '@/components/elements/Breadcrumb'
-import Pagination from '@/components/elements/Pagination'
 import data from '@/utils/blogData2'
 
 export default function Archive3() {
@@ -92,7 +91,6 @@ export default function Archive3() {
                           </div>
                         ))}
                       </div>
-                      <Pagination />
                     </div>
                   </div>
                 </div>

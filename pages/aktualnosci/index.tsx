@@ -9,7 +9,7 @@ export default function NewsPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
       <Head>
-        <title>Genz - About me</title>
+        <title>O nas</title>
       </Head>
       <Layout navigation={navigation}>
         <div className='cover-home3'>

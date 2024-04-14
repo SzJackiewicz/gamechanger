@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import PopularCategories from '@/components/sections/PopularCategories'
 import Sidebar2 from '@/components/layout/Sidebar2'
-import Pagination from '@/components/elements/Pagination'
 import PageHeader1 from '@/components/elements/PageHeader1'
 import data from '@/utils/blogData2'
 
@@ -120,7 +119,6 @@ export default function Archive2() {
                           )
                         )}
                       </div>
-                      <Pagination />
                     </div>
                     <div className='col-lg-4'>
                       <Sidebar2 />

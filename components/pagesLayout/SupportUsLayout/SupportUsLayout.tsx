@@ -37,7 +37,7 @@ export const SupportUsLayout = ({
       </Head>
       <Layout navigation={navigation}>
         <div className='row'>
-          <div className='col-xl-12'>
+          <div className='col-xl-12 wow animate__animated animate__fadeInUp'>
             <CoverWithTestimonials
               title={title}
               subtitle={subtitle}
@@ -49,13 +49,13 @@ export const SupportUsLayout = ({
         {articleText && (
           <>
             <div
-              className='col-xl-8 row mx-auto center-flex text-center font-md-clamp color-gray-500 mt-30 mb-20 w-75'
+              className='col-xl-8 row mx-auto center-flex text-center font-md-clamp color-gray-500 mt-30 mb-20 w-75 wow animate__animated animate__fadeInUp'
               data-wow-delay='.2s'
             >
               {articleText}
             </div>
             <div
-              className='col-xl-8 row mx-auto center-flex text-center font-md-clamp color-gray-500 mt-30 mb-20 w-75'
+              className='col-xl-8 row mx-auto center-flex text-center font-md-clamp color-gray-500 mt-30 mb-20 w-75 wow animate__animated animate__fadeInUp'
               data-wow-delay='.2s'
             >
               {articleText}

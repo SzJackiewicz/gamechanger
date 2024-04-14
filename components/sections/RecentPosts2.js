@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import data from '@/utils/blogData'
-import Pagination from '@/components/elements/Pagination'
 
 const RecentPosts2 = () => {
   return (
@@ -63,7 +62,6 @@ const RecentPosts2 = () => {
             </div>
           ))}
         </div>
-        <Pagination />
       </div>
     </>
   )

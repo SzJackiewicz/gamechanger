@@ -8,7 +8,7 @@ const PortfolioDetails = () => {
   return (
     <>
       <Head>
-        <title>Genz - Portfolio Details</title>
+        <title>Wspierają nas</title>
       </Head>
       <Layout>
         <div className='cover-home3'>
