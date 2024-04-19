@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import React from 'react'
-import data from '@/utils/blogData2'
 import { useWindowSize } from 'usehooks-ts'
+import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 
 export const AditionalPosts = () => {
   const { width = 0 } = useWindowSize()
 
   if (width > 500) {
-    return data.slice(1, 4).map((item, i) => (
+    return heroSectionData.slice(1, 4).map((item, i) => (
       <div
         className='card-list-posts wow animate__animated animate__fadeIn'
         data-wow-delay={`${i / 10}s`}
@@ -18,7 +18,7 @@ export const AditionalPosts = () => {
         <div className='card-image hover-up mt-5'>
           <Link href={`/aktualnosci/${item.id}`}>
             <img
-              src={`/assets/imgs/page/healthy/${item.img}`}
+              src={`${item.cover}`}
               alt='Gamechanger'
             />
           </Link>
@@ -28,17 +28,17 @@ export const AditionalPosts = () => {
             className='btn btn-tag bg-gray-800 hover-up'
             href={`/aktualnosci/${item.id}`}
           >
-            {item.category}
+            ZDROWIE
           </Link>
           <Link href={`/aktualnosci/${item.id}`}>
-            <h4 className='mt-15 mb-20 color-white text-xl'>{item.title}</h4>
+            <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
-          <p className='color-gray-500'>{item.excerpt}</p>
+          <p className='color-gray-500 text-md'>{item.subtitle}</p>
         </div>
       </div>
     ))
   } else {
-    return data.slice(1, 4).map((item, i) => (
+    return heroSectionData.slice(1, 4).map((item, i) => (
       <div
         className='card-style-1 hover-up wow animate__animated animate__fadeIn'
         data-wow-delay='.0s'
@@ -50,8 +50,9 @@ export const AditionalPosts = () => {
             href='/single-sidebar'
           >
             <img
-              src={`/assets/imgs/page/homepage3/${item.img}`}
+              src={`${item.cover}`}
               alt='Article main cover'
+              className='img-opacity'
             />
             <div className='card-info card-bg-2'>
               <div className='info-bottom mb-15'>
@@ -59,7 +60,7 @@ export const AditionalPosts = () => {
                 <h6 className='color-white mb-15'>Podtytuł Podtytuł Podtytuł Podtytuł Podtytuł</h6>
                 <div className='box-author'>
                   <div className='author-info'>
-                    <span className='color-gray-700 text-sm'>{item.date}</span>
+                    <span className='color-gray-200 text-sm'>{item.subtitle}</span>
                   </div>
                 </div>
               </div>

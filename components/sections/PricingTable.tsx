@@ -5,15 +5,15 @@ import React from 'react'
 
 export const PricingTable = () => {
   return (
-    <>
+    <div
+      className='wow animate__animated animate__fadeInUp'
+      data-wow-delay='.2s'
+    >
       <div className='text-center mt-30 mb-10'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wesprzyj nas</h2>
+        <h2 className='color-linear d-inline-block mb-10'>Wesprzyj nas</h2>
       </div>
       <div className='row mt-50 mb-30'>
-        <div
-          className='col-lg-4 wow animate__animated animate__fadeIn'
-          data-wow-delay='.0s'
-        >
+        <div className='col-lg-4'>
           <div className='card-pricing border-gray-800 bg-gray-850 mb-30'>
             <div className='card-pricing-top border-gray-800'>
               <h4 className='color-white mb-10'>Jednorazowo</h4>
@@ -37,10 +37,7 @@ export const PricingTable = () => {
             </div>
           </div>
         </div>
-        <div
-          className='col-lg-4 wow animate__animated animate__fadeIn'
-          data-wow-delay='.2s'
-        >
+        <div className='col-lg-4'>
           <div className='card-pricing border-gray-800 bg-gray-850 mb-30'>
             <div className='card-pricing-top border-gray-800'>
               <h4 className='color-white mb-10'>Co miesiąc</h4>
@@ -64,10 +61,7 @@ export const PricingTable = () => {
             </div>
           </div>
         </div>
-        <div
-          className='col-lg-4 wow animate__animated animate__fadeIn'
-          data-wow-delay='.4s'
-        >
+        <div className='col-lg-4'>
           <div className='card-pricing border-gray-800 bg-gray-850 mb-30'>
             <div className='card-pricing-top border-gray-800'>
               <h4 className='color-white mb-10'>1.5%</h4>
@@ -92,6 +86,6 @@ export const PricingTable = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

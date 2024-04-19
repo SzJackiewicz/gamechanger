@@ -587,7 +587,7 @@ h6 {
 }
 
 .color-white {
-  color: #b9e0f2 !important;
+  color: #e8eef1 !important;
 }
 
 .border-gray-800 {
@@ -1629,16 +1629,20 @@ input {
 .card-style-1 .card-image .link-post:hover h4 {
   color: #34cc99 !important;
 }
+
+.img-opacity {
+  filter: brightness(0.6);
+}
+
 .card-style-1 .card-image .card-info {
   position: absolute;
   bottom: 0px;
   height: 100%;
   width: 100%;
   border-radius: 8px;
-  background: url(../imgs/page/homepage1/bg-trans.png) repeat-x left bottom;
 }
 .card-style-1 .card-image .card-info.card-bg-2 {
-  background: url(../imgs/page/homepage3/bg-trans.png) repeat-x left bottom;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .card-style-1 .card-image .card-info .info-bottom {
   position: absolute;
@@ -1729,9 +1733,22 @@ input {
 .card-list-posts:hover h5.color-white {
   color: #34cc99 !important;
 }
+
+.go-to-payment {
+  background-color: #34cc995d;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid #0bd196;
+  margin: 10px auto;
+}
+
 .card-list-posts .card-image {
-  width: 210px;
-  min-width: 210px;
+  width: 170px;
+  min-width: 190px;
   margin-right: 20px;
 }
 .card-list-posts .card-image img {
@@ -1755,18 +1772,48 @@ input {
   min-width: 170px;
 }
 
+.support-us-form {
+  border: 1px solid #34cc99;
+  border-radius: 16px;
+}
+
 .card-pricing {
   border-width: 1px;
   border-style: solid;
   border-radius: 16px;
-  padding: 25px;
+  padding: 20px;
+  position: relative;
+  background-position: bottom right;
+  cursor: pointer;
+}
+
+.payment-methods {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
   position: relative;
   background-position: bottom right;
 }
+
 .card-pricing:hover {
   border-color: #34cc99 !important;
   background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
 }
+
+.support-us-option {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 16px;
+  padding: 15px;
+  position: relative;
+}
+
+.card-pricing-clicked {
+  border-color: #34cc99 !important;
+  background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
+}
+
 .card-pricing .lbl-danger {
   border-radius: 16px;
   padding: 5px 15px;
@@ -1775,6 +1822,11 @@ input {
   top: 30px;
   right: 20px;
 }
+
+.main-color-text {
+  color: #6cffc1;
+}
+
 .card-pricing .lbl-success {
   border-radius: 16px;
   padding: 5px 15px;
@@ -1784,9 +1836,6 @@ input {
   right: 20px;
 }
 .card-pricing .card-pricing-top {
-  padding-bottom: 30px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
   margin-bottom: 30px;
 }
 

@@ -6,6 +6,7 @@ import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonia
 import { ContactForm } from '@/components/elements/ContactForm'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { PricingTable } from '@/components/sections/PricingTable'
+import { SupportUsForm } from '@/components/sections/SupportUsForm/SupportUsForm'
 
 type SupportUsLayoutProps = {
   withForm?: boolean
@@ -37,15 +38,15 @@ export const SupportUsLayout = ({
       </Head>
       <Layout navigation={navigation}>
         <div className='row'>
-          <div className='col-xl-12 wow animate__animated animate__fadeInUp'>
+          <div className='col-xl-12 '>
             <CoverWithTestimonials
               title={title}
               subtitle={subtitle}
               img={img}
-              data-wow-delay='.1s'
             />
           </div>
         </div>
+        <SupportUsForm />
         {articleText && (
           <>
             <div
@@ -79,7 +80,10 @@ export const SupportUsLayout = ({
           </div>
         )}
         {pricingComponent && (
-          <div className='col-xl-8 row mx-auto'>
+          <div
+            className='col-xl-8 row mx-auto wow animate__animated animate__fadeInUp'
+            data-wow-delay='.3s'
+          >
             <PricingTable />
           </div>
         )}

@@ -4,8 +4,12 @@ import Breadcrumb from '../../components/elements/Breadcrumb'
 import { Navigation } from '@/types/types'
 import SingleContent from '@/components/sections/SingleContent'
 import { PricingTable } from '@/components/sections/PricingTable'
+import { useRouter } from 'next/router'
+import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 
-const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
+export default function BlogDetails({ navigation }: { navigation: Navigation }) {
+  const router = useRouter()
+
   return (
     <Layout navigation={navigation}>
       <div className='cover-home3'>
@@ -15,18 +19,18 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
             <div className='col-xl-10 col-lg-12'>
               <div className='pt-30 border-bottom border-gray-800 pb-20'>
                 <div className='box-breadcrumbs'>
-                  <Breadcrumb title='tytuł artykułu' />
+                  <Breadcrumb title={heroSectionData[Number(router.query.slug)].title} />
                 </div>
               </div>
               <div className='row mt-50 align-items-end'>
                 <div className='col-lg-8 m-auto text-center'>
-                  <h3 className='color-linear'>Digital Design That Will Help You Start Your Business</h3>
+                  <h3 className='color-linear'>{heroSectionData[Number(router.query.slug)].title}</h3>
                 </div>
               </div>
               <div className='mt-30'>
                 <div className='mb-3 center-flex'>
                   <img
-                    src='/assets/imgs/page/single/img.jpg'
+                    src={`${heroSectionData[Number(router.query.slug)].cover}`}
                     alt='Genz'
                   />
                 </div>
@@ -40,7 +44,7 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
                     alt='Genz'
                   />
                   <div className='author-info'>
-                    <h6 className='color-gray-700'>Jacek Szymkiewicz</h6>
+                    <h6 className='color-gray-700'>{heroSectionData[Number(router.query.slug)].author}</h6>
                     <span className='color-gray-700 text-sm mr-30'>25 April 2023</span>
                     <span className='color-gray-700 text-sm'>3 minuty czytania</span>
                   </div>
@@ -52,7 +56,10 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
                   <div className='row mb-40'>
                     <div className='col-md-6 mb-10' />
                   </div>
-                  <SingleContent data-wow-delay='.2s' />
+                  <SingleContent
+                    data-wow-delay='.2s'
+                    articleId={router.query.slug}
+                  />
                 </div>
               </div>
             </div>
@@ -63,5 +70,3 @@ const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
     </Layout>
   )
 }
-
-export default BlogDetails
