@@ -465,6 +465,15 @@ h3 {
   color: #000000;
 }
 
+h6,
+.heading-6 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 2rem);
+  line-height: 34px;
+  color: #000000;
+}
+
 h4,
 .heading-4 {
   font-family: 'Noto Sans', sans-serif;
@@ -1644,6 +1653,13 @@ input {
   border-radius: 8px;
   height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.613) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 69, 130, 0) 120%);
+
+  @media (max-width: 768px) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.613) 0%, rgba(0, 0, 0, 0.356) 30%, rgba(0, 69, 130, 0) 100%);
+  }
+  @media (max-width: 500px) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.504) 30%, rgba(0, 0, 0, 0.383) 50%, rgba(0, 69, 130, 0) 100%);
+  }
 }
 
 .card-style-1 .card-image .card-info {
@@ -5444,6 +5460,11 @@ input {
   padding: 0px 10px;
   min-width: 150px;
   max-width: 180px;
+}
+
+.font-sm-clamp {
+  font-size: clamp(14px, 0.61vi + 10.58px, 20.33px);
+  line-height: 1.4;
 }
 
 .font-md-clamp {

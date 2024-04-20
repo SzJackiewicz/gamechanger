@@ -54,13 +54,13 @@ export const AditionalPosts = () => {
               alt='Article main cover'
               className='img-opacity'
             />
+            <div className='img-backdrop' />
             <div className='card-info card-bg-2'>
               <div className='info-bottom mb-15'>
                 <h4 className='color-white mb-15'>{item.title}</h4>
-                <h6 className='color-white mb-15'>Podtytuł Podtytuł Podtytuł Podtytuł Podtytuł</h6>
                 <div className='box-author'>
                   <div className='author-info'>
-                    <span className='color-gray-200 text-sm'>{item.subtitle}</span>
+                    <h6 className='color-gray-200 font-sm-clamp'>{item.subtitle}</h6>
                   </div>
                 </div>
               </div>

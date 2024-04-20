@@ -26,7 +26,7 @@ export const MainSection = () => {
               <div className='card-info card-bg-2'>
                 <div className='info-bottom mb-15'>
                   <h4 className='color-white mb-15'>{heroSectionData[0].title}</h4>
-                  <h6 className='color-white mb-15'>{heroSectionData[0].subtitle}</h6>
+                  <h6 className='color-white mb-15 font-sm-clamp'>{heroSectionData[0].subtitle}</h6>
                   <div className='box-author'>
                     <div className='author-info'>
                       <span className='color-gray-100 text-md'>{heroSectionData[0].author}</span>
