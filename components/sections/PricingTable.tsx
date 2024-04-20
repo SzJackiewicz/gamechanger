@@ -23,7 +23,7 @@ export const PricingTable = () => {
                 className='btn btn-border-linear'
                 href='#'
               >
-                Jednorazowo
+                Wesprzyj nas
               </Link>
             </div>
             <div className='card-pricing-bottom'>
@@ -47,7 +47,7 @@ export const PricingTable = () => {
                 className='btn btn-border-linear'
                 href='#'
               >
-                Co miesiąc
+                Wesprzyj nas
               </Link>
             </div>
             <div className='card-pricing-bottom'>
@@ -64,14 +64,14 @@ export const PricingTable = () => {
         <div className='col-lg-4'>
           <div className='card-pricing border-gray-800 bg-gray-850 mb-30'>
             <div className='card-pricing-top border-gray-800'>
-              <h4 className='color-white mb-10'>1.5%</h4>
+              <h4 className='color-white mb-10'>Podaruj przedmiot</h4>
               <p className='text-lg color-gray-500 mb-15'>Best for personal use</p>
               <p className='text-base color-gray-500 mb-30'>Get started without creadit card or payment method</p>
               <Link
                 className='btn btn-border-linear'
                 href='#'
               >
-                1.5% podatku
+                Wesprzyj nas
               </Link>
             </div>
             <div className='card-pricing-bottom'>

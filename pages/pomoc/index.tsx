@@ -32,7 +32,7 @@ export default function HelpPage({ navigation }: { navigation: Navigation }) {
                     </div>
                   </div>
                   <div className='col-lg-8 m-auto'>
-                    <SingleContent />
+                    <SingleContent articleId='0'/>
                   </div>
                 </div>
               </div>
