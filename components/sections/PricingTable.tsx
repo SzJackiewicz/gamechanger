@@ -30,7 +30,6 @@ export const PricingTable = () => {
               <h6 className='color-white mb-25'>Co zyskujesz:</h6>
               <ul className='list-checked'>
                 <li>Unlimited Storage</li>
-                <li>Unlimited Members</li>
                 <li>Two-Factor Authentication</li>
                 <li>Collaborative Docs</li>
               </ul>
@@ -54,7 +53,6 @@ export const PricingTable = () => {
               <h6 className='color-white mb-25'>Co zyskujesz:</h6>
               <ul className='list-checked'>
                 <li>Unlimited Storage</li>
-                <li>Unlimited Members</li>
                 <li>Two-Factor Authentication</li>
                 <li>Collaborative Docs</li>
               </ul>
@@ -78,7 +76,6 @@ export const PricingTable = () => {
               <h6 className='color-white mb-25'>Co zyskujesz:</h6>
               <ul className='list-checked'>
                 <li>Unlimited Storage</li>
-                <li>Unlimited Members</li>
                 <li>Two-Factor Authentication</li>
                 <li>Collaborative Docs</li>
               </ul>

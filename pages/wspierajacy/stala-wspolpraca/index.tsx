@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import Layout from '../../../components/layout/Layout'
 import SingleContent from '../../../components/sections/SingleContent'
 import { Navigation } from '../../../types/types'
@@ -7,9 +6,6 @@ import { Navigation } from '../../../types/types'
 export default function SupportersSubPage({ navigation }: { navigation: Navigation }) {
   return (
     <>
-      <Head>
-        <title>Pomoc</title>
-      </Head>
       <Layout navigation={navigation}>
         <div className='cover-home3'>
           <div className='container'>
@@ -25,7 +21,6 @@ export default function SupportersSubPage({ navigation }: { navigation: Navigati
                   <div className='col-lg-12'>
                     <div className='image-detail mb-30'>
                       <img
-                        className='bdrd16'
                         src='/assets/imgs/page/single/img6.jpg'
                         alt='Genz'
                       />

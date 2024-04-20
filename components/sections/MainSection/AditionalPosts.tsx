@@ -19,7 +19,7 @@ export const AditionalPosts = () => {
           <Link href={`/aktualnosci/${item.id}`}>
             <img
               src={`${item.cover}`}
-              alt='Gamechanger'
+              alt='Article main cover'
             />
           </Link>
         </div>
@@ -33,14 +33,14 @@ export const AditionalPosts = () => {
           <Link href={`/aktualnosci/${item.id}`}>
             <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
-          <p className='color-gray-500 text-md'>{item.subtitle}</p>
+          <p className='color-gray-500 text-sm'>{item.subtitle}</p>
         </div>
       </div>
     ))
   } else {
     return heroSectionData.slice(1, 4).map((item, i) => (
       <div
-        className='card-style-1 hover-up wow animate__animated animate__fadeIn'
+        className='card-style-1 hover-up wow animate__animated animate__fadeIn mt-3'
         data-wow-delay='.0s'
         key={i}
       >

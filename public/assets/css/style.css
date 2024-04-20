@@ -1621,6 +1621,7 @@ input {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  background-color: transparent !important;
 }
 .card-style-1 .card-image img {
   width: 100%;
@@ -1631,7 +1632,18 @@ input {
 }
 
 .img-opacity {
-  filter: brightness(0.6);
+  position: relative;
+  margin-bottom: -3px;
+}
+
+.img-backdrop {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.613) 0%, rgba(0, 212, 255, 0) 50%, rgba(0, 69, 130, 0) 120%);
 }
 
 .card-style-1 .card-image .card-info {
@@ -1728,8 +1740,8 @@ input {
 .card-list-posts {
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
 }
+
 .card-list-posts:hover h5.color-white {
   color: #34cc99 !important;
 }
@@ -5674,9 +5686,9 @@ iframe.google-map {
 .box-list-posts {
   display: flex;
   height: 100%;
+  gap: 10px;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 30px;
 }
 
 .box-form-login {

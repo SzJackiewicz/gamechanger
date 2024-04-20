@@ -6,7 +6,6 @@ import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonia
 import { ContactForm } from '@/components/elements/ContactForm'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { PricingTable } from '@/components/sections/PricingTable'
-import { SupportUsForm } from '@/components/sections/SupportUsForm/SupportUsForm'
 
 type SupportUsLayoutProps = {
   withForm?: boolean
@@ -46,7 +45,6 @@ export const SupportUsLayout = ({
             />
           </div>
         </div>
-        <SupportUsForm />
         {articleText && (
           <>
             <div
