@@ -1691,15 +1691,64 @@ input {
   line-height: 20px !important;
 }
 
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card-blog-1 {
   padding: 20px;
   position: relative;
   width: 100%;
   border-radius: 16px;
   margin-bottom: 30px;
-  min-height: 737px;
+  min-height: 760px;
+  max-height: 760px;
   border: 1px solid #34cc9989;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    min-height: 650px;
+    max-height: 650px;
+  }
+
+  @media (max-width: 960px) {
+    min-height: 600px;
+    max-height: 600px;
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  @media (max-width: 760px) {
+    min-height: 540px;
+    max-height: 540px;
+    width: 85%;
+    margin: 10px auto;
+  }
+  @media (max-width: 500px) {
+    min-height: 500px;
+    max-height: 500px;
+  }
+  @media (max-width: 470px) {
+    min-height: 460px;
+    max-height: 460px;
+  }
 }
+
+.card-image {
+  @media (max-width: 992px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media (max-width: 400px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .card-blog-1 .card-image {
   position: relative;
 }
@@ -5464,12 +5513,12 @@ input {
 }
 
 .font-sm-clamp {
-  font-size: clamp(14px, 0.61vi + 10.58px, 20.33px);
+  font-size: clamp(14px, 0.61vi + 10.58px, 18.33px);
   line-height: 1.4;
 }
 
 .font-md-clamp {
-  font-size: clamp(19px, 0.61vi + 12.58px, 21.33px);
+  font-size: clamp(18px, 0.61vi + 12.58px, 21.33px);
   line-height: 1.6;
 }
 /* 

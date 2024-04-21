@@ -1,8 +1,10 @@
-import Link from 'next/link'
+'use server'
+
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import React from 'react'
 import { Navigation } from '../../types/types'
+import { ContactForm } from '@/components/elements/ContactForm'
 
 export default function PageContact({ navigation }: { navigation: Navigation }) {
   return (
@@ -11,7 +13,7 @@ export default function PageContact({ navigation }: { navigation: Navigation }) 
         <title>Gamechanger Kontact</title>
       </Head>
       <Layout navigation={navigation}>
-        <div className='row align-content-center justify-content-center align-items-baseline'>
+        <div className='row align-content-center justify-content-center align-items-baseline mx-5'>
           <div className='col-xxl-4'>
             <div className='text-center mt-70'>
               <h3 className='color-linear d-inline-block mb-30'>Skontaktuj się z nami</h3>
@@ -43,65 +45,7 @@ export default function PageContact({ navigation }: { navigation: Navigation }) 
             <div className='text-center'>
               <h3 className='color-linear d-inline-block mb-10'>Napisz do nas</h3>
             </div>
-            <div className='row mt-50'>
-              <div className='col-lg-6'>
-                <div className='form-group'>
-                  <input
-                    className='form-control bg-gray-850 border-gray-800 color-gray-500'
-                    type='text'
-                    placeholder='Imię *'
-                  />
-                </div>
-              </div>
-              <div className='col-lg-6'>
-                <div className='form-group'>
-                  <input
-                    className='form-control bg-gray-850 border-gray-800 color-gray-500'
-                    type='text'
-                    placeholder='Email *'
-                  />
-                </div>
-              </div>
-              <div className='col-lg-6'>
-                <div className='form-group'>
-                  <input
-                    className='form-control bg-gray-850 border-gray-800 color-gray-500'
-                    type='text'
-                    placeholder='Telefon *'
-                  />
-                </div>
-              </div>
-              <div className='col-lg-6'>
-                <div className='form-group'>
-                  <input
-                    className='form-control bg-gray-850 border-gray-800 color-gray-500'
-                    type='text'
-                    placeholder='Temat *'
-                  />
-                </div>
-              </div>
-              <div className='col-lg-12'>
-                <div className='form-group'>
-                  <textarea
-                    className='form-control bg-gray-850 border-gray-800 color-gray-500'
-                    rows={5}
-                    placeholder='Message *'
-                    defaultValue={''}
-                  />
-                </div>
-              </div>
-              <div className='col-lg-12'>
-                <div className='text-center mb-50'>
-                  <Link
-                    href='#'
-                    className='btn btn-linear btn-load-more btn-radius-8 hover-up'
-                  >
-                    Wyślij
-                    <i className='fi-rr-arrow-small-right' />
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </Layout>

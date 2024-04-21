@@ -39,8 +39,10 @@ export default function NewsPage({ navigation }: { navigation: Navigation }) {
                             </div>
                             <div className='card-info'>
                               <Link href={`/aktualnosci/${item.id}`}>
-                                <h4 className='color-white mt-20'>{item.title}</h4>
-                                <h6 className='color-gray-200 mt-20'>{item.subtitle}</h6>
+                                <h4 className='color-white mt-20 font-md-clamp'>{item.title}</h4>
+                                <div>
+                                  <h6 className='color-gray-200 mt-xl-20 mt-2 font-sm-clamp ellipsis'>{item.subtitle}</h6>
+                                </div>
                               </Link>
                               <div className='row align-items-center mt-25'>
                                 <div className='col-7'>

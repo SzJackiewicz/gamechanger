@@ -2,11 +2,11 @@ import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 interface IFormInput {
-  imie: string
+  name: string
   email: string
-  telefon: string
-  temat: string
-  wiadomosc: string
+  phone: string
+  subject: string
+  message: string
 }
 
 export const ContactForm = () => {
@@ -16,25 +16,29 @@ export const ContactForm = () => {
     formState: { errors },
   } = useForm<IFormInput>()
 
-  const onSubmit: SubmitHandler<IFormInput> = () => {
-    alert('Formularz został wysłany!')
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    // eslint-disable-next-line no-console
+    console.log({ data })
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      action='https://formsubmit.co/sz.jackiewicz@gmail.com'
+      method='POST'
+    >
       <div className='row mt-50'>
         <div className='col-lg-6'>
           <div className='form-group'>
             <input
               className='form-control bg-gray-850 border-gray-800 color-gray-500'
-              id='imie'
+              id='name'
               placeholder='Imię*'
-              {...register('imie', { required: true })}
+              {...register('name', { required: true })}
             />
-            {errors.imie && <span>To pole jest wymagane</span>}
+            {errors.name && <span>To pole jest wymagane</span>}
           </div>
         </div>
-
         <div className='col-lg-6'>
           <div className='form-group'>
             <input
@@ -54,23 +58,23 @@ export const ContactForm = () => {
           <div className='form-group'>
             <input
               className='form-control bg-gray-850 border-gray-800 color-gray-500'
-              id='telefon'
+              id='phone'
               type='tel'
               placeholder='Telefon*'
-              {...register('telefon', { required: true })}
+              {...register('phone', { required: true })}
             />
-            {errors.telefon && <span>To pole jest wymagane</span>}
+            {errors.phone && <span>To pole jest wymagane</span>}
           </div>
         </div>
         <div className='col-lg-6'>
           <div className='form-group'>
             <input
               className='form-control bg-gray-850 border-gray-800 color-gray-500'
-              id='temat'
+              id='subject'
               placeholder='Temat*'
-              {...register('temat', { required: true })}
+              {...register('subject', { required: true })}
             />
-            {errors.temat && <span>To pole jest wymagane</span>}
+            {errors.subject && <span>To pole jest wymagane</span>}
           </div>
         </div>
       </div>
@@ -79,11 +83,11 @@ export const ContactForm = () => {
         <div className='form-group'>
           <textarea
             className='form-control bg-gray-850 border-gray-800 color-gray-500'
-            id='wiadomosc'
+            id='message'
             placeholder='Wiadomość*'
-            {...register('wiadomosc', { required: true })}
+            {...register('message', { required: true })}
           />
-          {errors.wiadomosc && <span>To pole jest wymagane</span>}
+          {errors.message && <span>To pole jest wymagane</span>}
         </div>
       </div>
 
