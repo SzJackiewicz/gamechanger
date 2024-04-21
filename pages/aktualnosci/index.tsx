@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import { Navigation } from '../../types/types'
-import data from '@/utils/blogData2'
+import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Link from 'next/link'
 
 export default function NewsPage({ navigation }: { navigation: Navigation }) {
@@ -19,8 +19,8 @@ export default function NewsPage({ navigation }: { navigation: Navigation }) {
               <div className='col-xl-10 col-lg-12'>
                 <div className='mt-50 mb-50'>
                   <div className='row mt-50 mb-10'>
-                    {data &&
-                      data.map((item, i) => (
+                    {heroSectionData &&
+                      heroSectionData.map((item, i) => (
                         <div
                           className='col-lg-6'
                           key={i}
@@ -32,15 +32,15 @@ export default function NewsPage({ navigation }: { navigation: Navigation }) {
                             <div className='card-image mb-20'>
                               <Link href={`/aktualnosci/${item.id}`}>
                                 <img
-                                  src={`assets/imgs/page/homepage3/${item.img}`}
+                                  src={`${item.cover}`}
                                   alt='Genz'
                                 />
                               </Link>
                             </div>
                             <div className='card-info'>
                               <Link href={`/aktualnosci/${item.id}`}>
-                                <h4 className='color-white mt-20'>{item.title} </h4>
-                                <h6 className='color-white mt-20'>Podtytuł Podtytuł Podtytuł Podtytuł Podtytuł</h6>
+                                <h4 className='color-white mt-20'>{item.title}</h4>
+                                <h6 className='color-gray-200 mt-20'>{item.subtitle}</h6>
                               </Link>
                               <div className='row align-items-center mt-25'>
                                 <div className='col-7'>
