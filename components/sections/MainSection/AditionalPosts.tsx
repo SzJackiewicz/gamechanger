@@ -4,6 +4,8 @@ import Link from 'next/link'
 import React from 'react'
 import { useWindowSize } from 'usehooks-ts'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
+import Image from 'next/image'
+import { AditionalPostsMobile } from './AditionalPostsMobile'
 
 export const AditionalPosts = () => {
   const { width = 0 } = useWindowSize()
@@ -17,9 +19,12 @@ export const AditionalPosts = () => {
       >
         <div className='card-image hover-up mt-5'>
           <Link href={`/aktualnosci/${item.id}`}>
-            <img
+            <Image
               src={`${item.cover}`}
               alt='Article main cover'
+              width={190}
+              height={190}
+              priority
             />
           </Link>
         </div>
@@ -39,35 +44,10 @@ export const AditionalPosts = () => {
     ))
   } else {
     return heroSectionData.slice(1, 4).map((item, i) => (
-      <div
-        className='card-style-1 hover-up wow animate__animated animate__fadeIn mt-3'
-        data-wow-delay='.0s'
+      <AditionalPostsMobile
+        item={item}
         key={i}
-      >
-        <div className='card-image'>
-          <Link
-            className='link-post'
-            href='/single-sidebar'
-          >
-            <img
-              src={`${item.cover}`}
-              alt='Article main cover'
-              className='img-opacity'
-            />
-            <div className='img-backdrop' />
-            <div className='card-info card-bg-2'>
-              <div className='info-bottom mb-15'>
-                <h4 className='color-white mb-15'>{item.title}</h4>
-                <div className='box-author'>
-                  <div className='author-info'>
-                    <h6 className='color-gray-200 font-sm-clamp'>{item.subtitle}</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
+      />
     ))
   }
 }

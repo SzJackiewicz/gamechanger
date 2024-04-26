@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import AditionalPosts from './AditionalPosts'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
+import Image from 'next/image'
 
 export const MainSection = () => {
   return (
@@ -17,10 +18,13 @@ export const MainSection = () => {
               className='link-post'
               href={`/aktualnosci/${heroSectionData[0].id}`}
             >
-              <img
+              <Image
                 src={`${heroSectionData[0].cover}`}
                 alt='Article main cover'
                 className='img-opacity'
+                width={678}
+                height={678}
+                priority
               />
               <div className='img-backdrop' />
               <div className='card-info card-bg-2'>
