@@ -352,6 +352,14 @@ a:hover {
   color: #000000;
 }
 
+.text-bolder {
+  font-weight: 600 !important;
+}
+
+.text-cursive {
+  font-style: italic !important;
+}
+
 *:hover {
   transition-duration: 0.2s;
 }
@@ -1643,6 +1651,17 @@ input {
 .img-opacity {
   position: relative;
   margin-bottom: -3px;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  @media (max-width: 500px) {
+    width: 360px;
+    min-width: 340px;
+    height: auto;
+  }
+  @media (max-width: 760px) {
+    min-width: 540px;
+  }
 }
 
 .img-backdrop {
@@ -1735,6 +1754,29 @@ input {
   @media (max-width: 470px) {
     min-height: 460px;
     max-height: 460px;
+  }
+}
+
+.img-opacity {
+  min-width: 760px;
+  height: auto;
+
+  @media (max-width: 1200px) {
+    min-width: 650px;
+  }
+
+  @media (max-width: 960px) {
+    min-width: 460px;
+  }
+
+  @media (max-width: 760px) {
+    min-width: 540px;
+  }
+  @media (max-width: 500px) {
+    min-width: 500px;
+  }
+  @media (max-width: 470px) {
+    min-width: 460px;
   }
 }
 

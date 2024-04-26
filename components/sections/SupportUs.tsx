@@ -1,4 +1,4 @@
-'use client'
+'use server'
 
 import { Testimonial } from '../slider/Testimonial'
 

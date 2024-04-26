@@ -16,11 +16,11 @@ const Footer = () => {
                   />
                 </div>
                 <p className='mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp'>
-                  When an unknown prnoto sans took a galley and scrambled it to make.
+                  Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.
                 </p>
               </div>
               <div className='col-lg-3'>
-                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Categories</h6>
+                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Dane</h6>
                 <div className='row'>
                   <div className='col-12'>
                     <ul className='menu-footer'>
@@ -29,7 +29,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          43 1123 2202 0000 0000 8978 6765
+                          IBAN: PL45 1090 1098 0000 0001 5773 9195
                         </Link>
                       </li>
                       <li className='wow animate__animated animate__fadeInUp'>
@@ -37,7 +37,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          43 1123 2202 0000 0000 8978 6765
+                          SWIFT: WBKPPLPP
                         </Link>
                       </li>
                       <li className='wow animate__animated animate__fadeInUp'>
@@ -45,7 +45,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          43 1123 2202 0000 0000 8978 6765
+                          Santander Bank Polska S.A.
                         </Link>
                       </li>
                     </ul>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className='col-lg-3'>
-                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Categories</h6>
+                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Rejestry</h6>
                 <div className='row'>
                   <div className='col-12'>
                     <ul className='menu-footer'>
@@ -62,7 +62,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          NIP: 123-456-78-90
+                          NIP: 5842849980
                         </Link>
                       </li>
                       <li className='wow animate__animated animate__fadeInUp'>
@@ -70,7 +70,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          KRS: 123-456-78-90
+                          KRS: 0001095846
                         </Link>
                       </li>
                       <li className='wow animate__animated animate__fadeInUp'>
@@ -78,7 +78,7 @@ const Footer = () => {
                           className='color-gray-500'
                           href='/blog-archive'
                         >
-                          43 1123 2202 0000 0000 8978 6765
+                          REGON: 528175660
                         </Link>
                       </li>
                     </ul>
@@ -88,11 +88,15 @@ const Footer = () => {
               <div className='col-lg-3'>
                 <h4 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Adres</h4>
                 <p className='text-sm color-gray-500 wow animate__animated animate__fadeInUp'>
-                  Grunwaldzka 493
+                  GAME CHANGER FOUNDATION
                   <br />
-                  Gdańsk, 80-460
+                  Aleja Grunwaldzka 413
                   <br />
-                  Polska
+                  80-309 Gdańsk
+                  <br />
+                  biuro@f-gc.pl
+                  <br />
+                  tel: 690-301-110
                 </p>
                 <div className='box-socials'>
                   <div

@@ -1,8 +1,10 @@
 import 'swiper/css'
 import 'swiper/css/navigation'
 import '../public/assets/css/style.css'
+import { QueryClientProvider, dehydrate, Hydrate } from '@tanstack/react-query'
+import { getQueryClient } from '../utils/getQueryClient'
 import App from 'next/app'
-import {getNavigationData} from "../lib/api/getNavigationData";
+import { getNavigationData } from '../lib/api/getNavigationData'
 
 class MyApp extends App {
   constructor(props) {
@@ -14,39 +16,41 @@ class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     const navigationData = await getNavigationData()
 
+    ctx.queryClient = getQueryClient()
     let pageProps = {}
     pageProps.navigation = navigationData
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
-    return { pageProps }
+    return { pageProps, dehydratedState: dehydrate(ctx.queryClient) }
   }
 
   setPageProps = (newPageProps) => {
     this.setState({ pageProps: newPageProps })
   }
 
-  // initialize the WOW.js library when the component mounts
   componentDidMount() {
-    // Import the WOW.js library
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const WOW = require('wowjs')
-
-    // Create an instance of the WOW.js library with live set to false
-    // The live option determines whether elements are updated on resize or scroll events
     const wowInstance = new WOW.WOW({
       live: false,
     })
 
-    // Initialize the WOW.js library to animate elements
     wowInstance.init()
   }
   render() {
-    const { Component } = this.props
+    const { Component, dehydratedState } = this.props
     const { pageProps } = this.state
+    const queryClient = getQueryClient()
 
-    return <Component {...pageProps} />
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={dehydratedState}>
+          <Component {...pageProps} />
+        </Hydrate>
+      </QueryClientProvider>
+    )
   }
 }
 

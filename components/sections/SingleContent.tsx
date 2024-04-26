@@ -1,4 +1,5 @@
-'use client'
+'use server'
+
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 
 const SingleContent = ({ articleId }: { articleId: string | string[] | undefined }) => {
