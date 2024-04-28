@@ -2,15 +2,14 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../../../components/layout/Layout'
 import SingleContent from '../../../components/sections/SingleContent'
-import { Navigation } from '../../../types/types'
 
-export default function SupportersSubPage({ navigation }: { navigation: Navigation }) {
+export default function SupportersSubPage() {
   return (
     <>
       <Head>
         <title>Pomoc</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>
@@ -32,7 +31,7 @@ export default function SupportersSubPage({ navigation }: { navigation: Navigati
                     </div>
                   </div>
                   <div className='col-lg-8 m-auto'>
-                    <SingleContent articleId='0'/>
+                    <SingleContent articleId='0' />
                   </div>
                 </div>
               </div>

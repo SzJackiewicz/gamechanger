@@ -3,25 +3,20 @@
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import React from 'react'
-import { Navigation } from '../../types/types'
 import { ContactForm } from '@/components/elements/ContactForm'
 
-export default function PageContact({ navigation }: { navigation: Navigation }) {
+export default function PageContact() {
   return (
     <>
       <Head>
         <title>Gamechanger Kontact</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='row align-content-center justify-content-center align-items-baseline mx-5'>
           <div className='col-xxl-4'>
             <div className='text-center mt-70'>
               <h3 className='color-linear d-inline-block mb-30'>Skontaktuj się z nami</h3>
-              <p className='text-xl color-gray-500'>
-                We are AliThemes , a creative and dedicated group of individuals who love web development almost as much as we love our
-                customers. We are passionate team with the mission for achieving the perfection in web design. All designs are made by love
-                with pixel perfect design and excellent coding quality. Speed, security and SEO friendly alway in our mind.
-              </p>
+              <p className='text-xl color-gray-500'>Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.</p>
             </div>
             <div className='text-center mt-30'>
               <div className='d-inline-block support text-start'>

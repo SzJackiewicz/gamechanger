@@ -1,16 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
-import SingleContent from '../../components/sections/SingleContent'
-import { Navigation } from '../../types/types'
+import { HelpLines } from '@/utils/needHelpData'
 
-export default function HelpPage({ navigation }: { navigation: Navigation }) {
+export default function HelpPage() {
   return (
     <>
       <Head>
         <title>Pomoc</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>
@@ -32,7 +31,7 @@ export default function HelpPage({ navigation }: { navigation: Navigation }) {
                     </div>
                   </div>
                   <div className='col-lg-8 m-auto'>
-                    <SingleContent articleId='0'/>
+                    <HelpLines />
                   </div>
                 </div>
               </div>

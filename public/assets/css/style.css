@@ -726,6 +726,47 @@ h6 {
   min-width: 32px;
   margin-right: 7px;
 }
+
+.container-help {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.helpLine {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.icon-help {
+  margin: 5px 0;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.helpLine h2 {
+  margin-bottom: 5px;
+}
+
+.number {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1em;
+}
+
+a:hover {
+  color: #34cc99 !important;
+}
+
 .item-cats .cat-left .image-cat img {
   height: 32px;
   width: 32px;

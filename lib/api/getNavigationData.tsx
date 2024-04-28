@@ -1,46 +1,37 @@
-import { performRequest, PerformRequestParams } from '@/lib/datocms'
+import { performRequest } from '@/lib/datocms'
+import { Navigation } from '@/types/types'
+import { useQuery } from '@tanstack/react-query'
 
 const PAGE_CONTENT_QUERY = `
   query Home {
     allCategoryNavs {
+      label
+      name
+      slug
+      subMenu {
         label
         name
         slug
-        subMenu {
-          label
-          name
-          slug
-        }
+      }
     }
   }`
 
-interface CategoryNav {
-  label: string
-  name: string
-  slug: string
-}
-
 interface Data {
-  allCategoryNavs: CategoryNav[]
+  allCategoryNavs: Navigation[]
 }
 
-function getPageRequest(isEnabled: boolean): PerformRequestParams {
-  return {
-    query: PAGE_CONTENT_QUERY,
-    includeDrafts: isEnabled,
-    variables: {},
-    revalidate: 0,
-  }
-}
-
-export async function getNavigationData() {
-  try {
-    const pageRequest = getPageRequest(false)
-    const data = await performRequest<Data>(pageRequest)
-
+export function useNavigationData() {
+  const fetchNavigationData = async (): Promise<Navigation[]> => {
+    const data = await performRequest<Data>({ query: PAGE_CONTENT_QUERY })
     return data.allCategoryNavs
-  } catch (error) {
-    console.error('Error fetching navigation data:', error)
-    return []
   }
+
+  const { data, error, isLoading } = useQuery<Navigation[], Error>(['navigationData'], fetchNavigationData, {
+    cacheTime: Infinity,
+    onError: (err) => {
+      console.error('Error fetching navigation data:', err)
+    },
+  })
+
+  return { data, error, isLoading }
 }

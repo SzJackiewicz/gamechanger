@@ -43,35 +43,35 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
             className='wow animate__animated animate__fadeInUp'
             data-wow-delay='.0s'
           >
-            <a
+            <Link
               className={`btn btn-border-linear btn-filter hover-up`}
               href='/wspierajacy/stala-wspolpraca'
             >
               Stała współpraca
-            </a>
+            </Link>
           </span>
           <span
             className='wow animate__animated animate__fadeInUp'
             data-wow-delay='.1s'
           >
-            <a
+            <Link
               className={`btn btn-border-linear btn-filter hover-up`}
               href='/wspierajacy/ambasadorzy'
             >
               Ambasadorzy
-            </a>
+            </Link>
           </span>
 
           <span
             className='wow animate__animated animate__fadeInUp'
             data-wow-delay='.4s'
           >
-            <a
+            <Link
               className={`btn btn-border-linear btn-filter hover-up `}
               href='/wspierajacy/pomagaja-nam'
             >
               Pomagają nam
-            </a>
+            </Link>
           </span>
         </div>
       </div>

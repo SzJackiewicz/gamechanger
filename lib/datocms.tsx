@@ -1,62 +1,16 @@
-type ApiResponse = {
-  data: object
+import axios from 'axios'
+
+type ApiResponse<T> = {
+  data: T
 }
 
-type ApiFetchParams = {
-  body: string
-  includeDrafts?: boolean
-  excludeInvalid?: boolean
-  visualEditingBaseUrl?: string | null
-  revalidate?: number
-}
-
-export type PerformRequestParams = {
+export interface PerformRequestParams {
   query: string
   variables?: { [key: string]: unknown }
   includeDrafts?: boolean
   excludeInvalid?: boolean
   visualEditingBaseUrl?: string | null
   revalidate?: number
-}
-
-//TODO przerobić na react-query, stan lub cos innego
-
-const apiFetch = async ({
-  body,
-  includeDrafts = false,
-  excludeInvalid = false,
-  visualEditingBaseUrl = null,
-  revalidate,
-}: ApiFetchParams): Promise<ApiResponse> => {
-  const headers: { [key: string]: string } = {
-    Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
-    ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
-    ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
-    ...(visualEditingBaseUrl
-      ? {
-          'X-Visual-Editing': 'vercel-v1',
-          'X-Base-Editing-Url': visualEditingBaseUrl,
-        }
-      : {}),
-    ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
-  }
-
-  const init = {
-    method: 'POST',
-    headers,
-    body,
-    ...(revalidate && { next: { revalidate } }),
-  }
-
-  const response = await fetch('https://graphql.datocms.com/', init)
-
-  const responseBody = await response.json()
-
-  if (!response.ok) {
-    throw new Error(`${response.status} ${response.statusText}: ${JSON.stringify(responseBody)}`)
-  }
-
-  return responseBody
 }
 
 export async function performRequest<T>({
@@ -67,13 +21,22 @@ export async function performRequest<T>({
   visualEditingBaseUrl,
   revalidate,
 }: PerformRequestParams): Promise<T> {
-  const { data } = await apiFetch({
-    body: JSON.stringify({ query, variables, revalidate }),
-    includeDrafts,
-    excludeInvalid,
-    visualEditingBaseUrl,
-    revalidate,
-  })
+  const headers = {
+    'Authorization': `Bearer b00ca3cd15d1df8062445dda3aa52d`,
+    'Content-Type': 'application/json',
+    ...(includeDrafts ? { 'X-Include-Drafts': 'true' } : {}),
+    ...(excludeInvalid ? { 'X-Exclude-Invalid': 'true' } : {}),
+    ...(visualEditingBaseUrl ? { 'X-Visual-Editing': 'vercel-v1', 'X-Base-Editing-Url': visualEditingBaseUrl } : {}),
+    ...(process.env.NEXT_DATOCMS_ENVIRONMENT ? { 'X-Environment': process.env.NEXT_DATOCMS_ENVIRONMENT } : {}),
+  }
 
-  return data as T
+  const body = JSON.stringify({ query, variables, revalidate })
+
+  const response = await axios.post<ApiResponse<T>>('https://graphql.datocms.com/', body, { headers })
+
+  if (response.status !== 200) {
+    throw new Error(`API Error: ${response.status} ${response.statusText}`)
+  }
+
+  return response.data.data
 }

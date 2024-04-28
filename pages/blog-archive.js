@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '@/components/layout/Layout'
 import PageHeader1 from '@/components/elements/PageHeader1'
-import PopularCategories from '@/components/sections/PopularCategories'
 import data from '@/utils/blogData'
 
 export default function Archive() {
@@ -157,7 +156,6 @@ export default function Archive() {
                   </div>
                 </div>
                 <div className='mb-70' />
-                <PopularCategories />
               </div>
             </div>
           </div>
