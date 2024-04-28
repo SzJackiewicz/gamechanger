@@ -1,111 +1,43 @@
-'use client'
-import React from 'react'
-import SwiperCore, { Autoplay, Navigation } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import Link from 'next/link'
+'use server'
 
-SwiperCore.use([Autoplay, Navigation])
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+
 export const Testimonial = () => {
   const data = [
     {
       img: '1.webp',
+      title: '1.5% podatku',
     },
     {
       img: '2.webp',
+      title: 'Podaruj przedmiot',
     },
     {
       img: '3.webp',
-    },
-    {
-      img: '4.webp',
-    },
-    {
-      img: '5.webp',
+      title: 'Dowolna kwota',
     },
   ]
   return (
     <>
-      <div className='text-center mt-70 mb-4'>
-        <h2 className='color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp'>Wesprzyj nas</h2>
-        <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>Lorem ipsum dolor sit amet, consectet</p>
-      </div>
-      <div className='box-testimonials mb-20 animate__fadeIn mb-100'>
-        <div className='box-swiper' />
-        <div className='swiper-container swiper-group-3'>
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              prevEl: '.swiper-button-prev-style-3',
-              nextEl: '.swiper-button-next-style-3',
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              575: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              767: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              991: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1199: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              1350: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-            }}
-            className='swiper-wrapper pt-5'
+      <div className='box-testimonials mt-70 mb-20 animate__fadeIn mb-100 gap-5 mx-auto'>
+        {data.map((item, i) => (
+          <Link
+            key={i}
+            href='#'
+            className='img-supportUs'
           >
-            {data.map((item, i) => (
-              <SwiperSlide
-                className='swiper-slide'
-                key={i}
-              >
-                <div
-                  className='card-style-1 hover-up mb-30'
-                  data-wow-delay='.0s'
-                >
-                  <div className='card-image'>
-                    <Link
-                      className='link-post'
-                      href='#'
-                    >
-                      <img
-                        src={`assets/imgs/page/about/img4.png`}
-                        alt='Genz'
-                      />
-                      <div className='card-info card-bg-2'>
-                        <div className='info-bottom mb-15'>
-                          <h3 className='color-white mb-10'>Forma wsparcia</h3>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className='swiper-buttons'>
-            <div className='swiper-button-prev swiper-button-prev-style-3' />
-            <div className='swiper-button-next swiper-button-next-style-3' />
-          </div>
-        </div>
+            <Image
+              src={`/assets/data/supportUsSection/${item.img}`}
+              height={300}
+              width={300}
+              alt='Support Us'
+            />
+            <div className='supportUs-backdrop' />
+            <h2 className='font-xl-clamp supportUsTitle color-gray-100'>{item.title}</h2>
+          </Link>
+        ))}
       </div>
     </>
   )

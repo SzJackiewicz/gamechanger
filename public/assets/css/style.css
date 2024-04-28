@@ -1705,6 +1705,48 @@ input {
   }
 }
 
+.box-testimonials {
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.img-supportUs {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-supportUs:hover {
+  transform: scale(1.1);
+}
+
+.supportUs-backdrop {
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  bottom: 3px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.328);
+}
+
+.supportUsTitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .img-backdrop {
   position: absolute;
   bottom: 0px;
