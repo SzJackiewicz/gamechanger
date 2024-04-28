@@ -33,6 +33,7 @@ export const Testimonial = () => {
               height={300}
               width={300}
               alt='Support Us'
+              priority
             />
             <div className='supportUs-backdrop' />
             <h2 className='font-xl-clamp supportUsTitle color-gray-100'>{item.title}</h2>
