@@ -1,7 +1,6 @@
 import Layout from '@/components/layout/Layout'
 import Head from 'next/head'
 import React from 'react'
-import { Navigation } from '../../../types/types'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
 import { ContactForm } from '@/components/elements/ContactForm'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
@@ -10,7 +9,6 @@ import { PricingTable } from '@/components/sections/PricingTable'
 type SupportUsLayoutProps = {
   withForm?: boolean
   articleText?: string
-  navigation: Navigation
   partners?: boolean
   pricingComponent?: boolean
   img?: string
@@ -20,7 +18,6 @@ type SupportUsLayoutProps = {
 }
 
 export const SupportUsLayout = ({
-  navigation,
   withForm,
   articleText,
   img,
@@ -35,7 +32,7 @@ export const SupportUsLayout = ({
       <Head>
         <title>{headCopy}</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='row'>
           <div className='col-xl-12 '>
             <CoverWithTestimonials

@@ -1,12 +1,11 @@
 import React from 'react'
 import Layout from '../../../components/layout/Layout'
 import SingleContent from '../../../components/sections/SingleContent'
-import { Navigation } from '../../../types/types'
 
-export default function SupportersSubPage({ navigation }: { navigation: Navigation }) {
+export default function SupportersSubPage() {
   return (
     <>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>

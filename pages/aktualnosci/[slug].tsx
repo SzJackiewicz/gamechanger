@@ -1,17 +1,16 @@
 import React from 'react'
 import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
-import { Navigation } from '@/types/types'
 import SingleContent from '@/components/sections/SingleContent'
 import { PricingTable } from '@/components/sections/PricingTable'
 import { useRouter } from 'next/router'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 
-export default function BlogDetails({ navigation }: { navigation: Navigation }) {
+export default function BlogDetails() {
   const router = useRouter()
 
   return (
-    <Layout navigation={navigation}>
+    <Layout>
       <div className='cover-home3'>
         <div className='container'>
           <div className='row'>

@@ -4,7 +4,7 @@ import '../public/assets/css/style.css'
 import { QueryClientProvider, dehydrate, Hydrate } from '@tanstack/react-query'
 import { getQueryClient } from '../utils/getQueryClient'
 import App from 'next/app'
-import { getNavigationData } from '../lib/api/getNavigationData'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 class MyApp extends App {
   constructor(props) {
@@ -14,11 +14,9 @@ class MyApp extends App {
     }
   }
   static async getInitialProps({ Component, ctx }) {
-    const navigationData = await getNavigationData()
-
     ctx.queryClient = getQueryClient()
     let pageProps = {}
-    pageProps.navigation = navigationData
+    pageProps.navigation = []
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
@@ -48,6 +46,7 @@ class MyApp extends App {
       <QueryClientProvider client={queryClient}>
         <Hydrate state={dehydratedState}>
           <Component {...pageProps} />
+          <ReactQueryDevtools initialIsOpen={false} />
         </Hydrate>
       </QueryClientProvider>
     )

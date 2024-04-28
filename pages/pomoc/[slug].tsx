@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
 import data from '../../utils/blogData'
-import { Navigation } from '@/types/types'
 
 type BlogPost = {
   id: number
@@ -16,33 +15,19 @@ type BlogPost = {
   date: string
 }
 
-const BlogDetails = ({ navigation }: { navigation: Navigation }) => {
-  // Import the useRouter hook from 'next/router' module
+const BlogDetails = () => {
   const Router = useRouter()
-
-  // Define a state variable 'blogPost' and a function 'setBlogPost' to update the state
   const [blogPost, setBlogPost] = useState<BlogPost | null>(null)
-
-  // Destructure the 'id' from the 'query' object provided by the useRouter hook
   const { id } = Router.query
 
-  // useEffect hook is used to fetch the blog post data based on the 'id' when it changes
   useEffect(() => {
-    // Use the 'data' array (assuming it is available) and find the blog post with matching 'id'
-    // The find method returns the first element in the array that satisfies the provided testing function
-    // It looks for an object in the 'data' array where the 'id' property matches the current 'id' from the Router query
     const foundBlogPost = data.find((data) => data.id === Number(id)) || null
-
-    // Update the 'blogPost' state with the found blog post or set it to null if no match is found
     setBlogPost(foundBlogPost)
-
-    // The useEffect hook has a dependency array with 'id'
-    // This means that the effect will be triggered whenever the 'id' changes, and the blog post data will be updated accordingly
   }, [id])
 
   return (
     <>
-      <Layout navigation={navigation}>
+      <Layout>
         {blogPost && (
           <>
             <div className='cover-home3'>

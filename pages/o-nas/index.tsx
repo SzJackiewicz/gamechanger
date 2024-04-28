@@ -4,10 +4,9 @@ import Accordion from '../../components/elements/Accordion'
 import Layout from '../../components/layout/Layout'
 import { BoardMembers } from '../../components/sections/BoardMembers'
 import { PartnersLogs } from '../../components/sections/PartnersLogs'
-import { Navigation } from '../../types/types'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
 
-export default function AboutPage({ navigation }: { navigation: Navigation }) {
+export default function AboutPage() {
   const boardMembers = [
     {
       name: 'Jan Konikiewicz',
@@ -64,7 +63,7 @@ export default function AboutPage({ navigation }: { navigation: Navigation }) {
       <Head>
         <title>Zarząd</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home1'>
           <div className='container'>
             <CoverWithTestimonials title='Game Changer Foundation' />

@@ -1,17 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
-import { Navigation } from '../../types/types'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Link from 'next/link'
 
-export default function NewsPage({ navigation }: { navigation: Navigation }) {
+export default function NewsPage() {
   return (
     <>
       <Head>
         <title>O nas</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home3'>
           <div className='container'>
             <div className='row'>

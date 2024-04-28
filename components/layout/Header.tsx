@@ -9,7 +9,7 @@ type HeaderProps = {
   handleOpen: () => void
   handleRemove: () => void
   openClass: string
-  navigation: Navigation[]
+  navigation?: Navigation[]
 }
 
 const isActiveRoute = (currentRoute: string, targetRoute: string) => {
@@ -58,7 +58,8 @@ const Header = ({ handleOpen, handleRemove, openClass, navigation }: HeaderProps
             <div className='header-nav'>
               <nav className='nav-main-menu d-none d-xl-block'>
                 <ul className='main-menu'>
-                  {navigation?.length > 0 &&
+                  {navigation &&
+                    navigation.length > 0 &&
                     navigation.map((item, index) => (
                       <li
                         className={item.subMenu.length > 0 ? 'has-children' : ''}

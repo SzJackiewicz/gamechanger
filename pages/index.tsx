@@ -1,19 +1,18 @@
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import React from 'react'
-import { Navigation } from '../types/types'
 import { MainSection } from '@/components/sections/MainSection/MainSection'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { SupportUs } from '@/components/sections/SupportUs'
 import { SupportingUs } from '@/components/sections/SupportingUs'
 
-export default function Home({ navigation }: { navigation: Navigation }) {
+export default function Home() {
   return (
     <>
       <Head>
         <title>Gamechanger Fundacja</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home1'>
           <div className='container'>
             <div className='row'>

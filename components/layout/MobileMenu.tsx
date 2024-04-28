@@ -6,7 +6,7 @@ import { HeartFilled } from '@/public/assets/icons/HeartFilled'
 
 type MobileMenuProps = {
   openClass: string
-  navigation: Navigation[]
+  navigation?: Navigation[]
 }
 
 const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
@@ -38,7 +38,8 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
               <div className='mobile-menu-wrap mobile-header-border'>
                 <nav className='mt-15'>
                   <ul className='mobile-menu font-heading'>
-                    {navigation?.length > 0 &&
+                    {navigation &&
+                      navigation.length > 0 &&
                       navigation.map((item, index) => (
                         <li
                           key={index}

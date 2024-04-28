@@ -2,15 +2,14 @@ import React from 'react'
 import Head from 'next/head'
 import { PortfolioFilter } from '../../components/elements/PortfolioFilter'
 import Layout from '../../components/layout/Layout'
-import { Navigation } from '../../types/types'
 
-export default function SupportersPage({ navigation }: { navigation: Navigation }) {
+export default function SupportersPage() {
   return (
     <>
       <Head>
         <title>Wspierają nas</title>
       </Head>
-      <Layout navigation={navigation}>
+      <Layout>
         <div className='cover-home1'>
           <div className='container'>
             <div className='row'>
