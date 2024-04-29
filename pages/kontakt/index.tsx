@@ -12,11 +12,15 @@ export default function PageContact() {
         <title>Gamechanger Kontact</title>
       </Head>
       <Layout>
-        <div className='row align-content-center justify-content-center align-items-baseline mx-5'>
-          <div className='col-xxl-4'>
-            <div className='text-center mt-70'>
-              <h3 className='color-linear d-inline-block mb-30'>Skontaktuj się z nami</h3>
-              <p className='text-xl color-gray-500'>Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.</p>
+        <div className='row justify-content-center mt-10'>
+          <div className='col-xxl-4 px-4'>
+            <div className='text-center'>
+              <h3 className='color-linear d-inline-block mb-30'>Zostań partnerem zmiany i pomagaj razem z nami.</h3>
+              <p className='text-xl color-gray-500'>
+                Game Changer Fundacja działa na rzecz promowania zdrowia psychicznego poprzez sport i aktywność, zapewniając wsparcie dla
+                osób walczących z depresją i innymi zaburzeniami. Dołączając do naszej inicjatywy, wspierasz walkę o równowagę psychiczną i
+                stwarzasz bezpieczne środowisko do rozmów o emocjach oraz wyzwaniach.
+              </p>
             </div>
             <div className='text-center mt-30'>
               <div className='d-inline-block support text-start'>
@@ -36,7 +40,7 @@ export default function PageContact() {
               </div>
             </div>
           </div>
-          <div className='form-contact col-xxl-4'>
+          <div className='form-contact col-xxl-4 px-4 '>
             <div className='text-center'>
               <h3 className='color-linear d-inline-block mb-10'>Napisz do nas</h3>
             </div>

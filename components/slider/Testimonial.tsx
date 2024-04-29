@@ -21,7 +21,7 @@ export const Testimonial = () => {
   ]
   return (
     <>
-      <div className='box-testimonials mt-70 mb-20 animate__fadeIn mb-100 gap-5 mx-auto'>
+      <div className='box-testimonials-supportus mt-10 mb-20 animate__fadeIn gap-5 mx-auto'>
         {data.map((item, i) => (
           <Link
             key={i}
