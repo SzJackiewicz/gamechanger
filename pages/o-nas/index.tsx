@@ -47,15 +47,6 @@ export default function AboutPage() {
     {
       name: 'Jan Benesz',
     },
-    {
-      name: 'Marcin Woźniak',
-    },
-    {
-      name: 'Adrian Łowkajtis',
-    },
-    {
-      name: 'Bartosz Janus',
-    },
   ]
 
   return (
@@ -122,7 +113,7 @@ export default function AboutPage() {
                   members={councilMembers}
                 />
                 <BoardMembers
-                  title='Pomagają razem z nami'
+                  title='Team'
                   members={otherMembers}
                 />
                 <div className='text-center mt-30'>

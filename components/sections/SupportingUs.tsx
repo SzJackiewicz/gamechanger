@@ -9,8 +9,7 @@ export const SupportingUs = () => {
         <div className='container'>
           <div className='row'>
             <div className='swiper-container swiper-group-1'>
-              <Supporters title='Ambasadorzy' />
-              <Supporters title='Stała współpraca' />
+              <Supporters title='#FocusOnEmotions' />
             </div>
           </div>
         </div>

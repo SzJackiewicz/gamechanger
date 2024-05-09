@@ -727,6 +727,10 @@ h6 {
   margin-right: 7px;
 }
 
+.max-height-630 {
+  max-height: 630px;
+}
+
 .container-help {
   display: flex;
   flex-direction: column;
@@ -5661,7 +5665,7 @@ input {
 --font-size-6xl: clamp(4.77rem, 7.48vi + 2.9rem, 8.88rem); */
 
 .font-xl-clamp {
-  font-size: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  font-size: clamp(1.8rem, 1.56vi + 1.56rem, 2.51rem);
   line-height: 1.6;
 }
 
