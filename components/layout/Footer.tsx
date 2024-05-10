@@ -9,85 +9,55 @@ const Footer = () => {
           <div className='footer-1 border-gray-800'>
             <div className='row flex-row'>
               <div className='col-lg-2'>
-                <div className='wow animate__animated animate__fadeInUp'>
+                <div className=''>
                   <img
                     src='/assets/imgs/template/logo.png'
                     alt='Genz'
                   />
                 </div>
-                <p className='mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp'>
+                <p className='mb-20 mt-20 text-sm color-gray-500 '>
                   Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.
                 </p>
               </div>
               <div className='col-lg-3'>
-                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Dane</h6>
+                <h6 className='text-lg mb-30 color-white '>Dane</h6>
                 <div className='row'>
                   <div className='col-12'>
                     <ul className='menu-footer'>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          IBAN: PL45 1090 1098 0000 0001 5773 9195
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>IBAN: PL45 1090 1098 0000 0001 5773 9195</p>
                       </li>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          SWIFT: WBKPPLPP
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>SWIFT: WBKPPLPP</p>
                       </li>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          Santander Bank Polska S.A.
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>Santander Bank Polska S.A.</p>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className='col-lg-3'>
-                <h6 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Rejestry</h6>
+                <h6 className='text-lg mb-30 color-white '>Rejestry</h6>
                 <div className='row'>
                   <div className='col-12'>
                     <ul className='menu-footer'>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          NIP: 5842849980
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>NIP: 5842849980</p>
                       </li>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          KRS: 0001095846
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>KRS: 0001095846</p>
                       </li>
-                      <li className='wow animate__animated animate__fadeInUp'>
-                        <Link
-                          className='color-gray-500'
-                          href='/blog-archive'
-                        >
-                          REGON: 528175660
-                        </Link>
+                      <li className=''>
+                        <p className='color-gray-500'>REGON: 528175660</p>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className='col-lg-3'>
-                <h4 className='text-lg mb-30 color-white wow animate__animated animate__fadeInUp'>Adres</h4>
-                <p className='text-sm color-gray-500 wow animate__animated animate__fadeInUp'>
+                <h4 className='text-lg mb-30 color-white '>Adres</h4>
+                <p className='text-sm color-gray-500 '>
                   GAME CHANGER FOUNDATION
                   <br />
                   Aleja Grunwaldzka 413

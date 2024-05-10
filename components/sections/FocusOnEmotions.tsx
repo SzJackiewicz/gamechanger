@@ -2,7 +2,7 @@
 
 import { Supporters } from '../slider/Supporters'
 
-export const SupportingUs = () => {
+export const FocusOnEmotions = () => {
   return (
     <>
       <div className='list-logos mb-30'>

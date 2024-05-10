@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
 import SingleContent from '@/components/sections/SingleContent'
-import { PricingTable } from '@/components/sections/PricingTable'
 import { useRouter } from 'next/router'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
+import { SupportUs } from '@/components/sections/SupportUs'
 
 export default function BlogDetails() {
   const router = useRouter()
@@ -63,7 +63,7 @@ export default function BlogDetails() {
               </div>
             </div>
           </div>
-          <PricingTable />
+          <SupportUs />
         </div>
       </div>
     </Layout>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-function Breadcrumb({ title }) {
+function Breadcrumb({ title }: { title: string }) {
   return (
     <ul className='breadcrumb'>
       <li>
