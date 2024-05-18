@@ -9,6 +9,10 @@ class MyDocument extends Document {
             href='https://fonts.bunny.net/css?family=noto-sans:400,500,700,800'
             rel='stylesheet'
           />
+          <script
+            async
+            src='https://js.stripe.com/v3/buy-button.js'
+          />
         </Head>
         <body>
           <Main />
