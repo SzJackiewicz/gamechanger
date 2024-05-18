@@ -5544,6 +5544,12 @@ input {
   border: 1px solid #e5e5e5;
 }
 
+body .ProductImage-imageContainer {
+  background-color: #1a1a1a !important;
+  filter: none !important;
+  border: none;
+}
+
 .partner {
   display: flex;
   align-items: center;
@@ -6100,7 +6106,7 @@ iframe.google-map {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: ;
+  background-color:;
 }
 
 .accordion-button::after {

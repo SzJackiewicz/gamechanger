@@ -1,6 +1,6 @@
 'use server'
 
-import { Testimonial } from '../slider/Testimonial'
+import { BuyButtons } from '../slider/BuyButtons'
 
 export const SupportUs = () => {
   return (
@@ -11,9 +11,7 @@ export const SupportUs = () => {
             <h3 className='color-linear d-inline-block wow animate__animated animate__fadeInUp m-auto '>Wesprzyj nas</h3>
           </div>
           <div className='row'>
-            <div className='swiper-container swiper-group-1 mt-20 mb-30'>
-              <Testimonial />
-            </div>
+            <BuyButtons />
           </div>
         </div>
       </div>
