@@ -6,15 +6,15 @@ export const PartnersLogs = () => {
   return (
     <>
       <div className='row align-items-end mt-30'>
-        <div className='col-lg-9 wow animate__animated animate__fadeIn'>
-          <h3 className='color-linear'>Partnerzy</h3>
+        <div className='text-center'>
+          <h3 className='color-linear d-inline-block wow animate__animated animate__fadeInUp'>Patroni</h3>
         </div>
         <div
           className='col-lg-3 text-lg-end mt-15 hover-up wow animate__animated animate__fadeIn'
           data-wow-delay='0.2s'
         />
       </div>
-      <div className='list-logos mt-50 mb-30'>
+      <div className='list-logos mt-20 mb-30'>
         <div className='container'>
           <div className='row'>
             <div

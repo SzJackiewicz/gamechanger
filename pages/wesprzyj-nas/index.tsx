@@ -8,9 +8,8 @@ export default function SupportUsPage() {
   return (
     <SupportUsLayout
       articleText={articleText}
-      title='Wesprzyj nas'
-      subtitle='Wesprzyj nas w naszej działalności'
       pricingComponent
+      img='/assets/imgs/page/wesprzyj-nas/wesprzyj.webp'
     />
   )
 }

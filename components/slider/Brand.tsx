@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 
@@ -13,27 +14,23 @@ const Brand = () => {
     {
       img: 'fig.svg',
     },
-    {
-      img: 'flow.svg',
-    },
-    {
-      img: 'evara.svg',
-    },
   ]
 
   return (
-    <div className='swiper-wrapper pt-5 flex-wrap justify-content-around gap-5 '>
-      {data.map((item, i) => (
+    <div className='swiper-wrapper pt-5 flex-wrap justify-content-around gap-5'>
+      {data?.map((item, i) => (
         <div
-          className='flex'
+          className='flex partner mb-10'
           key={i}
         >
-          <a href='#'>
-            <img
-              src={`/assets/imgs/page/homepage3/${item.img}`}
-              alt='partner logo'
-            />
-          </a>
+          <Image
+            src={`/assets/imgs/slider/patrons/${i + 1}.png`}
+            alt='partner logo'
+            width={0}
+            height={0}
+            sizes='100%'
+            style={{ width: '100%', height: 'auto', zIndex: '1' }} // optional
+          />
         </div>
       ))}
     </div>

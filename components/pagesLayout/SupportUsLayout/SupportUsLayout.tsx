@@ -56,12 +56,6 @@ export const SupportUsLayout = ({
             >
               {articleText}
             </div>
-            <div
-              className='col-xl-8 row mx-auto center-flex text-center font-md-clamp color-gray-500 mt-30 mb-20 w-75 wow animate__animated animate__fadeInUp'
-              data-wow-delay='.2s'
-            >
-              {articleText}
-            </div>
           </>
         )}
         {partners && (

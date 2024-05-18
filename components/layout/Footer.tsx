@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import 'primeicons/primeicons.css'
 
 const Footer = () => {
   return (
@@ -74,27 +75,42 @@ const Footer = () => {
                     data-wow-delay='.0s'
                   >
                     <Link
-                      className='icon-socials icon-twitter color-gray-500'
-                      href='https://twitter.com'
-                    />
+                      className='color-gray-500 socialIcon'
+                      href='https://www.facebook.com/FundacjaGC'
+                    >
+                      <i
+                        className='pi pi-facebook'
+                        style={{ fontSize: '1.5rem' }}
+                      />
+                    </Link>
                   </div>
                   <div
                     className='d-inline-block mr-20 wow animate__animated animate__fadeIn'
                     data-wow-delay='.2s'
                   >
                     <Link
-                      className='icon-socials icon-linked color-gray-500'
-                      href='https://www.linkedin.com'
-                    />
+                      className='color-gray-500 socialIcon'
+                      href='https://www.linkedin.com/company/fundacja-game-changer'
+                    >
+                      <i
+                        className='pi pi-instagram'
+                        style={{ fontSize: '1.5rem' }}
+                      />
+                    </Link>
                   </div>
                   <div
                     className='d-inline-block wow animate__animated animate__fadeIn'
                     data-wow-delay='.4s'
                   >
                     <Link
-                      className='icon-socials icon-insta color-gray-500'
-                      href='https://www.instagram.com'
-                    />
+                      className='color-gray-500 socialIcon'
+                      href='https://www.instagram.com/fundacjagc'
+                    >
+                      <i
+                        className='pi pi-linkedin'
+                        style={{ fontSize: '1.5rem' }}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 type Props = {
@@ -6,10 +7,17 @@ type Props = {
   img?: string
 }
 
-export const CoverWithTestimonials = ({ title, subtitle }: Props) => {
-  // img przekazać do styli
+export const CoverWithTestimonials = ({ title, subtitle, img = '/assets/imgs/page/o-nas/aboutus.webp' }: Props) => {
   return (
     <div className='cover-relative m-auto'>
+      <Image
+        width={900}
+        height={300}
+        alt='cover'
+        src={img}
+        priority
+        className='coverFilter'
+      />
       <div className='cover-testimonials'>
         <p className='color-gray-200 font-xl-clamp'>{title}</p>
         <p className='color-gray-200 mt-3 font-l-clamp'>{subtitle}</p>

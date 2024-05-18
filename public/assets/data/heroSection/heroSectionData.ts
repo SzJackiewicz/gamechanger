@@ -41,7 +41,7 @@ export const heroSectionData = [
   {
     title: 'Depresja - choroba XXI wieku',
     id: 1,
-    date: '11.03-2203',
+    date: '',
     subtitle: 'Zderzenie z niezwykłym wyzwaniem zdrowotnym i społeczeństwo, które stara się zrozumieć problem.',
     author: 'John Doe',
     cover: '/assets/data/heroSection/img/2.jpeg',
@@ -63,7 +63,7 @@ export const heroSectionData = [
   {
     title: 'Rola wsparcia psychicznego w sporcie',
     id: 2,
-    date: '11.03-2203',
+    date: '',
     subtitle: ' Znaczenie opieki emocjonalnej i wsparcia psychologicznego dla osiągnięć sportowych i zdrowia mentalnego.',
     cover: '/assets/data/heroSection/img/3.jpeg',
     author: 'John Doe',
@@ -84,7 +84,7 @@ export const heroSectionData = [
   {
     title: 'Świadomość szczęścia w życiu',
     id: 3,
-    date: '11.03-2203',
+    date: '',
     subtitle: ' Odkrywając klucz do pełniejszego i bardziej satysfakcjonującego życia.',
     cover: '/assets/data/heroSection/img/4.jpeg',
     author: 'John Doe',

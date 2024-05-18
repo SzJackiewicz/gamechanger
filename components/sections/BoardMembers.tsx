@@ -1,10 +1,13 @@
 'use server'
 
+import { Avatar } from "../elements/Avatar"
+
 type Props = {
   title?: string
   members: {
     name: string
     role?: string
+    img: string
   }[]
 }
 
@@ -22,7 +25,7 @@ export const BoardMembers = ({ title, members }: Props) => {
               data-wow-delay='0s'
               key={index}
             >
-              <span className='item-icon bg-gray-950 icon-motion' />
+             <Avatar src={member.img} alt={member.role}/>
               <h5 className='color-white mb-15'>{member.name}</h5>
               <p className='text-base color-gray-500'>{member.role}</p>
             </div>
