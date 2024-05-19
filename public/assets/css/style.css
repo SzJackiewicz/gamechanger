@@ -1896,7 +1896,7 @@ input {
     margin: 0 auto;
   }
   @media (max-width: 400px) {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -4672,6 +4672,12 @@ input {
 .center-flex {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.center-flex-between {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
