@@ -2,7 +2,7 @@ import React from 'react'
 import { SupportUsLayout } from '@/components/pagesLayout/SupportUsLayout/SupportUsLayout'
 
 const articleText =
-  'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy.'
+  'Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu. W świecie, gdzie presja zwycięstwa często przytłacza, istnieje miejsce dla każdego, kto szuka równowagi. Nie chcemy, żeby ktokolwiek został sam w swojej walce. Przełamujemy tabu, dodajemy otuchy i odwagi. Mówimy otwarcie o problemach i szukamy rozwiązań. Wierzymy, że sport i aktywność są ważnymi elementami w pracy nad równowagą mentalną i psychiczną człowieka oraz mogą być platformą komunikacji i nośnikiem przekazu. Sport może stać się naszym sprzymierzeńcem w najważniejszej walce - o samego siebie. Razem tworzymy środowisko, w którym każdy może czuć się bezpiecznie, rozmawiając o swoich uczuciach, problemach, wyzwaniach i sukcesach. Działania realizujemy m.in. poprzez kampanie propagujące zdrowie psychiczne; organizację form edukacji o zdrowiu psychicznym z wykorzystaniem zajęć sportowych; organizację i wsparcie akcji promujących i popularyzujących wolontariat, zasady wzajemnej pomocy, tolerancję; działalność oświatową i edukacyjną. Dołącz do nas i zostań partnerem tej zmiany!'
 
 export default function SupportUsPage() {
   return (
