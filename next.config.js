@@ -5,3 +5,9 @@ const nextConfig = {
 
 require('dotenv').config();
 module.exports = nextConfig
+
+module.exports = {
+  images: {
+    domains: ['www.datocms-assets.com'],
+  },
+};

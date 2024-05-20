@@ -34,6 +34,8 @@ export async function performRequest<T>({
 
   const response = await axios.post<ApiResponse<T>>('https://graphql.datocms.com/', body, { headers })
 
+  console.log('REQ DO DATOCMS')
+  console.log({response})
   if (response.status !== 200) {
     throw new Error(`API Error: ${response.status} ${response.statusText}`)
   }

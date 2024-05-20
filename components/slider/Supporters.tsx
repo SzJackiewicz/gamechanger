@@ -1,32 +1,14 @@
-'use client'
+'use server'
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import {FocusOnMotion} from "@/types/types";
 
 SwiperCore.use([Autoplay, Navigation])
-export const Supporters = ({ title }: { title: string }) => {
-  const data = [
-    {
-      img: '1.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '2.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '3.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '4.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '5.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-  ]
+export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnEmotions: FocusOnMotion[] }) => {
+console.log('Supporters')
+  console.log( focusOnEmotions)
+// console.log(focusOnEmotions.length)
   return (
     <>
       <div className='text-center mb-40'>
@@ -75,7 +57,7 @@ export const Supporters = ({ title }: { title: string }) => {
             }}
             className='swiper-wrapper pt-5'
           >
-            {data.map((item, i) => (
+            {focusOnEmotions?.length > 0 && focusOnEmotions.map((item, i) => (
               <SwiperSlide
                 className='swiper-slide'
                 key={i}
@@ -87,13 +69,12 @@ export const Supporters = ({ title }: { title: string }) => {
                   <div className='card-image hover-up'>
                     <p className='link-post'>
                       <img
-                        src={`assets/imgs/page/about/img2.png`}
-                        alt='Genz'
+                        src={item.photo.url}
                       />
                     </p>
                   </div>
                   <div className='card-item-name'>
-                    <label>{item.name}</label>
+                    <label>{item.placeholder}</label>
                   </div>
                 </div>
               </SwiperSlide>

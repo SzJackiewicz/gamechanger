@@ -14,6 +14,7 @@ class MyApp extends App {
     }
   }
   static async getInitialProps({ Component, ctx }) {
+
     ctx.queryClient = getQueryClient()
     let pageProps = {}
     pageProps.navigation = []

@@ -7,6 +7,8 @@ import { SupportUs } from '@/components/sections/SupportUs'
 import { FocusOnEmotions } from '@/components/sections/FocusOnEmotions'
 
 export default function Home() {
+  console.log('Home rendered on', typeof window === 'undefined' ? 'server' : 'client');
+
   return (
     <>
       <Head>
@@ -32,7 +34,7 @@ export default function Home() {
                 className='col-xl-12 wow animate__animated animate__fadeIn'
                 data-wow-delay='.2s'
               >
-                <FocusOnEmotions />
+                <FocusOnEmotions/>
               </div>
               <div
                 className='col-xl-12 wow animate__animated animate__fadeIn'

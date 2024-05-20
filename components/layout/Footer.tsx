@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 import 'primeicons/primeicons.css'
+import {Layout} from "@/types/types";
 
-const Footer = () => {
+type FooterProps = Layout
+
+const Footer = ({ footerLogo, footerLogoAlt, footerSubtitle, iban, swift }: FooterProps) => {
+
   return (
     <>
       <footer className='footer'>
@@ -12,12 +16,12 @@ const Footer = () => {
               <div className='col-lg-2'>
                 <div className=''>
                   <img
-                    src='/assets/imgs/template/logo.png'
-                    alt='Genz'
+                    src={footerLogo?.url || '/assets/imgs/template/logo.png'}
+                    alt={footerLogoAlt}
                   />
                 </div>
                 <p className='mb-20 mt-20 text-sm color-gray-500 '>
-                  Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.
+                  {footerSubtitle}
                 </p>
               </div>
               <div className='col-lg-3'>
@@ -26,10 +30,10 @@ const Footer = () => {
                   <div className='col-12'>
                     <ul className='menu-footer'>
                       <li className=''>
-                        <p className='color-gray-500'>IBAN: PL45 1090 1098 0000 0001 5773 9195</p>
+                        <p className='color-gray-500'>IBAN: {iban}</p>
                       </li>
                       <li className=''>
-                        <p className='color-gray-500'>SWIFT: WBKPPLPP</p>
+                        <p className='color-gray-500'>SWIFT: {swift}</p>
                       </li>
                       <li className=''>
                         <p className='color-gray-500'>Santander Bank Polska S.A.</p>
