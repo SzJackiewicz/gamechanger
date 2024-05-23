@@ -760,16 +760,18 @@ h6 {
 }
 
 .helpLine {
-  padding: 10px;
+  display: flex;
   border-radius: 5px;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .icon-help {
-  margin: 5px 0;
-
   svg {
-    width: 25px;
-    height: 25px;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -1774,6 +1776,158 @@ input {
   text-align: center;
 }
 
+/* BUY BUTTON */
+
+.styledLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+}
+
+.styledPriceContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.styledBuyButtonLarge {
+  width: 264px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  color: whitesmoke;
+  background-color: #248d74;
+  font-size: 16px;
+  letter-spacing: 0.6pt;
+  font-weight: 600;
+  font-family:
+    Montserrat,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica Neue,
+    Ubuntu,
+    sans-serif;
+  &:hover {
+    background-color: #33cc99;
+  }
+}
+
+.styledBuyButtonSmall {
+  width: 214px;
+  height: 38px;
+  border-radius: 8px;
+  border: none;
+  color: whitesmoke;
+  background-color: #248d74;
+  font-size: 16px;
+  letter-spacing: 0.6pt;
+  font-weight: 600;
+  font-family:
+    Montserrat,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica Neue,
+    Ubuntu,
+    sans-serif;
+  &:hover {
+    background-color: #33cc99;
+  }
+}
+
+.styledPrice {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 6px;
+  white-space: nowrap;
+  font-size: 27px;
+  font-weight: 600;
+  color: whitesmoke;
+  font-family:
+    Montserrat,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica Neue,
+    Ubuntu,
+    sans-serif;
+}
+
+.styledTitle {
+  width: 100%;
+  overflow: hidden;
+  font-size: 16px;
+  color: whitesmoke;
+  font-weight: 500;
+  font-family:
+    Montserrat,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica Neue,
+    Ubuntu,
+    sans-serif;
+  letter-spacing: 0.6pt;
+}
+
+.styledContainerLarge {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  height: 331px;
+  padding: 10px 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.styledContainerSmall {
+  display: flex;
+  flex-direction: column;
+  width: 232px;
+  height: 330px;
+  padding: 10px 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto 10px;
+}
+
+.styledCycle {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 4px;
+  color: whitesmoke;
+  font-family:
+    Montserrat,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica Neue,
+    Ubuntu,
+    sans-serif;
+}
+
+.styledTitleContainer {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  height: 75px;
+  text-align: center;
+  justify-content: center;
+}
+
 .img-backdrop {
   position: absolute;
   bottom: 0px;
@@ -2051,10 +2205,6 @@ input {
   position: absolute;
   top: 30px;
   right: 20px;
-}
-
-.main-color-text {
-  color: #6cffc1;
 }
 
 .card-pricing .lbl-success {
@@ -5560,11 +5710,16 @@ body .ProductImage-imageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #34cc9976;
   max-height: 120px;
-  max-width: 210px;
+  max-width: 180px;
   padding: 10px;
   border-radius: 8px;
+
+  @media (max-width: 640px) {
+    max-width: 140px;
+    max-height: 100px;
+    padding: 0;
+  }
 }
 
 .cover-relative {
@@ -6060,6 +6215,9 @@ iframe.google-map {
   border: 1px solid #34cc9989;
   position: relative;
   z-index: 2;
+  @media (max-width: 1200px) {
+    padding: 30px 30px;
+  }
 }
 
 .item-icon {
@@ -6107,12 +6265,12 @@ iframe.google-map {
 }
 
 .accordion-collapse {
-  border-width: 0 0px;
+  border-width: 0px;
   padding-right: 70px;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color:;
+  background-color: transparent;
 }
 
 .accordion-button::after {
@@ -6172,7 +6330,7 @@ iframe.google-map {
 }
 
 .box-quote {
-  padding: 120px 100px 70px 100px;
+  padding: 120px 100px 50px 100px;
   background-image: url(../imgs/page/single/left-quote.svg);
   background-repeat: no-repeat;
   background-position: top 50px center;

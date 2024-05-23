@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Link from 'next/link'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 
 export default function NewsPage() {
   return (
@@ -70,6 +71,7 @@ export default function NewsPage() {
             </div>
           </div>
         </div>
+        <PartnersLogs />
       </Layout>
     </>
   )

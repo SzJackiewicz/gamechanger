@@ -68,7 +68,7 @@ export default function AboutPage() {
           <div className='container'>
             <CoverWithTestimonials img='/assets/imgs/page/o-nas/aboutus.webp' />
             <div className='row'>
-              <div className='col-xl-10 col-lg-10 margin-auto'>
+              <div className='col-xl-12 col-lg-12 margin-auto'>
                 <div
                   className='box-quote'
                   data-wow-delay='.1s'
@@ -113,21 +113,23 @@ export default function AboutPage() {
                 </p>
                 <br />
                 <p className='text-bolder font-sm-clamp color-gray-500'>Dołącz do nas i zostań partnerem tej zmiany!</p>
-                <BoardMembers
-                  title='Zarząd'
-                  members={boardMembers}
-                />
-                <BoardMembers
-                  title='Rada fundacji'
-                  members={councilMembers}
-                />
-                <BoardMembers
-                  title='Team'
-                  members={otherMembers}
-                />
+                <div className='col-xl-10 col-lg-12 margin-auto'>
+                  <BoardMembers
+                    title='Zarząd'
+                    members={boardMembers}
+                  />
+                  <BoardMembers
+                    title='Rada fundacji'
+                    members={councilMembers}
+                  />
+                  <BoardMembers
+                    title='Team'
+                    members={otherMembers}
+                  />
 
-                <div className='box-faqs mb-70 mt-40'>
-                  <Accordion />
+                  <div className='box-faqs mb-70 mt-40'>
+                    <Accordion />
+                  </div>
                 </div>
                 <PartnersLogs />
               </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { PortfolioFilter } from '../../components/elements/PortfolioFilter'
 import Layout from '../../components/layout/Layout'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 
 export default function SupportersPage() {
   return (
@@ -28,6 +29,7 @@ export default function SupportersPage() {
             </div>
           </div>
         </div>
+        <PartnersLogs />
       </Layout>
     </>
   )

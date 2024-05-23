@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChild,
@@ -104,20 +105,27 @@ export const HelpLines = () => {
           className='helpLine color-gray-100'
         >
           <div className='icon-help'>{line.icon}</div>
-          <h2 className='font-md-clamp color-gray-100'>{line.title}</h2>
-          {line.number && <p className='number mb-10 color-gray-300'>{line.number}</p>}
-          {line.url && (
-            <Link
-              href={line.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='color-gray-300'
-            >
-              {line.urlText}
-            </Link>
-          )}
+          <StyledTextContainer>
+            <h2 className='font-md-clamp color-gray-100'>{line.title}</h2>
+            {line.number && <p className='number mb-10 color-gray-300'>{line.number}</p>}
+            {line.url && (
+              <Link
+                href={line.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='color-gray-300'
+              >
+                {line.urlText}
+              </Link>
+            )}
+          </StyledTextContainer>
         </div>
       ))}
     </div>
   )
 }
+
+const StyledTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`

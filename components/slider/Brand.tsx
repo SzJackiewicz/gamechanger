@@ -6,13 +6,16 @@ SwiperCore.use([Autoplay, Navigation])
 const Brand = () => {
   const data = [
     {
-      img: 'agon.svg',
+      img: '/assets/imgs/slider/patrons/1.png',
     },
     {
-      img: 'mon.svg',
+      img: '/assets/imgs/slider/patrons/2.png',
     },
     {
-      img: 'fig.svg',
+      img: '/assets/imgs/slider/patrons/3.png',
+    },
+    {
+      img: '/assets/imgs/slider/patrons/4.png',
     },
   ]
 
@@ -24,7 +27,7 @@ const Brand = () => {
           key={i}
         >
           <Image
-            src={`/assets/imgs/slider/patrons/${i + 1}.png`}
+            src={item.img}
             alt='partner logo'
             width={0}
             height={0}
