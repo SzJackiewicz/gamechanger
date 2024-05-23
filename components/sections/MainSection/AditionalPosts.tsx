@@ -38,7 +38,7 @@ export const AditionalPosts = () => {
           <Link href={`/aktualnosci/${item.id}`}>
             <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
-          <p className='color-gray-500 text-sm'>{item.subtitle}</p>
+          <p className='color-gray-500 text-sm'>{item?.subtitle}</p>
         </div>
       </div>
     ))

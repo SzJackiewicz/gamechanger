@@ -4,7 +4,8 @@ import React from 'react'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
 import { ContactForm } from '@/components/elements/ContactForm'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
-import { SupportUs } from '@/components/sections/SupportUs'
+import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
+import { buttonsDataSupportPage } from '@/components/sections/SupportUs/data'
 
 type SupportUsLayoutProps = {
   withForm?: boolean
@@ -67,9 +68,10 @@ export const SupportUsLayout = ({
             className='col-xl-10 row mx-auto wow animate__animated animate__fadeInUp'
             data-wow-delay='.3s'
           >
-            <SupportUs />
+            <SupportUs buttonsData={buttonsDataSupportPage} />
           </div>
         )}
+        <PartnersLogs />
       </Layout>
     </>
   )

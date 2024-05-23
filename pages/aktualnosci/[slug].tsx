@@ -3,7 +3,9 @@ import Layout from '../../components/layout/Layout'
 import SingleContent from '@/components/sections/SingleContent'
 import { useRouter } from 'next/router'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
-import { SupportUs } from '@/components/sections/SupportUs'
+import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
+import { buttonsDataMainPage } from '@/components/sections/SupportUs/data'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 
 export default function BlogDetails() {
   const router = useRouter()
@@ -14,21 +16,21 @@ export default function BlogDetails() {
         <div className='container'>
           <div className='row'>
             <div className='col-xl-1' />
-            <div className='col-xl-10 col-lg-12'>
+            <div className='col-xl-12 col-lg-12'>
               <div className='row mt-50 align-items-end'>
                 <div className='col-lg-8 m-auto text-center'>
-                  <h3 className='color-linear'>{heroSectionData[Number(router.query.slug)].title}</h3>
+                  <h3 className='color-linear font-xl-clamp'>{heroSectionData[Number(router.query.slug)]?.title}</h3>
                 </div>
               </div>
               <div className='mt-30'>
-                <div className='mb-3 center-flex'>
+                <div className='mb-3 center-flex w-75 h-75 m-auto '>
                   <img
-                    src={`${heroSectionData[Number(router.query.slug)].cover}`}
-                    alt='Genz'
+                    src={`${heroSectionData[Number(router.query?.slug)]?.cover}`}
+                    alt='cover'
                   />
                 </div>
                 <div
-                  className='col-lg-9 m-auto'
+                  className='col-xl-12 col-lg-12 col-md-9 m-auto p-1'
                   data-wow-delay='.2s'
                 >
                   <div className='row mb-40'>
@@ -36,13 +38,14 @@ export default function BlogDetails() {
                   </div>
                   <SingleContent
                     data-wow-delay='.2s'
-                    articleId={router.query.slug}
+                    articleId={router.query?.slug}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <SupportUs />
+          <SupportUs buttonsData={buttonsDataMainPage} />
+          <PartnersLogs />
         </div>
       </div>
     </Layout>

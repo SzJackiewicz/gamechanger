@@ -10,7 +10,7 @@ const SingleContent = ({ articleId }: { articleId: string | string[] | undefined
         data-wow-delay='.3s'
       >
         <h3 className='color-white mb-30'>{(articleId && heroSectionData[Number(articleId)]?.subtitle) || ''}</h3>
-        <p className='text-xl color-gray-500'>{(articleId && heroSectionData[Number(articleId)]?.article) || ''}</p>
+        <p className='font-md-clamp color-gray-500'>{(articleId && heroSectionData[Number(articleId)]?.article) || ''}</p>
 
         <div
           className='bg-gray-850 box-quote'
@@ -20,7 +20,7 @@ const SingleContent = ({ articleId }: { articleId: string | string[] | undefined
             className='color-gray-500'
             data-wow-delay='.3s'
           >
-            {(articleId && heroSectionData[Number(articleId)].subtitle) || ''}
+            {(articleId && heroSectionData[Number(articleId)]?.subtitle) || ''}
           </h3>
         </div>
       </div>

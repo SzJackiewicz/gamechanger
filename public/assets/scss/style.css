@@ -2258,7 +2258,6 @@ input {
 .header .main-menu {
   display: inline-block;
   padding-top: 3px;
-  border: 1px solid red;
 }
 .header .main-menu li {
   float: left;

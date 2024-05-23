@@ -3,8 +3,9 @@ import Layout from '../components/layout/Layout'
 import React from 'react'
 import { MainSection } from '@/components/sections/MainSection/MainSection'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
-import { SupportUs } from '@/components/sections/SupportUs'
 import { FocusOnEmotions } from '@/components/sections/FocusOnEmotions'
+import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
+import { buttonsDataMainPage } from '@/components/sections/SupportUs/data'
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
                 className='col-xl-12 wow animate__animated animate__fadeIn'
                 data-wow-delay='.3s'
               >
-                <SupportUs />
+                <SupportUs buttonsData={buttonsDataMainPage} />
               </div>
               <div
                 className='col-xl-12 wow animate__animated animate__fadeIn'
