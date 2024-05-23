@@ -5859,13 +5859,13 @@ body .ProductImage-imageContainer {
 }
 
 .font-sm-clamp {
-  font-size: clamp(14px, 0.61vi + 10.58px, 18.33px);
-  line-height: 1.4;
+  font-size: clamp(16px, 0.61vi + 10.58px, 18.33px);
+  line-height: 1.5rem;
 }
 
 .font-md-clamp {
-  font-size: clamp(14px, 0.61vi + 12.58px, 21.33px);
-  line-height: 1.6;
+  font-size: clamp(16px, 0.61vi + 12.58px, 21.33px);
+  line-height: 1.6rem;
 }
 /* 
 --font-size-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);

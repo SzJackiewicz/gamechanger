@@ -23,8 +23,7 @@ export const AditionalPostsMobile = ({ item }: { item: Item }) => {
       <div className='card-image '>
         <Link
           className='link-post'
-          href='/single-sidebar'
-        >
+          href={`/aktualnosci/${item.id}`}>
           <Image
             src={`${item.cover}`}
             alt='Article main cover'
