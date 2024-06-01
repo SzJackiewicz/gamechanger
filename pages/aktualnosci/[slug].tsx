@@ -34,9 +34,6 @@ const exampleArticle = {
   
   Warto również pamiętać, że świadomość szczęścia to proces, który wymaga praktyki i zaangażowania. W dzisiejszym zabieganym świecie łatwo zapomnieć o tym, co naprawdę się liczy, ale dzięki regularnej praktyce uważności i wdzięczności możemy odkryć klucz do pełniejszego i bardziej satysfakcjonującego życia.
   
-  - Praktykuj uważność i zatrzymuj się na chwilę, aby cieszyć się drobnymi przyjemnościami dnia codziennego.
-  - Prowadź dziennik wdzięczności, w którym zapisujesz co najmniej jedną rzecz, za którą jesteś wdzięczny każdego dnia.
-  
   ## Podsumowanie
   
   Świadomość szczęścia w życiu to umiejętność dostrzegania i doceniania pozytywnych aspektów życia nawet w trudnych sytuacjach. Poprzez praktykowanie uważności, wdzięczności i budowanie relacji społecznych możemy rozwijać tę umiejętność i czerpać większą radość i satysfakcję z naszego codziennego doświadczenia.

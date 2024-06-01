@@ -23,7 +23,8 @@ export const AditionalPostsMobile = ({ item }: { item: Item }) => {
       <div className='card-image '>
         <Link
           className='link-post'
-          href={`/aktualnosci/${item.id}`}>
+          href={`/aktualnosci/${item.id}`}
+        >
           <Image
             src={`${item.cover}`}
             alt='Article main cover'
@@ -31,6 +32,8 @@ export const AditionalPostsMobile = ({ item }: { item: Item }) => {
             width={190}
             height={190}
             priority
+            placeholder='blur'
+            blurDataURL='/assets/imgs/imageBlur/blur.webp'
           />
           <div className='img-backdrop' />
           <div className='card-info card-bg-2'>

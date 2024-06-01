@@ -5554,24 +5554,6 @@ iframe.google-map {
   border-radius: 50%;
   margin-bottom: 15px;
 }
-.item-icon.icon-motion {
-  background: url(../imgs/page/about/motion.svg) no-repeat center;
-}
-.item-icon.icon-ui {
-  background: url(../imgs/page/about/ui.svg) no-repeat center;
-}
-.item-icon.icon-branding {
-  background: url(../imgs/page/about/branding.svg) no-repeat center;
-}
-.item-icon.icon-product {
-  background: url(../imgs/page/about/product.svg) no-repeat center;
-}
-.item-icon.icon-key {
-  background: url(../imgs/page/about/key.svg) no-repeat center;
-}
-.item-icon.icon-social {
-  background: url(../imgs/page/about/social.svg) no-repeat center;
-}
 
 .list-checked {
   padding: 0px 0px 0px 20px;
@@ -6911,9 +6893,7 @@ iframe.google-map {
 .theme-day .logo-night {
   display: none;
 }
-.theme-day .switch-button .form-switch .form-check-input {
-  background-image: url(../imgs/template/icons/mode-day.svg);
-}
+
 .theme-day .pagination li a {
   background-color: #7f92b0;
 }

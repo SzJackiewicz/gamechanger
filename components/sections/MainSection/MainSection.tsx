@@ -25,6 +25,8 @@ export const MainSection = () => {
                 width={678}
                 height={678}
                 priority
+                placeholder='blur'
+                blurDataURL='/assets/imgs/imageBlur/blur.webp'
               />
               <div className='img-backdrop' />
               <div className='card-info card-bg-2'>

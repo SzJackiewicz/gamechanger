@@ -25,6 +25,8 @@ export const AditionalPosts = () => {
               width={190}
               height={190}
               priority
+              placeholder='blur'
+              blurDataURL='/assets/imgs/imageBlur/blur.webp'
             />
           </Link>
         </div>

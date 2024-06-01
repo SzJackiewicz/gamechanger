@@ -17,6 +17,8 @@ export const CoverWithTestimonials = ({ title, subtitle, img = '/assets/imgs/pag
         src={img}
         priority
         className='coverFilter'
+        placeholder='blur'
+        blurDataURL='/assets/imgs/imageBlur/blur.webp'
       />
       <div className='cover-testimonials'>
         <p className='color-gray-200 font-xl-clamp'>{title}</p>
