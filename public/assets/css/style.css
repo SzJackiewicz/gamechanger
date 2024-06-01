@@ -1799,7 +1799,7 @@ input {
   height: 44px;
   border-radius: 8px;
   border: none;
-  color: whitesmoke;
+  color: #d8e6fb;
   background-color: #248d74;
   font-size: 16px;
   letter-spacing: 0.6pt;
@@ -1822,7 +1822,7 @@ input {
   height: 38px;
   border-radius: 8px;
   border: none;
-  color: whitesmoke;
+  color: #d8e6fb;
   background-color: #248d74;
   font-size: 16px;
   letter-spacing: 0.6pt;
@@ -1851,7 +1851,7 @@ input {
   white-space: nowrap;
   font-size: 27px;
   font-weight: 600;
-  color: whitesmoke;
+  color: #d8e6fb;
   font-family:
     Montserrat,
     -apple-system,
@@ -1866,7 +1866,7 @@ input {
   width: 100%;
   overflow: hidden;
   font-size: 16px;
-  color: whitesmoke;
+  color: #d8e6fb;
   font-weight: 500;
   font-family:
     Montserrat,
@@ -1888,6 +1888,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  color: #d8e6fb;
   margin: 30px auto;
 }
 
@@ -1900,6 +1901,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  color: #d8e6fb;
   margin: 30px auto 10px;
 }
 
@@ -1908,7 +1910,7 @@ input {
   flex-direction: column;
   text-align: left;
   padding-top: 4px;
-  color: whitesmoke;
+  color: d8e6fb;
   font-family:
     Montserrat,
     -apple-system,
@@ -1926,6 +1928,7 @@ input {
   height: 75px;
   text-align: center;
   justify-content: center;
+  color: #d8e6fb;
 }
 
 .img-backdrop {
@@ -2182,7 +2185,6 @@ input {
 
 .card-pricing:hover {
   border-color: #34cc99 !important;
-  background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
 }
 
 .support-us-option {
@@ -2195,7 +2197,6 @@ input {
 
 .card-pricing-clicked {
   border-color: #34cc99 !important;
-  background: url(../imgs/page/about/shadow-1.svg) no-repeat bottom right;
 }
 
 .card-pricing .lbl-danger {
@@ -5818,7 +5819,6 @@ body .ProductImage-imageContainer {
   width: 500px;
   content: '';
   z-index: 1;
-  background: url(../imgs/template/shadow-1.svg) no-repeat right top;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -5859,13 +5859,13 @@ body .ProductImage-imageContainer {
 }
 
 .font-sm-clamp {
-  font-size: clamp(16px, 0.61vi + 10.58px, 18.33px);
-  line-height: 1.5rem;
+  font-size: clamp(14px, 0.61vi + 10px, 16px);
+  line-height: 1.7rem;
 }
 
 .font-md-clamp {
   font-size: clamp(16px, 0.61vi + 12.58px, 21.33px);
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 /* 
 --font-size-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
@@ -5941,7 +5941,6 @@ body .ProductImage-imageContainer {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  background: url(../imgs/page/homepage3/shadow-1.svg) no-repeat bottom right;
   z-index: 1;
 }
 
@@ -5969,26 +5968,7 @@ body .ProductImage-imageContainer {
   width: 50px;
   border-radius: 50%;
 }
-.box-socials a span.fb {
-  background-image: url(../imgs/page/homepage3/fb.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.inst {
-  background-image: url(../imgs/page/homepage3/inst.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.snap {
-  background-image: url(../imgs/page/homepage3/snap.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.tw {
-  background-image: url(../imgs/page/homepage3/tw.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .box-socials a:hover {
   transition: all 0.2s;
 }
@@ -6118,7 +6098,6 @@ iframe.google-map {
   position: absolute;
   bottom: -50px;
   right: 0px;
-  background: url(../imgs/page/login/security.svg) no-repeat bottom right;
 }
 
 .box-line {
@@ -6156,17 +6135,11 @@ iframe.google-map {
   padding: 8px;
 }
 
-.btn-login-gmail {
-  background: url(../imgs/page/login/gmail.svg) no-repeat left center;
-  padding: 0px 0px 0px 30px;
-}
-
 .viewpass {
   position: absolute;
   top: 0px;
   right: 0px;
   padding-right: 30px;
-  background-image: url(../imgs/page/login/view.svg);
   background-position: center;
   background-repeat: no-repeat;
   height: 65px;
@@ -6196,7 +6169,6 @@ iframe.google-map {
   width: 100%;
   position: absolute;
   right: 0px;
-  background: url(../imgs/page/404/shadow-1.svg) no-repeat bottom 100% right 0px;
   z-index: -1;
 }
 
@@ -6278,6 +6250,13 @@ iframe.google-map {
   height: 54px;
   width: 54px;
   background-size: auto;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover::after {
+  border-radius: 50%;
+  background-color: #0bd196; /* Replace #ff0000 with the desired background color */
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -6308,15 +6287,6 @@ iframe.google-map {
   margin: 0px 10px;
   width: 20px;
 }
-.icon-media.icon-fb {
-  background-image: url(../imgs/page/single/fb.svg);
-}
-.icon-media.icon-tw {
-  background-image: url(../imgs/page/single/tw.svg);
-}
-.icon-media.icon-printest {
-  background-image: url(../imgs/page/single/pi.svg);
-}
 
 .box-share {
   display: flex;
@@ -6339,10 +6309,7 @@ iframe.google-map {
 }
 
 .content-detail {
-  padding-bottom: 50px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1200px) {

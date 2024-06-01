@@ -11,7 +11,7 @@ export const CoverWithTestimonials = ({ title, subtitle, img = '/assets/imgs/pag
   return (
     <div className='cover-relative m-auto'>
       <Image
-        width={900}
+        width={600}
         height={300}
         alt='cover'
         src={img}

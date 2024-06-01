@@ -24,11 +24,11 @@ export const BuyButtonComponent = ({ slug, buttonTitle, price, title, cycle, sma
           priority
         />
       </div>
-      <div className='styledTitleContainer'>
-        <div className='styledTitle'>{title}</div>
+      <div className='styledTitleContainer color-gray-100'>
+        <div className='styledTitle color-gray-100'>{title}</div>
         {price && (
           <div className='styledPriceContainer'>
-            <h3 className='styledPrice'>{price}</h3>
+            <h3 className='styledPrice color-gray-100'>{price}</h3>
             {cycle && (
               <div className='styledCycle'>
                 <span>na</span>

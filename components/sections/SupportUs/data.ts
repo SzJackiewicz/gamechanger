@@ -29,7 +29,7 @@ export const buttonsDataMainPage: ButtonData[] = [
   },
 ]
 
-export const buttonsDataSupportPage: ButtonData[] = [
+export const buttonsDataSupportPageOneTime: ButtonData[] = [
   {
     slug: 'https://donate.stripe.com/3cs03M0RCfh9cX6dQQ',
     title: 'Wsparcie jednorazowe',
@@ -58,6 +58,8 @@ export const buttonsDataSupportPage: ButtonData[] = [
     buttonTitle: 'Przekaż darowiznę',
     cycle: false,
   },
+]
+export const buttonsDataSupportCycle: ButtonData[] = [
   {
     slug: 'https://donate.stripe.com/3cs03M0RCfh9cX6dQQ',
     title: 'Wsparcie cykliczne',

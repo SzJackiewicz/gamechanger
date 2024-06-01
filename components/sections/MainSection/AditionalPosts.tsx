@@ -11,7 +11,7 @@ export const AditionalPosts = () => {
   const { width = 0 } = useWindowSize()
 
   if (width > 500) {
-    return heroSectionData.slice(1, 4).map((item, i) => (
+    return heroSectionData?.slice(1, 4).map((item, i) => (
       <div
         className='card-list-posts wow animate__animated animate__fadeIn'
         data-wow-delay={`${i / 10}s`}
@@ -38,12 +38,12 @@ export const AditionalPosts = () => {
           <Link href={`/aktualnosci/${item.id}`}>
             <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
-          <p className='color-gray-500 font-sm-clamp'>{item?.subtitle}</p>
+          <p className='color-gray-500 font-sm-clamp ellipsis'>{item?.subtitle}</p>
         </div>
       </div>
     ))
   } else {
-    return heroSectionData.slice(1, 4).map((item, i) => (
+    return heroSectionData?.slice(1, 4).map((item, i) => (
       <AditionalPostsMobile
         item={item}
         key={i}

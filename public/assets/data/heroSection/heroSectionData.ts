@@ -5,7 +5,6 @@ export const heroSectionData = [
     subtitle:
       'Omawiamy ideę Miesiąca Świadomości Zdrowia Psychicznego oraz to, w jaki sposób zasoby Amerykańskiego Towarzystwa Psychologicznego (APA) mogą wspierać osoby na całym świecie.',
     cover: '/assets/data/heroSection/img/1.jpeg',
-    author: 'John Doe',
     article: `Miesiąc Świadomości Zdrowia Psychicznego: Wsparcie od Amerykańskiego Towarzystwa Psychologicznego
   
       Każdego roku, w maju, obchodzimy Miesiąc Świadomości Zdrowia Psychicznego. Jest to czas poświęcony zwiększaniu świadomości na temat problemów zdrowia psychicznego, usuwaniu stigma z nimi związanego oraz promowaniu opieki nad własnym umysłem. W tym artykule omówimy ideę Miesiąca Świadomości Zdrowia Psychicznego oraz zasoby, jakie oferuje Amerykańskie Towarzystwo Psychologiczne (APA), aby wspierać osoby na całym świecie w walce z tymi wyzwaniami.

@@ -66,7 +66,7 @@ export default function AboutPage() {
       <Layout>
         <div className='cover-home1'>
           <div className='container'>
-            <CoverWithTestimonials img='/assets/imgs/page/o-nas/aboutus.webp' />
+            <CoverWithTestimonials img='/assets/imgs/page/o-nas/aboutus.png' />
             <div className='row'>
               <div className='col-xl-12 col-lg-12 margin-auto'>
                 <div

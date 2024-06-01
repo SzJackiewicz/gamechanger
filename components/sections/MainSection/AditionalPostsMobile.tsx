@@ -9,7 +9,7 @@ interface Item {
   id: number
   subtitle: string
   cover: string
-  author: string
+  author?: string
   article: string
   date?: string
 }
