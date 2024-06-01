@@ -17,12 +17,9 @@ export default function HelpPage() {
             <div className='row'>
               <div className='col-xl-1' />
               <div className='col-xl-10 col-lg-12'>
-                <div className='col-lg-8 m-auto text-center'>
-                  <h2 className='color-linear text-xl-clamp'>Nie czekaj, zgłoś się po pomoc</h2>
-                </div>
                 <div className='row mt-30'>
                   <div className='image-detail mb-30'>
-                    <CoverWithTestimonials img='/assets/imgs/page/pomoc/pomoc.webp' />
+                    <CoverWithTestimonials img='/assets/imgs/page/pomoc/pomoc.png' />
                   </div>
                   <div className='col-lg-10 m-auto'>
                     <HelpLines />

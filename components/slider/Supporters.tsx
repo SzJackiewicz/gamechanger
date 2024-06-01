@@ -4,29 +4,29 @@ import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 SwiperCore.use([Autoplay, Navigation])
-export const Supporters = ({ title }: { title: string }) => {
-  const data = [
-    {
-      img: '1.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '2.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '3.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '4.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-    {
-      img: '5.webp',
-      name: 'Jacek Szymkiewicz',
-    },
-  ]
+export const Supporters = ({ title, data }: { title: string; data: unknown[] }) => {
+  // const data = [
+  //   {
+  //     img: '1.webp',
+  //     name: 'Jacek Szymkiewicz',
+  //   },
+  //   {
+  //     img: '2.webp',
+  //     name: 'Jacek Szymkiewicz',
+  //   },
+  //   {
+  //     img: '3.webp',
+  //     name: 'Jacek Szymkiewicz',
+  //   },
+  //   {
+  //     img: '4.webp',
+  //     name: 'Jacek Szymkiewicz',
+  //   },
+  //   {
+  //     img: '5.webp',
+  //     name: 'Jacek Szymkiewicz',
+  //   },
+  // ]
   return (
     <>
       <div className='text-center mb-40'>
@@ -88,11 +88,12 @@ export const Supporters = ({ title }: { title: string }) => {
                     <p className='link-post'>
                       <img
                         src={`assets/imgs/page/about/img2.png`}
-                        alt='Genz'
+                        alt='Wspierający'
                       />
                     </p>
                   </div>
                   <div className='card-item-name'>
+                    {/* @ts-ignore */}
                     <label>{item.name}</label>
                   </div>
                 </div>

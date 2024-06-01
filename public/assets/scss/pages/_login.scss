@@ -22,7 +22,6 @@
     position: absolute;
     bottom: -50px;
     right: 0px;
-    background: url(../imgs/page/login/security.svg) no-repeat bottom right;
   }
 }
 .box-line {
@@ -58,16 +57,12 @@
   width: 100%;
   padding: 8px;
 }
-.btn-login-gmail {
-  background: url(../imgs/page/login/gmail.svg) no-repeat left center;
-  padding: 0px 0px 0px 30px;
-}
+
 .viewpass {
   position: absolute;
   top: 0px;
   right: 0px;
   padding-right: 30px;
-  background-image: url(../imgs/page/login/view.svg);
   background-position: center;
   background-repeat: no-repeat;
   height: 65px;
