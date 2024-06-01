@@ -98,8 +98,8 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
                         href='#'
                       >
                         <img
-                          src={`assets/imgs/page/about/${item.img}`}
-                          alt='Genz'
+                          src={`/assets/imgs/imageBlur/blur.webp`}
+                          alt='wspierający'
                         />
                         <div className='card-info card-bg-2'>
                           <div className='info-bottom mb-15'>
