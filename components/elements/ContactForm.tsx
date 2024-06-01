@@ -60,10 +60,9 @@ export const ContactForm = () => {
               className='form-control bg-gray-850 border-gray-800 color-gray-500'
               id='phone'
               type='tel'
-              placeholder='Telefon*'
-              {...register('phone', { required: true })}
+              placeholder='Telefon'
+              {...register('phone', { required: false })}
             />
-            {errors.phone && <span>To pole jest wymagane</span>}
           </div>
         </div>
         <div className='col-lg-6'>
@@ -72,9 +71,8 @@ export const ContactForm = () => {
               className='form-control bg-gray-850 border-gray-800 color-gray-500'
               id='subject'
               placeholder='Temat*'
-              {...register('subject', { required: true })}
+              {...register('subject', { required: false })}
             />
-            {errors.subject && <span>To pole jest wymagane</span>}
           </div>
         </div>
       </div>

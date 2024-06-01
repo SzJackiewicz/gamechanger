@@ -3,32 +3,32 @@ import React from 'react'
 
 const portfolio = [
   {
-    name: 'Flyer design',
+    name: 'Random title',
     category: ['all', 'web', 'motion'],
     img: 'img1.png',
   },
   {
-    name: 'Banner design',
+    name: 'Random title',
     category: ['all', 'graphic', 'web'],
     img: 'img2.png',
   },
   {
-    name: 'Disk cover',
+    name: 'Random title',
     category: ['all', 'graphic', 'motion '],
     img: 'img3.png',
   },
   {
-    name: 'Pattern design',
+    name: 'Random title',
     category: ['all', 'motion', 'mobile'],
     img: 'img4.png',
   },
   {
-    name: 'Logo design',
+    name: 'Random title',
     category: ['all', 'web', 'graphic'],
     img: 'img5.png',
   },
   {
-    name: 'Animal pattern',
+    name: 'Random title',
     category: ['all', 'mobile'],
     img: 'img5.png',
   },
@@ -37,45 +37,6 @@ const portfolio = [
 export const PortfolioFilter = ({ col }: { col: number }) => {
   return (
     <>
-      <div className='row text-center filter-nav'>
-        <div className='col-lg-12'>
-          <span
-            className='wow animate__animated animate__fadeInUp'
-            data-wow-delay='.0s'
-          >
-            <Link
-              className={`btn btn-border-linear btn-filter hover-up`}
-              href='/wspierajacy/stala-wspolpraca'
-            >
-              Stała współpraca
-            </Link>
-          </span>
-          <span
-            className='wow animate__animated animate__fadeInUp'
-            data-wow-delay='.1s'
-          >
-            <Link
-              className={`btn btn-border-linear btn-filter hover-up`}
-              href='/wspierajacy/ambasadorzy'
-            >
-              Ambasadorzy
-            </Link>
-          </span>
-
-          <span
-            className='wow animate__animated animate__fadeInUp'
-            data-wow-delay='.4s'
-          >
-            <Link
-              className={`btn btn-border-linear btn-filter hover-up `}
-              href='/wspierajacy/pomagaja-nam'
-            >
-              Pomagają nam
-            </Link>
-          </span>
-        </div>
-      </div>
-
       <div className='mt-70 mb-50'>
         <div className='row'>
           {portfolio.map((item) => (

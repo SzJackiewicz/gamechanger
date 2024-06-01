@@ -19,9 +19,7 @@ export default function SupportersPage() {
                 <div className='text-center mt-70 mb-50'>
                   <h2 className='color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp'>Wspierający</h2>
                   <p className='text-lg color-gray-500 wow animate__animated animate__fadeInUp'>
-                    The convention is the main event of the year for professionals in
-                    <br className='d-none d-lg-block' />
-                    the world of design and architecture.
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   </p>
                 </div>
                 <PortfolioFilter col={6} />

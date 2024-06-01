@@ -65,7 +65,7 @@ const Footer = () => {
                   <br />
                   80-309 Gdańsk
                   <br />
-                  biuro@f-gc.pl
+                  kontakt@f-gc.pl
                   <br />
                   tel: 690-301-110
                 </p>
