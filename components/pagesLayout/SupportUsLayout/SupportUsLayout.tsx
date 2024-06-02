@@ -1,3 +1,5 @@
+'use server'
+
 import Layout from '@/components/layout/Layout'
 import Head from 'next/head'
 import React from 'react'

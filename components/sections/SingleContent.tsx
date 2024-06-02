@@ -1,4 +1,5 @@
 'use server'
+
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 
