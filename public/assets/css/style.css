@@ -1731,6 +1731,24 @@ input {
   }
 }
 
+.coverFilter {
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.cover-relative {
+  display: flex;
+  height: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin: 10px 20px;
+  padding: 0 10px;
+}
+
 .box-testimonials-supportus {
   margin: 0 auto;
   justify-content: space-between;
@@ -5723,24 +5741,6 @@ body .ProductImage-imageContainer {
   }
 }
 
-.cover-relative {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  margin: 10px 20px;
-  padding: 0 10px;
-}
-
-.coverFilter {
-  filter: opacity(0.7);
-  height: auto;
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-}
-
 .cover-testimonials {
   position: absolute;
   top: 50%;
@@ -6238,7 +6238,7 @@ iframe.google-map {
 
 .accordion-button:hover::after {
   border-radius: 50%;
-  background-color: #0bd196; /* Replace #ff0000 with the desired background color */
+  background-color: #0bd196;
 }
 
 .accordion-button:not(.collapsed)::after {
