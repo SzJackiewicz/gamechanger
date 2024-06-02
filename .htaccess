@@ -4,6 +4,3 @@ RewriteRule ^$ http://127.0.0.1:3003/ [P,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ http://127.0.0.1:3003/$1 [P,L]
-.env
-.DS_Store
-node_modules
