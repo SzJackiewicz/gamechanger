@@ -53,7 +53,7 @@ export const ContactForm = () => {
               placeholder='Imię*'
               {...register('name', { required: true })}
             />
-            {errors.name && <span className='mt-5'>To pole jest wymagane</span>}
+            {errors.name && <span>To pole jest wymagane</span>}
           </div>
         </div>
         <div className='col-lg-6'>
@@ -65,7 +65,7 @@ export const ContactForm = () => {
               placeholder='Email*'
               {...register('email', { required: true })}
             />
-            {errors.email && <span className='mt-5'>To pole jest wymagane</span>}
+            {errors.email && <span>To pole jest wymagane</span>}
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@ export const ContactForm = () => {
             placeholder='Wiadomość*'
             {...register('message', { required: true })}
           />
-          {errors.message && <span className='mt-5'>To pole jest wymagane</span>}
+          {errors.message && <span>To pole jest wymagane</span>}
         </div>
       </div>
 
@@ -114,7 +114,7 @@ export const ContactForm = () => {
         Wyślij
         <i className='fi-rr-arrow-small-right' />
       </button>
-      {responseMessage && <p className='mt-5'>{responseMessage}</p>}
+      {responseMessage && <p>{responseMessage}</p>}
     </form>
   )
 }
