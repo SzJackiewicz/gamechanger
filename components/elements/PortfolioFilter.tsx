@@ -39,7 +39,7 @@ const portfolio = [
 export const PortfolioFilter = ({ col }: { col: number }) => {
   return (
     <>
-      <div className='mt-70 mb-50'>
+      <div className='mt-20 mb-50'>
         <div className='row'>
           {portfolio.map((item) => (
             <div
