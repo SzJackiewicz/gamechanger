@@ -25,7 +25,7 @@
     "components/slider/BuyButtons.tsx",
     "lib/datocms.tsx",
     "pages/_app.js",
-    "components/elements/BuyButtonComponent.jsx"
+    "components/elements/StripeButtonWrapper.jsx"
   ],
   "exclude": ["node_modules"]
 }

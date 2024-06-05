@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import Layout from '../../components/layout/Layout'
-import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
-import { buttonsDataMainPage } from '@/components/sections/SupportUs/data'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -91,7 +89,6 @@ const BlogDetails = () => {
               </div>
             </div>
           </div>
-          <SupportUs buttonsData={buttonsDataMainPage} />
           <PartnersLogs />
         </div>
       </div>

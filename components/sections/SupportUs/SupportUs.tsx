@@ -1,15 +1,12 @@
 'use server'
 
-import { BuyButtonComponent } from '@/components/elements/BuyButton/BuyButtonComponent'
-import { ButtonData } from './data'
-
 export type SupportUsProps = {
-  buttonsData: ButtonData[]
   copy?: string
   subtitle?: string
+  children?: React.ReactNode
 }
 
-export const SupportUs = ({ buttonsData, copy, subtitle }: SupportUsProps) => {
+export const SupportUs = ({ children, copy, subtitle }: SupportUsProps) => {
   return (
     <>
       <div className='list-logos mb-10'>
@@ -20,20 +17,7 @@ export const SupportUs = ({ buttonsData, copy, subtitle }: SupportUsProps) => {
           <div className='center-flex mt-30'>
             <h4 className='color-gray-100 wow animate__animated animate__fadeInUp m-auto font-md-clamp text-center'>{subtitle}</h4>
           </div>
-          <div className='row enter-flex-between'>
-            {buttonsData &&
-              buttonsData.map((buttonData, index) => (
-                <BuyButtonComponent
-                  small={buttonsData.length > 3 ? true : false}
-                  key={index}
-                  slug={buttonData.slug}
-                  title={buttonData.title}
-                  price={buttonData.price}
-                  buttonTitle={buttonData.buttonTitle}
-                  cycle={buttonData.cycle}
-                />
-              ))}
-          </div>
+          <div className='row center-flex-between'>{children}</div>
         </div>
       </div>
     </>

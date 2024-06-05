@@ -1649,6 +1649,8 @@ input {
 .card-style-1 {
   position: relative;
   width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .card-style-medium {
@@ -1899,28 +1901,23 @@ input {
 
 .styledContainerLarge {
   display: flex;
-  flex-direction: column;
-  width: 288px;
-  height: 331px;
-  padding: 10px 5px;
+  width: auto;
+  margin: 30px auto;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  color: #d8e6fb;
-  margin: 30px auto;
 }
 
 .styledContainerSmall {
   display: flex;
-  flex-direction: column;
-  width: 232px;
-  height: 330px;
-  padding: 10px 5px;
+  width: auto;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  color: #d8e6fb;
-  margin: 30px auto 10px;
+
+  & > stripe-buy-button {
+    width: 232px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .styledCycle {
@@ -5709,6 +5706,13 @@ input {
   75% {
     transform: scale(1.2);
   }
+}
+
+.iconWithTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .main-color-text {
