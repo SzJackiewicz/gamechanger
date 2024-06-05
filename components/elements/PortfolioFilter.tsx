@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { base64Blur } from './base64ImageBlur'
 
 const portfolio = [
   {
@@ -46,7 +47,7 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
                         priority
                         className='coverFilter'
                         placeholder='blur'
-                        blurDataURL='/assets/imgs/imageBlur/blur.webp'
+                        blurDataURL={base64Blur}
                       />
                     </div>
                     <div className='info-bottom mb-15'>

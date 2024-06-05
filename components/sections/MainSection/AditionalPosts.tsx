@@ -6,6 +6,7 @@ import { useWindowSize } from 'usehooks-ts'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Image from 'next/image'
 import { AditionalPostsMobile } from './AditionalPostsMobile'
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export const AditionalPosts = () => {
   const { width = 0 } = useWindowSize()
@@ -26,7 +27,7 @@ export const AditionalPosts = () => {
               height={190}
               priority
               placeholder='blur'
-              blurDataURL='/assets/imgs/imageBlur/blur.webp'
+              blurDataURL={base64Blur}
             />
           </Link>
         </div>

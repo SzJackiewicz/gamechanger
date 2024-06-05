@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AditionalPosts from './AditionalPosts'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Image from 'next/image'
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export const MainSection = () => {
   return (
@@ -26,7 +27,7 @@ export const MainSection = () => {
                 height={678}
                 priority
                 placeholder='blur'
-                blurDataURL='/assets/imgs/imageBlur/blur.webp'
+                blurDataURL={base64Blur}
               />
               <div className='img-backdrop' />
               <div className='card-info card-bg-2'>
