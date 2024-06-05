@@ -7,7 +7,7 @@ import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonia
 import { ContactForm } from '@/components/elements/ContactForm'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
-import { buttonsDataSupportCycle, buttonsDataSupportPageOneTime } from '@/components/sections/SupportUs/data'
+import { StripeButtonWrapper } from '@/components/elements/BuyButton/StripeButtonWrapper'
 
 type SupportUsLayoutProps = {
   withForm?: boolean
@@ -36,15 +36,11 @@ export const SupportUsLayout = ({
         <title>{headCopy}</title>
       </Head>
       <Layout>
-        <div className='row'>
-          <div className='col-xl-12 '>
-            <CoverWithTestimonials
-              title={title}
-              subtitle={subtitle}
-              img={img}
-            />
-          </div>
-        </div>
+        <CoverWithTestimonials
+          title={title}
+          subtitle={subtitle}
+          img={img}
+        />
         {articleText && (
           <>
             <div
@@ -71,16 +67,57 @@ export const SupportUsLayout = ({
               className='col-xl-10 row mx-auto wow animate__animated animate__fadeInUp'
               data-wow-delay='.3s'
             >
+              <SupportUs copy='Wparcie jednorazowe'>
+                <StripeButtonWrapper small={true}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PESdSRquiX5mroYK64El7Tk'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+                <StripeButtonWrapper small={true}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PH1nFRquiX5mroYSBb8LJyb'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+                <StripeButtonWrapper small={true}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PH1mcRquiX5mroYWynfUaSF'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+                <StripeButtonWrapper small={true}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PH1hQRquiX5mroYiQoUA6Ws'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+              </SupportUs>
               <SupportUs
-                buttonsData={buttonsDataSupportPageOneTime}
-                copy='Wparcie jednorazowe'
-              />
-              <SupportUs
-                buttonsData={buttonsDataSupportCycle}
                 copy='Wparcie cykliczne'
                 subtitle='W przypadku kwoty minimum 100 zł miesięcznie otrzymasz dedykowany certyfikat przyjaciela
               Fundacji, skontaktujemy się z Tobą!'
-              />
+              >
+                <StripeButtonWrapper small={false}>
+                  <stripe-buy-button
+                    as='stripe-buy-button'
+                    buy-button-id='buy_btn_1PGGigRquiX5mroYd9yD73FU'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+                <StripeButtonWrapper small={false}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PETn8RquiX5mroYzuHJZDJj'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+                <StripeButtonWrapper small={false}>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1PGH85RquiX5mroY2PGg2QT0'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
+              </SupportUs>
             </div>
             <div className='center-flex col-xl-8 mx-auto mt-50'>
               <h4 className='color-gray-100 wow animate__animated animate__fadeInUp m-auto font-md-clamp text-center'>
