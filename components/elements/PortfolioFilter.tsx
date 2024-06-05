@@ -34,12 +34,12 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
               >
                 <div className='item-content'>
                   <div
-                    className='card-style-1 hover-up mb-30'
+                    className='card-style-focusonemotions hover-up mb-30'
                     data-wow-delay='.0s'
                   >
-                    <div className='card-image'>
+                    <div className='card-image items-center justify-center'>
                       <Image
-                        width={200}
+                        width={300}
                         height={400}
                         alt='cover'
                         src={item.img}

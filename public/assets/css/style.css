@@ -1649,6 +1649,11 @@ input {
 .card-style-1 {
   position: relative;
   width: 100%;
+}
+
+.card-style-focusonemotions {
+  position: relative;
+  width: 100%;
   max-width: 350px;
   margin: 0 auto;
 }
@@ -1697,6 +1702,12 @@ input {
   bottom: 0; /* Położenie końcowe - tekst wysunięty */
 }
 
+.items-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-style-1:hover h6 {
   color: #34cc99 !important;
 }
@@ -1709,7 +1720,7 @@ input {
   position: relative;
   background-color: transparent !important;
 }
-.card-style-1 .card-image img {
+.card-style-1 .card-style-focusonemotions .card-image img {
   width: 100%;
   border-radius: 8px;
 }
