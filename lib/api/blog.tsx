@@ -9,6 +9,13 @@ query Home($slug: String!) {
     title
     content {
       value
+      blocks {
+        __typename
+        ... on ImageBlockRecord {
+          id
+          image { url alt }
+        }
+      }
     }
     coverImage {
       url
@@ -46,7 +53,7 @@ export function getBlogData(slug: string) {
         })
     }
 
-    const { data, error, isLoading } = useQuery<Data, Error>(['initHomePageData'], fetchInitData, {
+    const { data, error, isLoading } = useQuery<Data, Error>(['blog-' + slug], fetchInitData, {
         cacheTime: Infinity,
         onError: (err) => {
             console.error('Error fetching navigation data:', err)
