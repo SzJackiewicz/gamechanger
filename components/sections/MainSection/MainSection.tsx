@@ -1,8 +1,7 @@
 'use server'
 
 import Link from 'next/link'
-import AditionalPosts from './AditionalPosts'
-import {heroSectionData} from '@/public/assets/data/heroSection/heroSectionData'
+import AdditionalPosts from './AdditionalPosts'
 import Image from 'next/image'
 import {getInitHomePageData} from "@/lib/api/homePage";
 
@@ -11,8 +10,6 @@ export const MainSection = () => {
 
     if (isLoading) return <div/>;
     if (error) return <div/>;
-
-    console.log({sgPost})
 
     const mainSection = sgPost?.sgMain
     const subSections = sgPost?.subposts
@@ -28,7 +25,7 @@ export const MainSection = () => {
                             <div className='card-image max-height-630 '>
                                 <Link
                                     className='link-post'
-                                    href={`/aktualnosci/${heroSectionData[0].id}`}
+                                    href={`/aktualnosci/${mainSection.slug}`}
                                 >
                                     <Image
                                         src={mainSection.coverImage.url}
@@ -43,12 +40,6 @@ export const MainSection = () => {
                                         <div className='info-bottom mb-15'>
                                             <h4 className='color-white mb-15'>{mainSection.title}</h4>
                                             <h6 className='color-white mb-15 font-sm-clamp'>{mainSection.subtitle}</h6>
-                                            <div className='box-author'>
-                                                <div className='author-info'>
-                                                    <span
-                                                        className='color-gray-100 text-md'>{heroSectionData[0].author}</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </Link>
@@ -57,7 +48,7 @@ export const MainSection = () => {
                     </div>
                     <div className='col-xxl-6 col-xl-5 col-md-12 my-sm-4 my-md-4 my-lg-0 '>
                         <div className='box-list-posts'>
-                            <AditionalPosts posts={subSections}/>
+                            <AdditionalPosts posts={subSections}/>
                         </div>
                     </div>
                 </div>

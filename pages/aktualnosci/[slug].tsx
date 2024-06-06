@@ -3,11 +3,22 @@ import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
 import SingleContent from '@/components/sections/SingleContent'
 import { useRouter } from 'next/router'
-import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import { SupportUs } from '@/components/sections/SupportUs'
+import {getBlogData} from "@/lib/api/blog";
 
 export default function BlogDetails() {
   const router = useRouter()
+
+  const slug = router.query.slug
+
+  if (!slug) {
+    return
+  }
+
+  const {post, isLoading, error} = getBlogData(slug);
+
+  if (isLoading) return <div />;
+  if (error) return <div />;
 
   return (
     <Layout>
@@ -18,18 +29,18 @@ export default function BlogDetails() {
             <div className='col-xl-10 col-lg-12'>
               <div className='pt-30 border-bottom border-gray-800 pb-20'>
                 <div className='box-breadcrumbs'>
-                  <Breadcrumb title={heroSectionData[Number(router.query.slug)].title} />
+                  <Breadcrumb title={post.title} />
                 </div>
               </div>
               <div className='row mt-50 align-items-end'>
                 <div className='col-lg-8 m-auto text-center'>
-                  <h3 className='color-linear'>{heroSectionData[Number(router.query.slug)].title}</h3>
+                  <h3 className='color-linear'>{post.title}</h3>
                 </div>
               </div>
               <div className='mt-30'>
                 <div className='mb-3 center-flex'>
                   <img
-                    src={`${heroSectionData[Number(router.query.slug)].cover}`}
+                    src={`${post.coverImage.url}`}
                     alt='Genz'
                   />
                 </div>
@@ -43,7 +54,6 @@ export default function BlogDetails() {
                     alt='Genz'
                   />
                   <div className='author-info'>
-                    <h6 className='color-gray-700'>{heroSectionData[Number(router.query.slug)].author}</h6>
                     <span className='color-gray-700 text-sm mr-30'>25 April 2023</span>
                     <span className='color-gray-700 text-sm'>3 minuty czytania</span>
                   </div>
@@ -57,7 +67,7 @@ export default function BlogDetails() {
                   </div>
                   <SingleContent
                     data-wow-delay='.2s'
-                    articleId={router.query.slug}
+                    post={post}
                   />
                 </div>
               </div>

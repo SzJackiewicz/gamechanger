@@ -1,16 +1,16 @@
 'use server'
 
-import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
+import { StructuredText } from "react-datocms"
 
-const SingleContent = ({ articleId }: { articleId: string | string[] | undefined }) => {
-  return (
+const SingleContent = ({post}) => {
+
+return (
     <>
       <div
         className='content-detail border-gray-800'
         data-wow-delay='.3s'
       >
-        <h3 className='color-white mb-30'>{(articleId && heroSectionData[Number(articleId)]?.subtitle) || ''}</h3>
-        <p className='text-xl color-gray-500'>{(articleId && heroSectionData[Number(articleId)]?.article) || ''}</p>
+        <h3 className='color-white mb-30'>{post.title || ''}</h3>
 
         <div
           className='bg-gray-850 box-quote'
@@ -20,8 +20,8 @@ const SingleContent = ({ articleId }: { articleId: string | string[] | undefined
             className='color-gray-500'
             data-wow-delay='.3s'
           >
-            {(articleId && heroSectionData[Number(articleId)].subtitle) || ''}
-          </h3>
+              <StructuredText data={post.content} />
+          </h3>§
         </div>
       </div>
     </>

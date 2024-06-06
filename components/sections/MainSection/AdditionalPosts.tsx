@@ -4,17 +4,18 @@ import Link from 'next/link'
 import React from 'react'
 import { useWindowSize } from 'usehooks-ts'
 import Image from 'next/image'
-import { AditionalPostsMobile } from './AditionalPostsMobile'
+import { AdditionalPostsMobile } from './AdditionalPostsMobile'
 
-type AditionalPostsProps = {
+export type AdditionalPostsProps = {
   subtitle: string,
   title: string,
+  slug: string,
   coverImage: {
     url: string
   }
-}[]
+}
 
-export const AditionalPosts = ({posts} : { posts: AditionalPostsProps}) => {
+export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
   const { width = 0 } = useWindowSize()
 
   if (width > 500) {
@@ -25,10 +26,10 @@ export const AditionalPosts = ({posts} : { posts: AditionalPostsProps}) => {
         key={i}
       >
         <div className='card-image hover-up mt-5'>
-          <Link href={`/aktualnosci/`}>
+          <Link href={`/aktualnosci/${item.slug}`}>
             <Image
               src={item.coverImage.url}
-              alt='Article main cover'
+              alt={item.title}
               width={190}
               height={190}
               priority
@@ -38,11 +39,11 @@ export const AditionalPosts = ({posts} : { posts: AditionalPostsProps}) => {
         <div className='card-info'>
           <Link
             className='btn btn-tag bg-gray-800 hover-up'
-            href={`/aktualnosci/`}
+            href={`/aktualnosci/${item.slug}`}
           >
             ZDROWIE
           </Link>
-          <Link href={`/aktualnosci/`}>
+          <Link href={`/aktualnosci/${item.slug}`}>
             <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
           <p className='color-gray-500 text-sm'>{item.subtitle}</p>
@@ -51,12 +52,12 @@ export const AditionalPosts = ({posts} : { posts: AditionalPostsProps}) => {
     ))
   } else {
     return posts.slice(0, 3).map((item, i) => (
-      <AditionalPostsMobile
-        item={item}
-        key={i}
+      <AdditionalPostsMobile
+          post={item}
+          key={i}
       />
     ))
   }
 }
 
-export default AditionalPosts
+export default AdditionalPosts

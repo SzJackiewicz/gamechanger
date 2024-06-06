@@ -13,6 +13,7 @@ query Home {
   sgPost {
     sgMain {
       title
+      slug
       subtitle
       coverImage {
         url
@@ -20,6 +21,7 @@ query Home {
     }
     subposts {
       subtitle
+      slug
       title
       coverImage {
         url
@@ -45,6 +47,7 @@ interface Data {
     }[]
     sgPost: {
         sgMain: {
+            slug: string,
             subtitle: string,
             title: string
             coverImage: {
@@ -52,6 +55,7 @@ interface Data {
             }
         },
         subposts: {
+            slug: string,
             subtitle: string,
             title: string
         }[]
@@ -69,7 +73,6 @@ export function getInitHomePageData() {
             console.error('Error fetching navigation data:', err)
         },
     })
-console.log({data})
-console.log({error})
+
     return { ...data, error, isLoading }
 }
