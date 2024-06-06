@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Link from 'next/link'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
+import Image from 'next/image'
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export default function NewsPage() {
   return (
@@ -30,9 +33,13 @@ export default function NewsPage() {
                           >
                             <div className='card-image mb-20'>
                               <Link href={`/aktualnosci/${item.id}`}>
-                                <img
+                                <Image
+                                  width={500}
+                                  height={500}
                                   src={`${item.cover}`}
-                                  alt='Genz'
+                                  alt='okładka artykułu'
+                                  placeholder='blur'
+                                  blurDataURL={base64Blur}
                                 />
                               </Link>
                             </div>
@@ -70,6 +77,7 @@ export default function NewsPage() {
             </div>
           </div>
         </div>
+        <PartnersLogs />
       </Layout>
     </>
   )

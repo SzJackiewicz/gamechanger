@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AdditionalPosts from './AdditionalPosts'
 import Image from 'next/image'
 import {getInitHomePageData} from "@/lib/api/homePage";
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export const MainSection = () => {
     const {sgPost, isLoading, error} = getInitHomePageData();
@@ -27,14 +28,16 @@ export const MainSection = () => {
                                     className='link-post'
                                     href={`/aktualnosci/${mainSection.slug}`}
                                 >
-                                    <Image
-                                        src={mainSection.coverImage.url}
-                                        alt='Article main cover'
-                                        className='img-opacity'
-                                        width={678}
-                                        height={678}
-                                        priority
-                                    />
+                                  <Image
+                                      src={`${mainSection.coverImage.url}`}
+                                      alt='Article main cover'
+                                      className='img-opacity'
+                                      width={678}
+                                      height={678}
+                                      priority
+                                      placeholder='blur'
+                                      blurDataURL={base64Blur}
+                                  />
                                     <div className='img-backdrop'/>
                                     <div className='card-info card-bg-2'>
                                         <div className='info-bottom mb-15'>

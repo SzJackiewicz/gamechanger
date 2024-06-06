@@ -1,5 +1,8 @@
+'use server'
+
 import Image from 'next/image'
 import React from 'react'
+import { base64Blur } from './base64ImageBlur'
 
 type Props = {
   title?: string
@@ -11,12 +14,14 @@ export const CoverWithTestimonials = ({ title, subtitle, img = '/assets/imgs/pag
   return (
     <div className='cover-relative m-auto'>
       <Image
-        width={900}
+        width={600}
         height={300}
         alt='cover'
         src={img}
         priority
         className='coverFilter'
+        placeholder='blur'
+        blurDataURL={base64Blur}
       />
       <div className='cover-testimonials'>
         <p className='color-gray-200 font-xl-clamp'>{title}</p>

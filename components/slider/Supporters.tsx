@@ -1,4 +1,4 @@
-'use server'
+'use client'
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -6,9 +6,7 @@ import {FocusOnMotion} from "@/types/types";
 
 SwiperCore.use([Autoplay, Navigation])
 export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnEmotions: FocusOnMotion[] }) => {
-console.log('Supporters')
-  console.log( focusOnEmotions)
-// console.log(focusOnEmotions.length)
+
   return (
     <>
       <div className='text-center mb-40'>

@@ -11,7 +11,9 @@
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-var": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
+    "@typescript-eslint/ban-ts-comment": "off",
     "@next/next/no-img-element": "off",
+    "import/no-anonymous-default-export": "off",
     "react/self-closing-comp": [
       "error",
       {

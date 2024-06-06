@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
 import React from 'react'
 import { ContactForm } from '@/components/elements/ContactForm'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 
 export default function PageContact() {
   return (
@@ -46,6 +47,7 @@ export default function PageContact() {
             </div>
             <ContactForm />
           </div>
+          <PartnersLogs />
         </div>
       </Layout>
     </>

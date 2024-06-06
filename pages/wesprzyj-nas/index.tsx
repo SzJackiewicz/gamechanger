@@ -1,15 +1,15 @@
-import React from 'react'
 import { SupportUsLayout } from '@/components/pagesLayout/SupportUsLayout/SupportUsLayout'
+import React from 'react'
 
 const articleText =
-  'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy.'
+  'Otrzymane wsparcie pozawala realizować naszą misję. Z każdą darowizną na cele statutowe stajesz się partnerem zmiany i razem z nami dążysz do naszego celu – upowszechnienia dbania o zdrowie psychiczne i normalizację dbania o siebie w zdrowiu psychicznym przy udziale sportu.'
 
 export default function SupportUsPage() {
   return (
     <SupportUsLayout
       articleText={articleText}
       pricingComponent
-      img='/assets/imgs/page/wesprzyj-nas/wesprzyj.webp'
+      img='/assets/imgs/page/wesprzyj-nas/joinus.png'
     />
   )
 }

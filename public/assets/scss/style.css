@@ -2258,7 +2258,6 @@ input {
 .header .main-menu {
   display: inline-block;
   padding-top: 3px;
-  border: 1px solid red;
 }
 .header .main-menu li {
   float: left;
@@ -5336,26 +5335,7 @@ input {
   width: 50px;
   border-radius: 50%;
 }
-.box-socials a span.fb {
-  background-image: url(../imgs/page/homepage3/fb.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.inst {
-  background-image: url(../imgs/page/homepage3/inst.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.snap {
-  background-image: url(../imgs/page/homepage3/snap.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.box-socials a span.tw {
-  background-image: url(../imgs/page/homepage3/tw.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .box-socials a:hover {
   background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0) / 200%;
   transition: all 0.2s;
@@ -5478,7 +5458,6 @@ iframe.google-map {
   position: absolute;
   bottom: -50px;
   right: 0px;
-  background: url(../imgs/page/login/security.svg) no-repeat bottom right;
 }
 
 .box-line {
@@ -5516,17 +5495,11 @@ iframe.google-map {
   padding: 8px;
 }
 
-.btn-login-gmail {
-  background: url(../imgs/page/login/gmail.svg) no-repeat left center;
-  padding: 0px 0px 0px 30px;
-}
-
 .viewpass {
   position: absolute;
   top: 0px;
   right: 0px;
   padding-right: 30px;
-  background-image: url(../imgs/page/login/view.svg);
   background-position: center;
   background-repeat: no-repeat;
   height: 65px;
@@ -5580,24 +5553,6 @@ iframe.google-map {
   width: 60px;
   border-radius: 50%;
   margin-bottom: 15px;
-}
-.item-icon.icon-motion {
-  background: url(../imgs/page/about/motion.svg) no-repeat center;
-}
-.item-icon.icon-ui {
-  background: url(../imgs/page/about/ui.svg) no-repeat center;
-}
-.item-icon.icon-branding {
-  background: url(../imgs/page/about/branding.svg) no-repeat center;
-}
-.item-icon.icon-product {
-  background: url(../imgs/page/about/product.svg) no-repeat center;
-}
-.item-icon.icon-key {
-  background: url(../imgs/page/about/key.svg) no-repeat center;
-}
-.item-icon.icon-social {
-  background: url(../imgs/page/about/social.svg) no-repeat center;
 }
 
 .list-checked {
@@ -5661,15 +5616,6 @@ iframe.google-map {
   background-size: auto 17.5px;
   margin: 0px 10px;
   width: 20px;
-}
-.icon-media.icon-fb {
-  background-image: url(../imgs/page/single/fb.svg);
-}
-.icon-media.icon-tw {
-  background-image: url(../imgs/page/single/tw.svg);
-}
-.icon-media.icon-printest {
-  background-image: url(../imgs/page/single/pi.svg);
 }
 
 .box-share {
@@ -6947,9 +6893,7 @@ iframe.google-map {
 .theme-day .logo-night {
   display: none;
 }
-.theme-day .switch-button .form-switch .form-check-input {
-  background-image: url(../imgs/template/icons/mode-day.svg);
-}
+
 .theme-day .pagination li a {
   background-color: #7f92b0;
 }

@@ -1,13 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-require('dotenv').config();
-module.exports = nextConfig
-
+require('dotenv').config()
 module.exports = {
+  reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     domains: ['www.datocms-assets.com'],
   },
-};
+}

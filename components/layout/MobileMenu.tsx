@@ -1,7 +1,6 @@
-'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Navigation } from '../../types/types'
+import { Navigation } from '@/types/types'
 import { HeartFilled } from '@/public/assets/icons/HeartFilled'
 
 type MobileMenuProps = {
@@ -46,7 +45,7 @@ const MobileMenu = ({ openClass, navigation }: MobileMenuProps) => {
                           className={isActive.key === index ? 'has-children active' : 'has-children'}
                           onClick={() => handleToggle(index)}
                         >
-                          <Link href={item.slug}>{item.label}</Link>
+                          <Link href={item.slug}>{item.name}</Link>
                           {item.subMenu.length > 0 && (
                             <>
                               <span className='menu-expand'>

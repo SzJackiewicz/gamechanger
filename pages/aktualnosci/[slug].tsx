@@ -3,12 +3,11 @@ import Layout from '../../components/layout/Layout'
 import Breadcrumb from '../../components/elements/Breadcrumb'
 import SingleContent from '@/components/sections/SingleContent'
 import { useRouter } from 'next/router'
-import { SupportUs } from '@/components/sections/SupportUs'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import {getBlogData} from "@/lib/api/blog";
 
-export default function BlogDetails() {
+const BlogDetails = () => {
   const router = useRouter()
-
   const slug = router.query.slug
 
   if (!slug) {
@@ -19,14 +18,13 @@ export default function BlogDetails() {
 
   if (isLoading) return <div />;
   if (error) return <div />;
-
   return (
     <Layout>
       <div className='cover-home3'>
         <div className='container'>
           <div className='row'>
             <div className='col-xl-1' />
-            <div className='col-xl-10 col-lg-12'>
+            <div className='col-xl-12 col-lg-12'>
               <div className='pt-30 border-bottom border-gray-800 pb-20'>
                 <div className='box-breadcrumbs'>
                   <Breadcrumb title={post.title} />
@@ -34,32 +32,19 @@ export default function BlogDetails() {
               </div>
               <div className='row mt-50 align-items-end'>
                 <div className='col-lg-8 m-auto text-center'>
-                  <h3 className='color-linear'>{post.title}</h3>
+                  <h3 className='color-linear font-xl-clamp'>{post.title}</h3>
                 </div>
               </div>
               <div className='mt-30'>
-                <div className='mb-3 center-flex'>
+                <div className='mb-3 center-flex w-75 h-75 m-auto '>
                   <img
                     src={`${post.coverImage.url}`}
-                    alt='Genz'
+                    alt='cover'
                   />
                 </div>
 
                 <div
-                  className='box-author col-lg-9 m-auto'
-                  data-wow-delay='.2s'
-                >
-                  <img
-                    src='/assets/imgs/page/about/author2.png'
-                    alt='Genz'
-                  />
-                  <div className='author-info'>
-                    <span className='color-gray-700 text-sm mr-30'>25 April 2023</span>
-                    <span className='color-gray-700 text-sm'>3 minuty czytania</span>
-                  </div>
-                </div>
-                <div
-                  className='col-lg-9 m-auto'
+                  className='col-xl-12 col-lg-12 col-md-9 m-auto p-1'
                   data-wow-delay='.2s'
                 >
                   <div className='row mb-40'>
@@ -73,9 +58,11 @@ export default function BlogDetails() {
               </div>
             </div>
           </div>
-          <SupportUs />
+          <PartnersLogs />
         </div>
       </div>
     </Layout>
   )
 }
+
+export default BlogDetails

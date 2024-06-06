@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {AdditionalPostsProps} from "@/components/sections/MainSection/AdditionalPosts";
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export const AdditionalPostsMobile = ({ post }: { post: AdditionalPostsProps }) => {
 
@@ -24,6 +25,8 @@ export const AdditionalPostsMobile = ({ post }: { post: AdditionalPostsProps }) 
             width={190}
             height={190}
             priority
+            placeholder='blur'
+            blurDataURL={base64Blur}
           />
           <div className='img-backdrop' />
           <div className='card-info card-bg-2'>

@@ -21,7 +21,7 @@ return (
             data-wow-delay='.3s'
           >
               <StructuredText data={post.content} />
-          </h3>§
+          </h3>
         </div>
       </div>
     </>

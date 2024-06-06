@@ -5,6 +5,7 @@ import React from 'react'
 import { useWindowSize } from 'usehooks-ts'
 import Image from 'next/image'
 import { AdditionalPostsMobile } from './AdditionalPostsMobile'
+import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export type AdditionalPostsProps = {
   subtitle: string,
@@ -33,6 +34,8 @@ export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
               width={190}
               height={190}
               priority
+              placeholder='blur'
+              blurDataURL={base64Blur}
             />
           </Link>
         </div>
@@ -46,7 +49,7 @@ export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
           <Link href={`/aktualnosci/${item.slug}`}>
             <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
           </Link>
-          <p className='color-gray-500 text-sm'>{item.subtitle}</p>
+          <p className='color-gray-500 font-sm-clamp ellipsis'>{item?.subtitle}</p>
         </div>
       </div>
     ))
