@@ -1,9 +1,15 @@
 'use server'
 
 import Brand from '@/components/slider/Brand'
+import {getInitHomePageData} from "@/lib/api/homePage";
 
 export const PartnersLogs = () => {
-  return (
+    const { allPartnerIds, isLoading, error } = getInitHomePageData();
+
+    if (isLoading) return <div />;
+    if (error) return <div />;
+
+    return (
     <>
       <div className='row align-items-end mt-30'>
         <div className='text-center'>
@@ -21,7 +27,7 @@ export const PartnersLogs = () => {
               className='swiper-container swiper-group-1'
               data-wow-delay='.2s'
             >
-              <Brand />
+                {allPartnerIds && <Brand data={allPartnerIds}/>}
             </div>
           </div>
         </div>

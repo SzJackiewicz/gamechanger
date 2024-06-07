@@ -10,6 +10,7 @@
     "sass": "sass --watch public/assets/scss/style.scss:public/assets/css/style.css"
   },
   "dependencies": {
+    "@datocms/svelte": "^2.0.4",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
@@ -29,6 +30,7 @@
     "next-themes": "^0.3.0",
     "primeicons": "^7.0.0",
     "react": "18.2.0",
+    "react-datocms": "^6.0.4",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.51.3",
     "resend": "^3.2.0",

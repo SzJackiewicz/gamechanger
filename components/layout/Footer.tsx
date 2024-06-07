@@ -3,24 +3,25 @@
 import Link from 'next/link'
 import React from 'react'
 import 'primeicons/primeicons.css'
+import { Layout } from '@/types/types'
 
-const Footer = () => {
+type FooterProps = Layout
+
+const Footer = ({ footerLogo, footerLogoAlt, footerSubtitle, iban, swift }: FooterProps) => {
   return (
     <>
-      <footer className='footer'>
+      <footer className='footer mb-30'>
         <div className='container'>
           <div className='footer-1 border-gray-800'>
             <div className='row flex-row'>
               <div className='col-lg-2'>
                 <div className=''>
                   <img
-                    src='/assets/imgs/template/logo.png'
-                    alt='Genz'
+                    src={footerLogo?.url || '/assets/imgs/template/logo.png'}
+                    alt={footerLogoAlt}
                   />
                 </div>
-                <p className='mb-20 mt-20 text-sm color-gray-500 '>
-                  Naszą misją jest promowanie zdrowia psychicznego poprzez sport i w obszarze sportu.
-                </p>
+                <p className='mb-20 mt-20 text-sm color-gray-500 '>{footerSubtitle}</p>
               </div>
               <div className='col-lg-3'>
                 <h6 className='text-lg mb-30 color-white '>Dane</h6>
@@ -28,10 +29,10 @@ const Footer = () => {
                   <div className='col-12'>
                     <ul className='menu-footer'>
                       <li className=''>
-                        <p className='color-gray-500'>IBAN: PL45 1090 1098 0000 0001 5773 9195</p>
+                        <p className='color-gray-500'>IBAN: {iban}</p>
                       </li>
                       <li className=''>
-                        <p className='color-gray-500'>SWIFT: WBKPPLPP</p>
+                        <p className='color-gray-500'>SWIFT: {swift}</p>
                       </li>
                       <li className=''>
                         <p className='color-gray-500'>Santander Bank Polska S.A.</p>
@@ -40,7 +41,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-3'>
+              <div className='col-lg-2'>
                 <h6 className='text-lg mb-30 color-white '>Rejestry</h6>
                 <div className='row'>
                   <div className='col-12'>
@@ -73,7 +74,7 @@ const Footer = () => {
                 </p>
                 <div className='box-socials'>
                   <div
-                    className='d-inline-block mr-30 wow animate__animated animate__fadeIn'
+                    className='d-inline-block mr-10 wow animate__animated animate__fadeIn'
                     data-wow-delay='.0s'
                   >
                     <Link

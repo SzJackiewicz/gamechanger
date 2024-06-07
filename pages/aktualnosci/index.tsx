@@ -1,13 +1,18 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
-import { heroSectionData } from '@/public/assets/data/heroSection/heroSectionData'
 import Link from 'next/link'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import Image from 'next/image'
 import { base64Blur } from '@/components/elements/base64ImageBlur'
+import {getBlogsData} from "@/lib/api/blog";
 
 export default function NewsPage() {
+  const {allPosts, isLoading, error} = getBlogsData();
+
+  if (isLoading) return <div />;
+  if (error) return <div />;
+
   return (
     <>
       <Head>
@@ -21,8 +26,8 @@ export default function NewsPage() {
               <div className='col-xl-10 col-lg-12'>
                 <div className='mt-50 mb-50'>
                   <div className='row mt-50 mb-10'>
-                    {heroSectionData &&
-                      heroSectionData.map((item, i) => (
+                    {allPosts &&
+                        allPosts.map((item, i) => (
                         <div
                           className='col-lg-6'
                           key={i}
@@ -32,36 +37,30 @@ export default function NewsPage() {
                             data-wow-delay='.2s'
                           >
                             <div className='card-image mb-20'>
-                              <Link href={`/aktualnosci/${item.id}`}>
+                              <Link href={`/aktualnosci/${item.slug}`}>
                                 <Image
                                   width={500}
                                   height={500}
-                                  src={`${item.cover}`}
-                                  alt='okładka artykułu'
+                                  src={`${item.coverImage.url}`}
+                                  alt={`${item.subtitle}`}
                                   placeholder='blur'
                                   blurDataURL={base64Blur}
                                 />
                               </Link>
                             </div>
                             <div className='card-info'>
-                              <Link href={`/aktualnosci/${item.id}`}>
+                              <Link href={`/aktualnosci/${item.slug}`}>
                                 <h4 className='color-white mt-20 font-md-clamp'>{item.title}</h4>
                                 <div>
                                   <h6 className='color-gray-200 mt-xl-20 mt-2 font-sm-clamp ellipsis'>{item.subtitle}</h6>
                                 </div>
                               </Link>
                               <div className='row align-items-center mt-25'>
-                                <div className='col-7'>
-                                  <div className='box-author'>
-                                    <div className='author-info'>
-                                      <span className='color-gray-700 text-sm'>{item.date}</span>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div className='col-7' />
                                 <div className='col-5 text-end'>
                                   <Link
                                     className='readmore color-gray-500 text-sm'
-                                    href={`/aktualnosci/${item.id}`}
+                                    href={`/aktualnosci/${item.slug}`}
                                   >
                                     <span>Czytaj</span>
                                   </Link>

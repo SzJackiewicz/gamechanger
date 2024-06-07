@@ -23,18 +23,14 @@ export default function PageContact() {
                 stwarzasz bezpieczne środowisko do rozmów o emocjach oraz wyzwaniach.
               </p>
             </div>
-            <div className='text-center mt-30'>
+            <div className='text-center mt-30 contact-box '>
               <div className='d-inline-block support text-start'>
                 (48) 654-430-309
                 <br />
                 (01) 6532-430-309
               </div>
+              <div className='d-inline-block plane text-start'>kontakt@f-gc.pl</div>
               <div className='d-inline-block location text-start'>
-                contact@gamechanger.com
-                <br />
-                sales@gamechanger.com
-              </div>
-              <div className='d-inline-block plane text-start'>
                 Grunwaldzka 403
                 <br />
                 Gdańsk, 80-117

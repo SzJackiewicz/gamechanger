@@ -2,31 +2,11 @@
 import React from 'react'
 import SwiperCore, { Autoplay, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import {FocusOnMotion} from "@/types/types";
 
 SwiperCore.use([Autoplay, Navigation])
-export const Supporters = ({ title, data }: { title: string; data: unknown[] }) => {
-  // const data = [
-  //   {
-  //     img: '1.webp',
-  //     name: 'Jacek Szymkiewicz',
-  //   },
-  //   {
-  //     img: '2.webp',
-  //     name: 'Jacek Szymkiewicz',
-  //   },
-  //   {
-  //     img: '3.webp',
-  //     name: 'Jacek Szymkiewicz',
-  //   },
-  //   {
-  //     img: '4.webp',
-  //     name: 'Jacek Szymkiewicz',
-  //   },
-  //   {
-  //     img: '5.webp',
-  //     name: 'Jacek Szymkiewicz',
-  //   },
-  // ]
+export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnEmotions: FocusOnMotion[] }) => {
+
   return (
     <>
       <div className='text-center mb-40'>
@@ -75,7 +55,7 @@ export const Supporters = ({ title, data }: { title: string; data: unknown[] }) 
             }}
             className='swiper-wrapper pt-5'
           >
-            {data.map((item, i) => (
+            {focusOnEmotions?.length > 0 && focusOnEmotions.map((item, i) => (
               <SwiperSlide
                 className='swiper-slide'
                 key={i}
@@ -87,14 +67,13 @@ export const Supporters = ({ title, data }: { title: string; data: unknown[] }) 
                   <div className='card-image hover-up'>
                     <p className='link-post'>
                       <img
-                        src={`assets/imgs/page/about/img2.png`}
-                        alt='Wspierający'
+                        src={item.photo.url}
+                        alt='slider image'
                       />
                     </p>
                   </div>
                   <div className='card-item-name'>
-                    {/* @ts-ignore */}
-                    <label>{item.name}</label>
+                    <label>{item.placeholder}</label>
                   </div>
                 </div>
               </SwiperSlide>
