@@ -3,7 +3,6 @@ import Layout from '../components/layout/Layout'
 import React from 'react'
 import { MainSection } from '@/components/sections/MainSection/MainSection'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
-import { FocusOnEmotions } from '@/components/sections/FocusOnEmotions'
 import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
 import { StripeButtonWrapper } from '@/components/elements/BuyButton/StripeButtonWrapper'
 import Link from 'next/link'
@@ -57,12 +56,13 @@ export default function Home() {
                   </StripeButtonWrapper>
                 </SupportUs>
               </div>
-              <div
+              {/* nie ma danych do tej karuzeli, więc ją ukrywam */}
+              {/* <div
                 className='col-xl-12 wow animate__animated animate__fadeIn'
                 data-wow-delay='.2s'
               >
                 <FocusOnEmotions/>
-              </div>
+              </div> */}
               <div
                 className='col-xl-12 wow animate__animated animate__fadeIn mt-20'
                 data-wow-delay='.2s'

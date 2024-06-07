@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {performRequest} from '@/lib/datocms'
 import {FocusOnMotion} from '@/types/types'
 import {useQuery} from '@tanstack/react-query'

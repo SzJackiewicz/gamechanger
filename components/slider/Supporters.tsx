@@ -68,6 +68,7 @@ export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnE
                     <p className='link-post'>
                       <img
                         src={item.photo.url}
+                        alt='slider image'
                       />
                     </p>
                   </div>
