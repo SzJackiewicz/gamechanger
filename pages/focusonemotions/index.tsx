@@ -12,7 +12,7 @@ export default function SupportersPage() {
         <title>Wspierają nas</title>
       </Head>
       <Layout>
-        <CoverWithTestimonials img={'/assets/imgs/page/focusonemotions/baner.png'} />
+        <CoverWithTestimonials img={'/assets/imgs/page/focusOnEmotions/baner.png'} />
         <div className='container'>
           <div className='row'>
             <div className='col-xl-1' />
