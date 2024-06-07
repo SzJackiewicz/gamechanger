@@ -117,6 +117,12 @@ export const SupportUsLayout = ({
                     publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
                   />
                 </StripeButtonWrapper>
+                <StripeButtonWrapper>
+                  <stripe-buy-button
+                    buy-button-id='buy_btn_1POaGoRquiX5mroYqZJ5aNWy'
+                    publishable-key='pk_live_51P6U0iRquiX5mroYEDznLjQgM9VvPInhMnA88DJdi7AYzPINHT2cfU0i8jAgPwB1weqCxtNrsoDTmoMOGGpUDdPh009M6R2VSs'
+                  />
+                </StripeButtonWrapper>
               </SupportUs>
             </div>
             <div className='center-flex col-xl-8 mx-auto mt-50'>

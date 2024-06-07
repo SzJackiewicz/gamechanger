@@ -1893,6 +1893,13 @@ input {
     sans-serif;
 }
 
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .styledTitle {
   width: 100%;
   overflow: hidden;
