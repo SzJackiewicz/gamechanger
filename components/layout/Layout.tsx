@@ -12,7 +12,7 @@ const Layout = ({children}: { children: React.ReactNode }) => {
 
 
     if (isLoading) return <div/>;
-    if (error) return <div/>;
+    if (error || !allCategoryNavs || !layout) return <div/>;
 
     const handleOpen = () => {
         document.body.classList.add('mobile-menu-active')

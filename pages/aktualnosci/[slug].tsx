@@ -17,7 +17,12 @@ const BlogDetails = () => {
   const {post, isLoading, error} = getBlogData(slug);
 
   if (isLoading) return <div />;
-  if (error) return <div />;
+  if (error || !post) return <div />;
+
+  const { title, coverImage } = post;
+
+  const imageUrl = coverImage.url;
+
   return (
     <Layout>
       <div className='cover-home3'>
@@ -27,18 +32,18 @@ const BlogDetails = () => {
             <div className='col-xl-12 col-lg-12'>
               <div className='pt-30 border-bottom border-gray-800 pb-20'>
                 <div className='box-breadcrumbs'>
-                  <Breadcrumb title={post.title} />
+                  <Breadcrumb title={title} />
                 </div>
               </div>
               <div className='row mt-50 align-items-end'>
                 <div className='col-lg-8 m-auto text-center'>
-                  <h3 className='color-linear font-xl-clamp'>{post.title}</h3>
+                  <h3 className='color-linear font-xl-clamp'>{title}</h3>
                 </div>
               </div>
               <div className='mt-30'>
                 <div className='mb-3 center-flex w-75 h-75 m-auto '>
                   <img
-                    src={`${post.coverImage.url}`}
+                    src={`${imageUrl}`}
                     alt='cover'
                   />
                 </div>

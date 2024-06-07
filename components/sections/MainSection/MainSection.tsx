@@ -14,6 +14,7 @@ export const MainSection = () => {
 
     const mainSection = sgPost?.sgMain
     const subSections = sgPost?.subposts
+
     return (
         <>
             {mainSection && subSections && (

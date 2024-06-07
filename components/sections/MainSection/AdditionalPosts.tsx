@@ -6,15 +6,9 @@ import { useWindowSize } from 'usehooks-ts'
 import Image from 'next/image'
 import { AdditionalPostsMobile } from './AdditionalPostsMobile'
 import { base64Blur } from '@/components/elements/base64ImageBlur'
+import {Post} from "@/lib/api/homePage";
 
-export type AdditionalPostsProps = {
-  subtitle: string,
-  title: string,
-  slug: string,
-  coverImage: {
-    url: string
-  }
-}
+export type AdditionalPostsProps =Post
 
 export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
   const { width = 0 } = useWindowSize()

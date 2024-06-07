@@ -37,7 +37,16 @@ allPartnerIds {
 }
 `
 
-interface Data {
+export interface Post {
+    slug: string,
+    subtitle: string,
+    title: string,
+    coverImage: {
+        url: string
+    }
+}
+
+export interface Data {
     allFocusonemotionitems: FocusOnMotion[]
     allPartnerIds: {
         placeholder: string
@@ -46,19 +55,8 @@ interface Data {
         }
     }[]
     sgPost: {
-        sgMain: {
-            slug: string,
-            subtitle: string,
-            title: string
-            coverImage: {
-                url: string
-            }
-        },
-        subposts: {
-            slug: string,
-            subtitle: string,
-            title: string
-        }[]
+        sgMain: Post,
+        subposts: Post[]
     }
 }
 

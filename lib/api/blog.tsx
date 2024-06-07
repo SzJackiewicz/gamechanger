@@ -1,7 +1,7 @@
 import {performRequest} from '@/lib/datocms'
 import {useQuery} from '@tanstack/react-query'
 
-const PAGE_CONTENT_QUERY = `
+const BLOG_CONTENT_QUERY = `
 query Home($slug: String!) {
   post(filter: {slug: {eq: $slug}}) {
     slug
@@ -21,6 +21,22 @@ query Home($slug: String!) {
       url
     }
   }
+}
+`
+
+const BLOGS_CONTENT_QUERY = `
+query Home {
+    allPosts {
+        slug
+        title
+        subtitle
+        coverImage {
+            url
+        }
+        content {
+            value
+        }
+    }
 }
 `
 
@@ -45,15 +61,41 @@ interface Data {
     }
 }
 
-export function getBlogData(slug: string) {
-    const fetchInitData = async (): Promise<Data> => {
-        return await performRequest<Data>({
-            query: PAGE_CONTENT_QUERY,
+export interface POST {
+    post: Data
+}
+
+
+interface POSTS {
+    allPosts: Data[]
+}
+
+export function getBlogData(slug: string | string[]) {
+    const fetchInitData = async (): Promise<POST> => {
+        return await performRequest<POST>({
+            query: BLOG_CONTENT_QUERY,
             variables: { slug }
         })
     }
 
-    const { data, error, isLoading } = useQuery<Data, Error>(['blog-' + slug], fetchInitData, {
+    const { data, error, isLoading } = useQuery<POST, Error>(['blog-' + slug], fetchInitData, {
+        cacheTime: Infinity,
+        onError: (err) => {
+            console.error('Error fetching navigation data:', err)
+        },
+    })
+
+    return { ...data, error, isLoading }
+}
+
+export function getBlogsData() {
+    const fetchInitData = async (): Promise<POSTS> => {
+        return await performRequest<POSTS>({
+            query: BLOGS_CONTENT_QUERY,
+        })
+    }
+
+    const { data, error, isLoading } = useQuery<POSTS, Error>(['blogs'], fetchInitData, {
         cacheTime: Infinity,
         onError: (err) => {
             console.error('Error fetching navigation data:', err)
