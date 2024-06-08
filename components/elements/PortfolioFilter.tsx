@@ -3,28 +3,21 @@
 import React from 'react'
 import Image from 'next/image'
 import { base64Blur } from './base64ImageBlur'
-
-const portfolio = [
-  {
-    name: 'Aaron Cel',
-    subtitle:
-      'Były koszykarz. Mistrz Polski, wicemistrz (3 krotnie), zdobywca brązowego medalu oraz Mistrz Francji. Zagrał w 108 meczach reprezentacji Polski z którą zagrał na Mistrzostwach Europy i Świata.    ',
-    img: '/assets/imgs/page/focusOnEmotions/Aaron.png',
-  },
-  {
-    name: 'Bartosz Zmarzlik',
-    subtitle:
-      'Żużlowiec. Indywiduany (4 krotnie) i dryżynowo (3 krotnie) Mistrz Świata. Jeszcze przed 30 rokiem życia został jednym z najlepszych zawodników w historii tej dyscypliny.',
-    img: '/assets/imgs/page/focusOnEmotions/Bartosz.png',
-  },
-]
+import {getInitHomePageData} from "@/lib/api/homePage";
 
 export const PortfolioFilter = ({ col }: { col: number }) => {
+
+  const { allFocusonemotionitems, isLoading, error } = getInitHomePageData();
+
+  if (isLoading) return <div />;
+  if (error || !allFocusonemotionitems) return <div />;
+
+
   return (
     <>
       <div className='mt-20 mb-50'>
         <div className='row'>
-          {portfolio.map((item) => (
+          {allFocusonemotionitems.map((item) => (
             <div
               className={`col-lg-${col}`}
               key={item.name}
@@ -43,7 +36,7 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
                         width={300}
                         height={400}
                         alt='cover'
-                        src={item.img}
+                        src={item.photo.url}
                         priority
                         className='coverFilter'
                         placeholder='blur'
@@ -52,7 +45,7 @@ export const PortfolioFilter = ({ col }: { col: number }) => {
                     </div>
                     <div className='info-bottom mb-15'>
                       <h3 className='color-white mb-10 text-center'>{item.name}</h3>
-                      <p className='color-gray-500 font-sm-clamp text-center'>{item.subtitle}</p>
+                      <p className='color-gray-500 font-sm-clamp text-center'>{item.description}</p>
                     </div>
                   </div>
                 </div>

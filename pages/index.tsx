@@ -6,6 +6,7 @@ import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
 import { StripeButtonWrapper } from '@/components/elements/BuyButton/StripeButtonWrapper'
 import Link from 'next/link'
+import {FocusOnEmotions} from "@/components/sections/FocusOnEmotions";
 
 export default function Home() {
   return (
@@ -53,13 +54,12 @@ export default function Home() {
                   </StripeButtonWrapper>
                 </SupportUs>
               </div>
-              {/* nie ma danych do tej karuzeli, więc ją ukrywam */}
-              {/* <div
+              <div
                 className='col-xl-12 wow animate__animated animate__fadeIn'
                 data-wow-delay='.2s'
               >
                 <FocusOnEmotions/>
-              </div> */}
+              </div>
               <div className='col-xl-12 wow wow animate__animated animate__fadeInUp mt-20'>
                 <PartnersLogs />
               </div>

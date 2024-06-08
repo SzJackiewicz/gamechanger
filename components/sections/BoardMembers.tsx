@@ -1,17 +1,18 @@
 'use server'
 
 import { Avatar } from "../elements/Avatar"
+import {Person} from "@/lib/api/getTeamData";
 
 type Props = {
   title?: string
-  members: {
-    name: string
-    role?: string
-    img: string
-  }[]
+  members: Person[] | []
 }
 
 export const BoardMembers = ({ title, members }: Props) => {
+  if (members.length === 0) {
+      return
+  }
+
   return (
     <>
       <div className='text-center mt-70 mb-20'>
@@ -25,9 +26,9 @@ export const BoardMembers = ({ title, members }: Props) => {
               data-wow-delay='0s'
               key={index}
             >
-             <Avatar src={member.img} alt={member.role}/>
+             <Avatar src={member.picture.url} alt={member.positionitem?.name}/>
               <h5 className='color-white mb-15'>{member.name}</h5>
-              <p className='text-base color-gray-500'>{member.role}</p>
+              <p className='text-base color-gray-500'>{member.positionitem?.name}</p>
             </div>
           ))}
         </div>

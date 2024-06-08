@@ -6,7 +6,8 @@ import { useQuery } from '@tanstack/react-query'
 const PAGE_CONTENT_QUERY = `
 query Home {
   allFocusonemotionitems {
-    placeholder
+    name
+    description
     photo {
       url
     }

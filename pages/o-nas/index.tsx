@@ -4,61 +4,36 @@ import React from 'react'
 import Head from 'next/head'
 import Accordion from '../../components/elements/Accordion'
 import Layout from '../../components/layout/Layout'
-import { BoardMembers } from '../../components/sections/BoardMembers'
-import { PartnersLogs } from '../../components/sections/PartnersLogs'
+import { BoardMembers } from '@/components/sections/BoardMembers'
+import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
+import {getTeamData, Person} from "@/lib/api/getTeamData";
 
 export default function AboutPage() {
-  const boardMembers = [
-    {
-      name: 'Jan Konikiewicz',
-      role: 'Prezes Zarządu',
-      img: '/assets/imgs/avatars/Jan_Konikiewicz.webp',
-    },
-    {
-      name: ' Karol Stawicki',
-      role: 'Członek Zarządu',
-      img: '/assets/imgs/avatars/Karol_Stawicki.webp',
-    },
-    {
-      name: 'Krystian Jaworski',
-      role: 'Członek Zarządu',
-      img: '/assets/imgs/avatars/Krystian_Jaworski.webp',
-    },
-  ]
+  const {allPeople, isLoading, error } = getTeamData();
 
-  const councilMembers = [
-    {
-      name: 'Maciej Kowalski',
-      role: 'Przewodniczący Rady',
-      img: '/assets/imgs/avatars/Maciej_Kowalski.webp',
-    },
-    {
-      name: 'Aaron Cel',
-      role: 'Członek Rady',
-      img: '/assets/imgs/avatars/Aaron_Cel.webp',
-    },
-    {
-      name: 'Krystian Plech',
-      role: 'Członek Rady',
-      img: '/assets/imgs/avatars/Krystian_Plech.webp',
-    },
-  ]
+  if (isLoading) return <div/>;
+  if (error || !allPeople) return <div/>;
 
-  const otherMembers = [
-    {
-      name: 'Katarzyna Górska',
-      img: '/assets/imgs/avatars/Katarzyna_Górska.webp',
-    },
-    {
-      name: 'Mateusz Stępień',
-      img: '/assets/imgs/avatars/Mateusz_Stępień.webp',
-    },
-    {
-      name: 'Jan Benesz',
-      img: '/assets/imgs/avatars/Jan_Benesz.webp',
-    },
-  ]
+  const councilMembers: Person[] = [];
+  const boardMembers: Person[] = [];
+  const otherMembers: Person[] = [];
+
+  const councilIds = ['KoGauPXfTW2ecT4p6c9Vpw', 'Ksl1IeW4Q6W_0yETjijvmQ'];
+  const boardIds = ['JuaaifcgTNy-dXzMpuwn-g', 'PRd6GDvCQJaPYIbRCbnzmQ'];
+  const otherIds = ['Vv_ZRh7mT16EMj24gWNgVw']
+
+  allPeople.forEach((person) => {
+    if (person && person.positionitem) {
+      if (person.positionitem.id && otherIds.includes(person.positionitem.id)) {
+        otherMembers.push(person);
+      } else if (person.positionitem.id && councilIds.includes(person.positionitem.id)) {
+        councilMembers.push(person);
+      } else if (person.positionitem.id && boardIds.includes(person.positionitem.id)) {
+        boardMembers.push(person);
+      }
+    }
+  })
 
   return (
     <>
@@ -115,19 +90,24 @@ export default function AboutPage() {
               <br />
               <p className='text-bolder font-sm-clamp color-gray-500'>Dołącz do nas i zostań partnerem tej zmiany!</p>
               <div className='col-xl-10 col-lg-12 margin-auto'>
-                <BoardMembers
-                  title='Zarząd'
-                  members={boardMembers}
-                />
-                <BoardMembers
-                  title='Rada fundacji'
-                  members={councilMembers}
-                />
-                <BoardMembers
-                  title='Team'
-                  members={otherMembers}
-                />
-
+                {boardMembers.length > 0 && (
+                    <BoardMembers
+                        title='Zarząd'
+                        members={boardMembers}
+                    />
+                )}
+                {councilMembers.length > 0 && (
+                    <BoardMembers
+                        title='Rada fundacji'
+                        members={councilMembers}
+                    />
+                )}
+                {otherMembers.length > 0 && (
+                    <BoardMembers
+                        title='Team'
+                        members={otherMembers}
+                    />
+                )}
                 <div className='box-faqs mb-70 mt-40'>
                   <Accordion />
                 </div>
