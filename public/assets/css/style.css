@@ -2033,6 +2033,10 @@ input {
   }
 }
 
+.height-auto {
+  height: auto !important;
+}
+
 .card-style-1 .card-image .card-info {
   bottom: 0px;
   height: 100%;

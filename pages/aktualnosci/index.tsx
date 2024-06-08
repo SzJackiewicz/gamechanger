@@ -33,14 +33,15 @@ export default function NewsPage() {
                           key={i}
                         >
                           <div
-                            className='card-blog-1 hover-up wow animate__animated animate__fadeIn'
+                            className='card-blog-1 hover-up wow animate__animated animate__fadeIn mb-20'
                             data-wow-delay='.2s'
                           >
                             <div className='card-image mb-20'>
                               <Link href={`/aktualnosci/${item.slug}`}>
                                 <Image
                                   width={500}
-                                  height={500}
+                                  height={350}
+                                  style={{ height: 'auto' }}
                                   src={`${item.coverImage.url}`}
                                   alt={`${item.subtitle}`}
                                   placeholder='blur'
