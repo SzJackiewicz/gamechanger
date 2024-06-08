@@ -3,17 +3,16 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {AdditionalPostsProps} from "@/components/sections/MainSection/AdditionalPosts";
+import { AdditionalPostsProps } from '@/components/sections/MainSection/AdditionalPosts'
 import { base64Blur } from '@/components/elements/base64ImageBlur'
 
 export const AdditionalPostsMobile = ({ post }: { post: AdditionalPostsProps }) => {
-
   return (
     <div
       className='card-style-1 hover-up wow animate__animated animate__fadeIn mt-3'
       data-wow-delay='.0s'
     >
-      <div className='card-image '>
+      <div className='card-image  '>
         <Link
           className='link-post'
           href={`/aktualnosci/${post.slug}`}
@@ -32,10 +31,8 @@ export const AdditionalPostsMobile = ({ post }: { post: AdditionalPostsProps }) 
           <div className='card-info card-bg-2'>
             <div className='info-bottom mb-15'>
               <h4 className='color-white mb-15'>{post.title}</h4>
-              <div className='box-author'>
-                <div className='author-info'>
-                  <h6 className='color-gray-200 font-sm-clamp'>{post.subtitle}</h6>
-                </div>
+              <div className='author-info'>
+                <h6 className='color-gray-200 font-sm-clamp ellipsis'>{post.subtitle}</h6>
               </div>
             </div>
           </div>

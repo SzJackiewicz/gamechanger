@@ -6,11 +6,11 @@ import { useWindowSize } from 'usehooks-ts'
 import Image from 'next/image'
 import { AdditionalPostsMobile } from './AdditionalPostsMobile'
 import { base64Blur } from '@/components/elements/base64ImageBlur'
-import {Post} from "@/lib/api/homePage";
+import { Post } from '@/lib/api/homePage'
 
-export type AdditionalPostsProps =Post
+export type AdditionalPostsProps = Post
 
-export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
+export const AdditionalPosts = ({ posts }: { posts: AdditionalPostsProps[] }) => {
   const { width = 0 } = useWindowSize()
 
   if (width > 500) {
@@ -20,18 +20,16 @@ export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
         data-wow-delay={`${i / 10}s`}
         key={i}
       >
-        <div className='card-image hover-up mt-5'>
-          <Link href={`/aktualnosci/${item.slug}`}>
-            <Image
-              src={item.coverImage.url}
-              alt={item.title}
-              width={190}
-              height={190}
-              priority
-              placeholder='blur'
-              blurDataURL={base64Blur}
-            />
-          </Link>
+        <div className='mt-5 card-image-additionalpost-desktop'>
+          <Image
+            src={`${item.coverImage.url}`}
+            alt='Article main cover'
+            layout='fill'
+            objectFit='cover'
+            priority
+            placeholder='blur'
+            blurDataURL={base64Blur}
+          />
         </div>
         <div className='card-info'>
           <Link
@@ -41,7 +39,7 @@ export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
             ZDROWIE
           </Link>
           <Link href={`/aktualnosci/${item.slug}`}>
-            <h4 className='mt-15 mb-20 color-white text-xxl'>{item.title}</h4>
+            <h4 className='mt-15 mb-20 color-white font-md-clamp'>{item.title}</h4>
           </Link>
           <p className='color-gray-500 font-sm-clamp ellipsis'>{item?.subtitle}</p>
         </div>
@@ -50,8 +48,8 @@ export const AdditionalPosts = ({ posts }: {posts: AdditionalPostsProps[]}) => {
   } else {
     return posts.slice(0, 3).map((item, i) => (
       <AdditionalPostsMobile
-          post={item}
-          key={i}
+        post={item}
+        key={i}
       />
     ))
   }

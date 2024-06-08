@@ -5,13 +5,13 @@ import Link from 'next/link'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import Image from 'next/image'
 import { base64Blur } from '@/components/elements/base64ImageBlur'
-import {getBlogsData} from "@/lib/api/blog";
+import { getBlogsData } from '@/lib/api/blog'
 
 export default function NewsPage() {
-  const {allPosts, isLoading, error} = getBlogsData();
+  const { allPosts, isLoading, error } = getBlogsData()
 
-  if (isLoading) return <div />;
-  if (error) return <div />;
+  if (isLoading) return <div />
+  if (error) return <div />
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function NewsPage() {
                 <div className='mt-50 mb-50'>
                   <div className='row mt-50 mb-10'>
                     {allPosts &&
-                        allPosts.map((item, i) => (
+                      allPosts.map((item, i) => (
                         <div
                           className='col-lg-6'
                           key={i}
@@ -48,7 +48,7 @@ export default function NewsPage() {
                                 />
                               </Link>
                             </div>
-                            <div className='card-info'>
+                            <div className='card-info max-width-100'>
                               <Link href={`/aktualnosci/${item.slug}`}>
                                 <h4 className='color-white mt-20 font-md-clamp'>{item.title}</h4>
                                 <div>
@@ -62,7 +62,7 @@ export default function NewsPage() {
                                     className='readmore color-gray-500 text-sm'
                                     href={`/aktualnosci/${item.slug}`}
                                   >
-                                    <span>Czytaj</span>
+                                    <span className='font-sm-clamp'>Czytaj</span>
                                   </Link>
                                 </div>
                               </div>

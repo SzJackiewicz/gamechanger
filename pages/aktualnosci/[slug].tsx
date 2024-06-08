@@ -4,7 +4,7 @@ import Breadcrumb from '../../components/elements/Breadcrumb'
 import SingleContent from '@/components/sections/SingleContent'
 import { useRouter } from 'next/router'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
-import {getBlogData} from "@/lib/api/blog";
+import { getBlogData } from '@/lib/api/blog'
 
 const BlogDetails = () => {
   const router = useRouter()
@@ -14,14 +14,14 @@ const BlogDetails = () => {
     return
   }
 
-  const {post, isLoading, error} = getBlogData(slug);
+  const { post, isLoading, error } = getBlogData(slug)
 
-  if (isLoading) return <div />;
-  if (error || !post) return <div />;
+  if (isLoading) return <div />
+  if (error || !post) return <div />
 
-  const { title, coverImage } = post;
+  const { title, coverImage } = post
 
-  const imageUrl = coverImage.url;
+  const imageUrl = coverImage.url
 
   return (
     <Layout>
@@ -49,7 +49,7 @@ const BlogDetails = () => {
                 </div>
 
                 <div
-                  className='col-xl-12 col-lg-12 col-md-9 m-auto p-1'
+                  className='col-xl-10 col-lg-12 col-md-9 m-auto p-1'
                   data-wow-delay='.2s'
                 >
                   <div className='row mb-40'>
