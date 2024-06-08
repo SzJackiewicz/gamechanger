@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../../components/layout/Layout'
-import { HelpLines } from '@/utils/needHelpData'
+import { HelpLines } from '@/components/sections/needHelpData'
 import { CoverWithTestimonials } from '@/components/elements/CoverWithTestimonials'
 import { PartnersLogs } from '@/components/sections/PartnersLogs'
 
