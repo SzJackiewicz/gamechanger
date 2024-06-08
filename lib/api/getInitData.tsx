@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import {performRequest} from '@/lib/datocms'
-import {Navigation, Layout} from '@/types/types'
-import {useQuery} from '@tanstack/react-query'
+import { performRequest } from '@/lib/datocms'
+import { Navigation, Layout } from '@/types/types'
+import { useQuery } from '@tanstack/react-query'
 
 const PAGE_CONTENT_QUERY = `
   query Home {
@@ -33,11 +33,12 @@ interface Data {
 
 export function getInitData() {
   const fetchInitData = async (): Promise<Data> => {
-    return await performRequest<Data>({query: PAGE_CONTENT_QUERY})
+    return await performRequest<Data>({ query: PAGE_CONTENT_QUERY })
   }
 
   const { data, error, isLoading } = useQuery<Data, Error>(['initData'], fetchInitData, {
     cacheTime: Infinity,
+    refetchOnWindowFocus: false,
     onError: (err) => {
       console.error('Error fetching navigation data:', err)
     },

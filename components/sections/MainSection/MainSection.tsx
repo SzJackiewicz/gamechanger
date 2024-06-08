@@ -34,7 +34,6 @@ export const MainSection = () => {
                     alt='Article main cover'
                     className='img-opacity'
                     fill
-                    // objectFit='cover'
                     style={{ objectFit: 'cover' }}
                     priority
                     placeholder='blur'

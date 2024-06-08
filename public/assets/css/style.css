@@ -1918,6 +1918,7 @@ input {
 }
 
 .styledContainerLarge {
+  height: 320px;
   display: flex;
   width: auto;
   margin: 30px auto;
@@ -1926,6 +1927,7 @@ input {
 }
 
 .styledContainerSmall {
+  height: 320px;
   display: flex;
   width: auto;
   justify-content: center;
@@ -2754,6 +2756,12 @@ input {
   position: relative;
   width: 100%;
 }
+
+.header-logo {
+  min-height: 94px;
+  max-width: 240px;
+}
+
 .header .main-header .header-logo {
   max-width: 240px;
   width: 100%;
@@ -2761,7 +2769,7 @@ input {
 .header .main-header .header-logo a {
   display: block;
 }
-.header .main-header .header-logo a img {
+.header .main-header a img {
   min-height: 37px;
 }
 .header .main-header .header-nav {

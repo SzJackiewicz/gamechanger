@@ -80,6 +80,7 @@ export function getBlogData(slug: string | string[]) {
 
   const { data, error, isLoading } = useQuery<POST, Error>(['blog-' + slug], fetchInitData, {
     cacheTime: Infinity,
+    refetchOnWindowFocus: false,
     onError: (err) => {
       console.error('Error fetching navigation data:', err)
     },
@@ -97,6 +98,7 @@ export function getBlogsData() {
 
   const { data, error, isLoading } = useQuery<POSTS, Error>(['blogs'], fetchInitData, {
     cacheTime: Infinity,
+    refetchOnWindowFocus: false,
     onError: (err) => {
       console.error('Error fetching navigation data:', err)
     },
