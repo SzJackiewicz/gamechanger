@@ -9,10 +9,13 @@ import { base64Blur } from '@/components/elements/base64ImageBlur'
 export const AdditionalPostsMobile = ({ post }: { post: AdditionalPostsProps }) => {
   return (
     <div
-      className='card-style-1 hover-up wow animate__animated animate__fadeIn mt-3'
+      className='card-style-1 hover-up wow animate__animated animate__fadeInUp mt-3'
       data-wow-delay='.0s'
     >
-      <div className='card-image  '>
+      <div
+        className='card-image wow animate__animated animate__fadeInUp'
+        data-wow-delay='.5s'
+      >
         <Link
           className='link-post'
           href={`/aktualnosci/${post.slug}`}

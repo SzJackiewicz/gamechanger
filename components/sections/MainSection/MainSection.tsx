@@ -20,10 +20,7 @@ export const MainSection = () => {
       {mainSection && subSections && (
         <div className='row'>
           <div className='col-xxl-6 col-xl-7 align-content-center col-md-12 my-lg-4 my-xl-0'>
-            <div
-              className='card-style-1 hover-up wow animate__animated animate__fadeIn'
-              data-wow-delay='.0s'
-            >
+            <div className='card-style-1 hover-up'>
               <div className='card-image-main '>
                 <Link
                   className='link-post'

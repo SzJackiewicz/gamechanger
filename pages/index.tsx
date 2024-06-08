@@ -17,10 +17,7 @@ export default function Home() {
         <div className='container'>
           <div className='row'>
             <div className='col-xl-12 col-lg-12'>
-              <div
-                className='col-xl-12 wow animate__animated animate__fadeIn'
-                data-wow-delay='.3s'
-              >
+              <div className='col-xl-12'>
                 <MainSection />
               </div>
               <div
@@ -63,10 +60,7 @@ export default function Home() {
               >
                 <FocusOnEmotions/>
               </div> */}
-              <div
-                className='col-xl-12 wow animate__animated animate__fadeIn mt-20'
-                data-wow-delay='.2s'
-              >
+              <div className='col-xl-12 wow wow animate__animated animate__fadeInUp mt-20'>
                 <PartnersLogs />
               </div>
             </div>
