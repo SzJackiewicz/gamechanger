@@ -8,11 +8,11 @@ import {getInitData} from "@/lib/api/getInitData";
 const Layout = ({children}: { children: React.ReactNode }) => {
     const [openClass, setOpenClass] = useState('')
 
-    const { allCategoryNavs, layout, isLoading, error } = getInitData();
+    const { allCategoryNavs, isLoading, error } = getInitData();
 
 
     if (isLoading) return <div/>;
-    if (error || !allCategoryNavs || !layout) return <div/>;
+    if (error || !allCategoryNavs) return <div/>;
 
     const handleOpen = () => {
         document.body.classList.add('mobile-menu-active')
@@ -46,13 +46,7 @@ const Layout = ({children}: { children: React.ReactNode }) => {
                 navigation={allCategoryNavs}
             />
             <main className='main'>{children}</main>
-            <Footer
-                footerLogo={layout.footerLogo}
-                footerLogoAlt={layout.footerLogoAlt}
-                footerSubtitle={layout.footerSubtitle}
-                iban={layout.iban}
-                swift={layout.swift}
-            />
+            <Footer/>
             <BackToTop/>
         </>
     )

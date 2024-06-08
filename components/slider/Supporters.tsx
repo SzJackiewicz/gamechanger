@@ -18,11 +18,11 @@ export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnE
           <Swiper
             slidesPerView={4}
             spaceBetween={0}
-            loop={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
+            loop={false}
+            centeredSlides={true}
+            autoplay={false}
+            grabCursor={true}
+            freeMode={true}
             navigation={{
               prevEl: '.swiper-button-prev-style-3',
               nextEl: '.swiper-button-next-style-3',
@@ -73,7 +73,7 @@ export const Supporters = ({ title, focusOnEmotions }: { title: string, focusOnE
                     </p>
                   </div>
                   <div className='card-item-name'>
-                    <label>{item.placeholder}</label>
+                    <label>{item.name}</label>
                   </div>
                 </div>
               </SwiperSlide>
