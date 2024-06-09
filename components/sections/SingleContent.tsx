@@ -1,7 +1,5 @@
-'use server'
-
 import { renderRule, StructuredText } from 'react-datocms'
-import { isHeading, isParagraph, isRoot } from 'datocms-structured-text-utils'
+import { isHeading, isParagraph, isRoot, isLink } from 'datocms-structured-text-utils'
 import React from 'react'
 import { POST } from '@/lib/api/blog'
 
@@ -10,6 +8,7 @@ type StylesTypes = {
   marginBottom?: string
   fontSize?: string
   marginTop?: string
+  fontStyle?: string
 }
 
 type ImageBlockRecord = {
@@ -19,8 +18,6 @@ type ImageBlockRecord = {
     alt: string
   }
 }
-
-
 
 const SingleContent = ({ post }: POST) => {
   return (
@@ -37,7 +34,6 @@ const SingleContent = ({ post }: POST) => {
             // @ts-ignore
             data={post.content}
             // @ts-ignore
-
             renderBlock={({ record }: { record: ImageBlockRecord }) => {
               switch (record.__typename) {
                 case 'ImageBlockRecord':
@@ -89,6 +85,25 @@ const SingleContent = ({ post }: POST) => {
                   >
                     {children}
                   </Tag>
+                )
+              }),
+              renderRule(isLink, ({ adapter: { renderNode }, children, key, node }) => {
+                const style = {
+                  color: '#34cc99',
+                  textDecoration: 'none',
+                  fontStyle: 'italic',
+                }
+
+                return renderNode(
+                  'a',
+                  {
+                    key,
+                    style,
+                    href: node.url,
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                  },
+                  children
                 )
               }),
             ]}
