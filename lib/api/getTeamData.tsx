@@ -20,6 +20,12 @@ query MyQuery {
       value
       blocks
     }
+    doc {
+      name
+      file {
+        url
+      }
+    }
   }
 }
 `
@@ -34,10 +40,18 @@ export type Person = {
     }
 }
 
+export type File = {
+    name: string,
+    file: {
+        url: string
+    }
+}
+
 interface Data {
     allPeople: Person[]
     about: {
         content: StructuredText
+        doc: File[]
     }
 }
 
