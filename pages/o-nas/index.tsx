@@ -74,7 +74,7 @@ export default function AboutPage() {
                             </h4>
                         );
                       }
-                      return null; // Ignore other heading levels or handle them as needed
+                      return null;
                     }),
                   ]}
               />
