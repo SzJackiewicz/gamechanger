@@ -98,7 +98,7 @@ export default function AboutPage() {
                     />
                 )}
                 <div className='box-faqs mb-70 mt-40'>
-                  <Accordion />
+                  <Accordion items={about.doc}/>
                 </div>
               </div>
               <PartnersLogs />
