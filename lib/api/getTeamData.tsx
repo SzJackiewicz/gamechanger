@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { performRequest } from '@/lib/datocms'
 import { useQuery } from '@tanstack/react-query'
+import {StructuredText} from "datocms-structured-text-utils";
 
 const PAGE_CONTENT_QUERY = `
 query MyQuery {
@@ -12,6 +13,12 @@ query MyQuery {
     }
     picture {
       url
+    }
+  }
+  about {
+    content {
+      value
+      blocks
     }
   }
 }
@@ -29,6 +36,9 @@ export type Person = {
 
 interface Data {
     allPeople: Person[]
+    about: {
+        content: StructuredText
+    }
 }
 
 export function getTeamData() {
