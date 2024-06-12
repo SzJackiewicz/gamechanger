@@ -6,7 +6,8 @@ import { PartnersLogs } from '@/components/sections/PartnersLogs'
 import { SupportUs } from '@/components/sections/SupportUs/SupportUs'
 import { StripeButtonWrapper } from '@/components/elements/BuyButton/StripeButtonWrapper'
 import Link from 'next/link'
-import {FocusOnEmotions} from "@/components/sections/FocusOnEmotions";
+import { FocusOnEmotions } from '@/components/sections/FocusOnEmotions'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -44,12 +45,13 @@ export default function Home() {
                         className='font-md-clamp main-color-text'
                         href='/wesprzyj-nas'
                       >
-                        inne formy wsparcia
+                        <Image
+                          width={180}
+                          height={180}
+                          alt='Inne formy wsparcia'
+                          src={'/assets/imgs/page/wesprzyj-nas/inne.png'}
+                        />
                       </Link>
-                      <i
-                        className='pi pi-arrow-circle-right'
-                        style={{ fontSize: '1.5rem' }}
-                      />
                     </div>
                   </StripeButtonWrapper>
                 </SupportUs>
@@ -58,7 +60,7 @@ export default function Home() {
                 className='col-xl-12 wow animate__animated animate__fadeIn'
                 data-wow-delay='.2s'
               >
-                <FocusOnEmotions/>
+                <FocusOnEmotions />
               </div>
               <div className='col-xl-12 wow wow animate__animated animate__fadeInUp mt-20'>
                 <PartnersLogs />
